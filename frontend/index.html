@@ -57,12 +57,8 @@
 </head>
 <body>
     <h2>Test Railway Backend API</h2>
+    <p style="color: #666; font-size: 0.9em;">Connected to: <strong>https://hackaton-production-a9a8.up.railway.app</strong></p>
     
-    <div class="form-group">
-        <label for="backendUrl">Railway Backend URL:</label>
-        <input type="text" id="backendUrl" placeholder="Paste Railway Backend URL here" value="">
-    </div>
-
     <hr/>
 
     <h3>Test Login Form</h3>
@@ -81,22 +77,13 @@
     <div id="response" style="display: none;"></div>
 
     <script>
+        // Hardcoded live backend URL
+        const backendUrl = "https://hackaton-production-a9a8.up.railway.app";
+
         document.getElementById('loginForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            const backendUrl = document.getElementById('backendUrl').value.trim();
             const responseDiv = document.getElementById('response');
-            
-            if (!backendUrl) {
-                responseDiv.style.display = 'block';
-                responseDiv.className = 'error';
-                responseDiv.innerText = 'Please enter your Railway Backend URL first!';
-                return;
-            }
-
-            // Trim trailing slash if present
-            const cleanBaseUrl = backendUrl.endsWith('/') ? backendUrl.slice(0, -1) : backendUrl;
-            
             const usernameInput = document.getElementById('username').value;
             const passwordInput = document.getElementById('password').value;
 
@@ -105,7 +92,7 @@
             responseDiv.innerText = 'Sending request...';
 
             try {
-                const response = await fetch(`${cleanBaseUrl}/api/login`, {
+                const response = await fetch(`${backendUrl}/api/login`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

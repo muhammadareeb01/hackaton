@@ -66,3 +66,26 @@ The platform does not rely on basic IF/ELSE logic. It utilizes trained scikit-le
 * **Multi-Tiered Sub-Admin Architecture (Departmental Routing)**
   * **Planned Feature**: We plan to introduce a Sub-Admin role for specific municipal departments (e.g., Water Department, Electricity Department). 
   * **How it will work**: The Main Admin (Mayor/Commissioner level) will retain a global view of all city issues. However, Sub-Admins will be restricted to their own domain. For example, an Electric Department official logging in will *only* see complaints categorized under "Electricity". This creates a fully isolated, secure, and distributed workflow for massive city-scale operations!
+
+## 🛠️ 9. Comprehensive Tech Stack & Deployment Architecture
+To ensure scalability, performance, and a modern developer experience, the project utilizes the following technologies:
+
+### 🌐 Frontend (Citizen & Admin Portals)
+* **Framework:** Next.js (React) - Chosen for Server-Side Rendering (SSR), fast page loads, and SEO optimization.
+* **Styling & UI:** Tailwind CSS for utility-first styling, `framer-motion` for fluid 60fps animations, and `lucide-react` for iconography.
+* **Data Visualization:** `recharts` for building the interactive admin analytics dashboard.
+
+### ⚙️ Backend & AI Engine
+* **Core Framework:** FastAPI (Python) - Provides asynchronous high-concurrency request handling, making it perfect for ML and AI tasks.
+* **Database & ORM:** SQLAlchemy with **MySQL** for strict relational data integrity and robust performance.
+* **AI/ML:** Google GenAI SDK (Gemini) for the chatbot and initial complaint analysis, paired with `scikit-learn` for local ML fallback models (Logistic Regression, Random Forest).
+
+### 🔐 Authentication & Security
+* **Firebase Authentication:** Used on the frontend for secure, scalable citizen login/signup. The backend verifies Firebase tokens to authenticate users.
+* **JWT (JSON Web Tokens):** Used for strict Admin authentication and role-based access control.
+* **SlowAPI:** Implements Rate Limiting (Bot protection) on FastAPI endpoints to prevent DDoS and spam.
+
+### 🚀 Current Deployment Architecture
+* **Frontend Portals (Citizen & Admin):** **Vercel** - Hosted here for ultra-fast edge CDN routing, automatic SSL, and seamless CI/CD for Next.js applications.
+* **Backend API:** **Railway** - Hosts the Python FastAPI application, providing excellent performance for our ML models and API routes.
+* **Database:** **MySQL** - The primary relational database used in production, ensuring stable and scalable data storage.

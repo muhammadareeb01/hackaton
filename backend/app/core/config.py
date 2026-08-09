@@ -4,7 +4,10 @@ import os
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "AI Smart Civic Services"
-    BACKEND_CORS_ORIGINS: list[str] = ["http://localhost:3000", "http://localhost:3001"]
+    @property
+    def BACKEND_CORS_ORIGINS(self) -> list[str]:
+        origins = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:3001")
+        return [origin.strip() for origin in origins.split(",")]
     
     # MySQL Database Config (User must update .env)
     DB_USER: str = "root"
@@ -19,7 +22,6 @@ class Settings(BaseSettings):
     
     ENCRYPTION_KEY: str = "uO_N8yHj9T6J8jF5_5D2s6Fz4-B9uN7t_gJ3Ym7x9kA="
     JWT_SECRET: str = "super-secret-key-change-in-prod"
-    ALLOWED_CORS_ORIGIN: str = "http://localhost:3000"
     GEMINI_API_KEY: Optional[str] = None
     RESEND_API_KEY: Optional[str] = None
 

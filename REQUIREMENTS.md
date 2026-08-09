@@ -39,3 +39,59 @@ Behind the scenes, city administrators have access to a powerful, data-rich dash
 
 **Summary:** 
 CitySync is not just a standard web application; it is a smart, secure, and highly scalable AI ecosystem. By combining advanced generative AI capabilities, custom Machine Learning models, and a beautifully crafted user interface, it provides an unparalleled experience for both citizens and administrators.
+
+---
+
+## 🚀 How to Run the Project Locally
+
+This project is divided into three main components. Follow these simple steps to run them on your local machine:
+
+### 1. Backend (FastAPI / Python)
+The backend powers the AI models, database, and core logic.
+1. Open a new terminal and navigate to the backend folder:
+   ```bash
+   cd backend
+   ```
+2. Install the required Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Start the backend server:
+   ```bash
+   uvicorn main:app --reload --port 8000
+   ```
+*The backend will now be running on `http://localhost:8000`.*
+
+### 2. Citizen Frontend (Next.js)
+This is the main public-facing website for citizens to report complaints.
+1. Open a **second** terminal and navigate to the frontend folder:
+   ```bash
+   cd frontend
+   ```
+2. Install the Node modules:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+*The Citizen website will be live at `http://localhost:3000`.*
+
+### 3. Admin Frontend (Next.js)
+This is the restricted dashboard for city officials and administrators.
+1. Open a **third** terminal and navigate to the admin_frontend folder:
+   ```bash
+   cd admin_frontend
+   ```
+2. Install the Node modules:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+*The Admin Dashboard will be live at `http://localhost:3001` (or whichever port Next.js automatically assigns).*
+
+> **Important Note:** Make sure your `.env` files are properly configured in all three folders with the correct Database credentials and API keys before running the servers!

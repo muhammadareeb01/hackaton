@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "AI Smart Civic Services"
     @property
     def BACKEND_CORS_ORIGINS(self) -> list[str]:
-        origins = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:3001")
+        origins = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:3001,https://hackaton-j9fm.vercel.app,https://aismartcity.vercel.app")
         return [origin.strip() for origin in origins.split(",")]
     
     # MySQL Database Config (User must update .env)
@@ -16,9 +16,8 @@ class Settings(BaseSettings):
     DB_PORT: str = "3306"
     DB_NAME: str = "citysync"
     
-    @property
-    def DB_URL(self) -> str:
-        return f"mysql+pymysql://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
+    # If DB_URL is explicitly set in env, use it. Otherwise, fallback to SQLite for easy deployment
+    DB_URL: str = "sqlite:///./database.db"
     
     ENCRYPTION_KEY: str = "uO_N8yHj9T6J8jF5_5D2s6Fz4-B9uN7t_gJ3Ym7x9kA="
     JWT_SECRET: str = "super-secret-key-change-in-prod"

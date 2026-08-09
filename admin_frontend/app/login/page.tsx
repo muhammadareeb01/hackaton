@@ -50,7 +50,12 @@ export default function AdminLogin() {
               <AlertTriangle className="w-7 h-7" />
             </div>
             <h1 className="text-2xl font-bold text-slate-900 mb-2">Admin Portal</h1>
-            <p className="text-slate-500 text-sm">Secure CitySync Administration</p>
+            <p className="text-slate-500 text-sm mb-4">Secure CitySync Administration</p>
+            <div className="bg-blue-50 text-blue-700 text-xs py-2 px-3 rounded-md border border-blue-100 font-medium inline-block text-left">
+              <p><strong>Demo Credentials:</strong></p>
+              <p className="mt-1">Username: <code className="bg-white px-1 py-0.5 rounded border border-blue-200">admin</code></p>
+              <p>Password: <code className="bg-white px-1 py-0.5 rounded border border-blue-200">admin123</code></p>
+            </div>
           </div>
 
           <form onSubmit={handleLogin} className="space-y-5">

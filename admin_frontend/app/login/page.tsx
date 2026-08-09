@@ -63,15 +63,16 @@ export default function AdminLogin() {
               </div>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 text-sm text-slate-600">
                 <div className="flex-1">
-                  <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Email Address</span>
-                  <code className="font-mono text-xs text-slate-800 bg-white px-2.5 py-1.5 rounded border border-slate-200 block w-full truncate select-all">admin@citysync.gov</code>
+                  <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block mb-0.5">Email Address</span>
+                  <span className="font-semibold text-slate-800 block truncate">admin@citysync.gov</span>
                 </div>
                 <div className="flex-1">
-                  <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Password</span>
-                  <code className="font-mono text-xs text-slate-800 bg-white px-2.5 py-1.5 rounded border border-slate-200 block w-full truncate select-all">admin1234</code>
+                  <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block mb-0.5">Password</span>
+                  <span className="font-semibold text-slate-800 block truncate">admin1234</span>
                 </div>
               </div>
             </div>
+          </div>
 
           <form onSubmit={handleLogin} className="space-y-5">
             <div className="space-y-1.5">

@@ -65,7 +65,7 @@ export default function AdminDashboard() {
         setStats(data);
         setIsLoaded(true);
       })
-      .catch(err => {
+      .catch(() => {
         // console.error(err);
         setIsLoaded(true);
       });

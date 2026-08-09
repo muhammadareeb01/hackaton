@@ -73,7 +73,7 @@ export default function ComplaintsList() {
         setCategories(uniqueCats as string[]);
         setLoading(false);
       })
-      .catch(err => {
+      .catch(() => {
         // console.error("Error fetching complaints", err);
         setLoading(false);
       });

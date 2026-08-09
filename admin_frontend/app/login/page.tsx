@@ -29,8 +29,9 @@ export default function AdminLogin() {
       Cookies.set('token', data.access_token, { expires: 1/48 });
       toast.success("Welcome back, Administrator!");
       router.push("/dashboard");
-    } catch (error: any) {
-      if (error.message === "Failed to fetch" || error.message.includes("Network")) {
+    } catch (error) {
+      const err = error as Error;
+      if (err.message === "Failed to fetch" || err.message?.includes("Network")) {
         toast.error("Cannot connect to server. Is the backend running?");
       } else {
         toast.error("Invalid credentials or server error.");

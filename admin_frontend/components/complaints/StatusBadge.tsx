@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/Badge"
 import { cn } from "@/lib/utils"
 
-export type StatusType = "Pending Review" | "Open" | "Assigned" | "In Progress" | "Resolved";
+export type StatusType = "Pending Review" | "Open" | "Assigned" | "In Progress" | "Resolved" | "Rejected" | "Escalated";
 
 interface StatusBadgeProps {
   status: StatusType;
@@ -16,6 +16,8 @@ export function StatusBadge({ status, className }: StatusBadgeProps) {
       case "Assigned": return "bg-[var(--color-priority-medium)]/10 text-[var(--color-priority-medium)] border-[var(--color-priority-medium)]/20";
       case "Open": return "bg-[var(--color-primary)]/10 text-[var(--color-primary)] border-[var(--color-primary)]/20";
       case "Pending Review": return "bg-[var(--color-priority-high)]/10 text-[var(--color-priority-high)] border-[var(--color-priority-high)]/20";
+      case "Rejected": return "bg-red-100 text-red-700 border-red-200";
+      case "Escalated": return "bg-orange-100 text-orange-700 border-orange-200";
       default: return "bg-gray-100 text-gray-800 border-gray-200";
     }
   };

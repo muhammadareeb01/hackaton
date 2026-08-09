@@ -3,18 +3,38 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
-import { LayoutDashboard, Users, FileText, CheckCircle2, Clock, AlertTriangle, LogOut } from "lucide-react";
+import { FileText, CheckCircle2, Clock, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import Link from "next/link";
+
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
-import { Button } from "@/components/ui/Button";
+
 
 import { RoleBadge } from "@/components/ui/RoleBadge";
 
+interface PriorityData {
+  name: string;
+  value: number;
+  color: string;
+}
+
+interface CategoryData {
+  name: string;
+  count: number;
+}
+
+interface StatsData {
+  total: number;
+  open_issues: number;
+  resolved: number;
+  avg_resolution_time: string;
+  category_data: CategoryData[];
+  priority_data: PriorityData[];
+}
+
 export default function AdminDashboard() {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [stats, setStats] = useState<any>(null);
+  const [stats, setStats] = useState<StatsData | null>(null);
   const router = useRouter();
 
   const handleLogout = () => {
@@ -49,6 +69,7 @@ export default function AdminDashboard() {
         console.error(err);
         setIsLoaded(true);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!isLoaded || !stats) {
@@ -124,7 +145,7 @@ export default function AdminDashboard() {
                         dataKey="value"
                         animationDuration={1500}
                       >
-                        {stats.priority_data.map((entry: any, index: number) => (
+                        {stats.priority_data.map((entry: PriorityData, index: number) => (
                           <Cell key={`cell-${index}`} fill={entry.color} />
                         ))}
                       </Pie>
@@ -145,7 +166,14 @@ export default function AdminDashboard() {
   );
 }
 
-function StatCard({ title, value, icon, trend }: any) {
+interface StatCardProps {
+  title: string;
+  value: string | number;
+  icon: React.ReactNode;
+  trend: string;
+}
+
+function StatCard({ title, value, icon, trend }: StatCardProps) {
   return (
     <motion.div whileHover={{ y: -5, scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }}>
       <div className="relative overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all">

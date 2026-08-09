@@ -51,7 +51,7 @@ export default function ReportPage() {
     fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api'}/categories/`)
       .then(res => res.json())
       .then(data => setCategories(data))
-      .catch(err => console.error("Failed to load categories"));
+      .catch(() => console.error("Failed to load categories"));
       
     // Check if user is logged in
     const token = Cookies.get("user_token");

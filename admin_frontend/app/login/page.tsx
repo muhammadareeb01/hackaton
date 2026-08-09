@@ -28,7 +28,7 @@ export default function AdminLogin() {
       Cookies.set('token', data.access_token, { expires: 1/48 });
       toast.success("Welcome back, Administrator!");
       router.push("/dashboard");
-    } catch (error) {
+    } catch {
       toast.error("Invalid credentials.");
       setLoading(false);
     }

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
@@ -18,6 +18,7 @@ export function Navbar() {
 
   // Force check cookie on every route change in case Firebase listener is delayed
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     setMounted(true);
     setIsLoggedIn(!!Cookies.get("user_token"));
   }, [pathname]);

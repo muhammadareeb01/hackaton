@@ -36,7 +36,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-[var(--color-background)] font-sans overflow-x-hidden relative">
       
-      {/* Huge blurry color meshes for advanced UI background */}
+      {/* Background decoration layer with blur effect */}
       <div className="absolute top-0 left-0 w-full h-[800px] overflow-hidden pointer-events-none -z-10">
         <div className="absolute top-[-15%] left-[-10%] w-[50%] h-[60%] bg-[#0ea5e9]/20 rounded-[100%] blur-[120px] mix-blend-multiply opacity-70"></div>
         <div className="absolute top-[10%] right-[-10%] w-[40%] h-[70%] bg-[#8b5cf6]/20 rounded-[100%] blur-[140px] mix-blend-multiply opacity-70"></div>
@@ -48,7 +48,7 @@ export default function LandingPage() {
 
         <div className="max-w-7xl mx-auto px-6 text-center w-full relative">
           
-          {/* Floating UI Chips for Advanced Feel */}
+          {/* Floating notification chip to demonstrate real-time updates */}
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: [0, -15, 0], opacity: 1 }}

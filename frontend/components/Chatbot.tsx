@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquare, X, Send, Loader2, Bot, User } from "lucide-react";
+import { MessageSquare, X, Send, Bot, User } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 interface Message {

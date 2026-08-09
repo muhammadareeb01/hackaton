@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Input";
 import { PriorityBadge } from "@/components/complaints/PriorityBadge";
 import { StatusBadge } from "@/components/complaints/StatusBadge";
-import { Button } from "@/components/ui/Button";
+
 import { apiClient } from "@/lib/api";
 import toast from "@/lib/toast";
 
@@ -38,11 +38,25 @@ function TableSkeleton() {
   );
 }
 
+type PriorityLevel = "Critical" | "High" | "Medium" | "Low";
+type StatusLevel = "Pending Review" | "In Progress" | "Resolved" | "Rejected" | "Escalated";
+
+interface Complaint {
+  id: string;
+  category: string;
+  citizen_name?: string;
+  summary?: string;
+  priority: PriorityLevel;
+  status: StatusLevel;
+  date_submitted: string;
+  estimated_resolution_days?: number;
+}
+
 export default function ComplaintsList() {
   const [statusFilter, setStatusFilter] = useState("All");
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
-  const [complaints, setComplaints] = useState<any[]>([]);
+  const [complaints, setComplaints] = useState<Complaint[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [updatingId, setUpdatingId] = useState<string | null>(null);
@@ -52,10 +66,10 @@ export default function ComplaintsList() {
   const fetchComplaints = useCallback(() => {
     setLoading(true);
     apiClient("/complaints/")
-      .then((data: any[]) => {
+      .then((data: Complaint[]) => {
         setComplaints(data);
         // Extract unique categories from complaints
-        const uniqueCats = Array.from(new Set(data.map((c: any) => c.category).filter(Boolean))).sort();
+        const uniqueCats = Array.from(new Set(data.map((c: Complaint) => c.category).filter(Boolean))).sort();
         setCategories(uniqueCats as string[]);
         setLoading(false);
       })
@@ -69,7 +83,7 @@ export default function ComplaintsList() {
 
 
 
-  const handleStatusChange = async (complaintId: string, newStatus: string) => {
+  const handleStatusChange = async (complaintId: string, newStatus: StatusLevel) => {
     setUpdatingId(complaintId);
     setOpenDropdown(null);
     try {
@@ -222,7 +236,7 @@ export default function ComplaintsList() {
                           <span className="px-2 py-0.5 rounded-md bg-gray-100 text-xs font-medium">{complaint.category}</span>
                         </td>
                         <td className="px-6 py-4">
-                          <PriorityBadge priority={complaint.priority as any} />
+                          <PriorityBadge priority={complaint.priority} />
                           {complaint.estimated_resolution_days && (
                             <p className="text-[10px] text-[var(--color-text-muted)] mt-1.5 font-medium ml-1">
                               Est: <span className="font-bold text-gray-700">{complaint.estimated_resolution_days} days</span>
@@ -230,7 +244,7 @@ export default function ComplaintsList() {
                           )}
                         </td>
                         <td className="px-6 py-4">
-                          <StatusBadge status={complaint.status as any} />
+                          <StatusBadge status={complaint.status} />
                         </td>
                         <td className="px-6 py-4 text-[var(--color-text-muted)] text-xs whitespace-nowrap">
                           {new Date(complaint.date_submitted).toLocaleDateString("en-PK", { day: "2-digit", month: "short", year: "numeric" })}
@@ -261,7 +275,7 @@ export default function ComplaintsList() {
                                     {STATUS_OPTIONS.map(opt => (
                                       <button
                                         key={opt.value}
-                                        onClick={() => handleStatusChange(complaint.id, opt.value)}
+                                        onClick={() => handleStatusChange(complaint.id, opt.value as StatusLevel)}
                                         className={`w-full flex items-center gap-2 px-3 py-2.5 text-xs font-medium transition-colors ${opt.color}`}
                                       >
                                         {opt.icon}
@@ -301,14 +315,14 @@ export default function ComplaintsList() {
                       <p className="font-bold text-[var(--color-primary)] text-sm">{complaint.citizen_name || "Anonymous"}</p>
                       <p className="text-[10px] text-[var(--color-text-muted)] font-mono uppercase">#{complaint.id}</p>
                     </div>
-                    <StatusBadge status={complaint.status as any} />
+                    <StatusBadge status={complaint.status} />
                   </div>
                   
                   <p className="text-sm text-[var(--color-text-muted)] line-clamp-2 leading-relaxed">{complaint.summary}</p>
                   
                   <div className="flex flex-wrap gap-2 mt-1">
                     <span className="px-2.5 py-1 rounded-md bg-gray-50 border border-gray-100 text-xs font-medium text-gray-700">{complaint.category}</span>
-                    <PriorityBadge priority={complaint.priority as any} />
+                    <PriorityBadge priority={complaint.priority} />
                   </div>
                   
                   <div className="flex justify-between items-center mt-3 pt-4 border-t border-gray-50">
@@ -342,7 +356,7 @@ export default function ComplaintsList() {
                               {STATUS_OPTIONS.map(opt => (
                                 <button
                                   key={opt.value}
-                                  onClick={() => handleStatusChange(complaint.id, opt.value)}
+                                  onClick={() => handleStatusChange(complaint.id, opt.value as StatusLevel)}
                                   className={`w-full flex items-center gap-2.5 px-4 py-3 text-xs font-semibold transition-colors border-b border-gray-50 last:border-0 ${opt.color}`}
                                 >
                                   {opt.icon}

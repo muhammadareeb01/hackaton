@@ -39,9 +39,15 @@ function CategoryCardSkeleton() {
   );
 }
 
+interface Category {
+  id: number;
+  name: string;
+  created_at: string;
+}
+
 export default function AdminCategories() {
   const router = useRouter();
-  const [categories, setCategories] = useState<any[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [deletingId, setDeletingId] = useState<number | null>(null);
@@ -80,8 +86,8 @@ export default function AdminCategories() {
       setCategories(prev => [...prev, data]);
       setNewName("");
       toast.success(`Category "${data.name}" created!`);
-    } catch (error: any) {
-      toast.error(error.message || "Failed to create category");
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Failed to create category");
     } finally {
       setIsSubmitting(false);
     }
@@ -94,8 +100,8 @@ export default function AdminCategories() {
       await apiClient(`/categories/${id}`, { method: "DELETE" });
       setCategories(prev => prev.filter(c => c.id !== id));
       toast.success(`"${name}" deleted`);
-    } catch (error: any) {
-      toast.error(error.message || "Failed to delete category");
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Failed to delete category");
     } finally {
       setDeletingId(null);
     }

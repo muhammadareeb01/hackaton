@@ -38,7 +38,7 @@ export function Sidebar() {
             <AlertTriangle className="w-5 h-5 text-white" />
           </div>
           <div>
-            <h1 className="text-lg font-bold tracking-tight text-gray-900 leading-tight">CitySync</h1>
+            <h1 className="text-lg font-bold tracking-tight text-gray-900 leading-tight">SmartCity</h1>
             <p className="text-xs text-[var(--color-text-muted)] font-medium">Admin Portal</p>
           </div>
         </div>

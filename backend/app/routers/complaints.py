@@ -44,6 +44,13 @@ def get_current_user_id(request: Request):
 @router.post("/", response_model=ComplaintResponse)
 @limiter.limit("5/minute")
 def submit_complaint(complaint_in: ComplaintCreate, request: Request, db: Session = Depends(get_db)):
+    """
+    Registers a new civic complaint from a citizen.
+    
+    This endpoint intercepts the user's text description and runs it through our Machine Learning 
+    models to automatically categorize the issue, assign a priority, and estimate resolution days 
+    before saving it to the database. It also triggers a confirmation email notification.
+    """
     user_id = get_optional_user_id(request)
     
     # 1. Run AI Analysis
@@ -102,6 +109,10 @@ def submit_complaint(complaint_in: ComplaintCreate, request: Request, db: Sessio
 
 @router.get("/me", response_model=List[ComplaintResponse])
 def get_my_complaints(request: Request, db: Session = Depends(get_db)):
+    """
+    Fetches all complaints submitted by the currently authenticated citizen.
+    Requires a valid JWT/Firebase token in the Authorization header.
+    """
     user_id = get_current_user_id(request)
     complaints = db.query(Complaint).filter(Complaint.user_id == user_id).order_by(Complaint.date_submitted.desc()).all()
     return [
@@ -120,6 +131,10 @@ def get_my_complaints(request: Request, db: Session = Depends(get_db)):
 
 @router.get("/", response_model=List[ComplaintResponse])
 def get_complaints(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    """
+    Fetches a paginated list of all civic complaints.
+    This is primarily used by the admin dashboard to populate the data tables and map views.
+    """
     complaints = db.query(Complaint).order_by(Complaint.date_submitted.desc()).offset(skip).limit(limit).all()
     # Map to schema mapping
     return [
@@ -141,6 +156,10 @@ class StatusUpdate(BaseModel):
 
 @router.put("/{complaint_id}/status")
 def update_status(complaint_id: str, status_update: StatusUpdate, db: Session = Depends(get_db)):
+    """
+    Updates the status of a specific complaint (e.g., 'Pending Review' -> 'In Progress').
+    Automatically triggers an email notification to the citizen informing them of the status change.
+    """
     complaint = db.query(Complaint).filter(Complaint.complaint_id == complaint_id).first()
     if not complaint:
         raise HTTPException(status_code=404, detail="Complaint not found")

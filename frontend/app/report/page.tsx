@@ -52,7 +52,7 @@ export default function ReportPage() {
     fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api'}/categories/`)
       .then(res => res.json())
       .then(data => setCategories(data))
-      .catch(() => console.error("Failed to load categories"));
+      .catch(() => { /* error handling */ });
       
     // Check if user is logged in
     const token = Cookies.get("user_token");
@@ -121,7 +121,7 @@ export default function ReportPage() {
       setStep("success");
       toast.success("Complaint analyzed and submitted to database!");
     } catch (error: any) {
-      console.error("Submission error:", error);
+      // console.error("Submission error:", error);
       toast.error(`Error: ${error.message || "Failed to connect to AI Engine."}`);
       setStep("form");
     }

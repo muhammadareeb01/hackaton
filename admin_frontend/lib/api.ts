@@ -38,7 +38,7 @@ export const apiClient = async (endpoint: string, options: RequestInit = {}) => 
 
     return await response.json();
   } catch (error) {
-    console.error(`API Error on ${endpoint}:`, error);
+    // console.error(`API Error on ${endpoint}:`, error);
     throw error;
   }
 };

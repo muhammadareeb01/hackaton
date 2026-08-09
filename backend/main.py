@@ -14,8 +14,8 @@ Base.metadata.create_all(bind=engine)
 # Seed default admin
 db = SessionLocal()
 try:
-    if not db.query(Admin).filter(Admin.username == "admin").first():
-        default_admin = Admin(username="admin", password_hash=hash_password("admin123"))
+    if not db.query(Admin).filter(Admin.email == "admin@citysync.gov").first():
+        default_admin = Admin(email="admin@citysync.gov", password_hash=hash_password("admin1234"))
         db.add(default_admin)
         db.commit()
 

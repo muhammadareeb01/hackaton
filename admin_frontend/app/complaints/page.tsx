@@ -74,7 +74,7 @@ export default function ComplaintsList() {
         setLoading(false);
       })
       .catch(err => {
-        console.error("Error fetching complaints", err);
+        // console.error("Error fetching complaints", err);
         setLoading(false);
       });
   }, []);
@@ -189,9 +189,9 @@ export default function ComplaintsList() {
         </div>
 
         {/* Table */}
-        <Card className="overflow-hidden">
+        <Card className="overflow-visible">
           {/* Desktop Table */}
-          <div className="hidden md:block overflow-x-auto">
+          <div className="hidden md:block overflow-visible">
             <table className="w-full text-left text-sm text-[var(--color-text-primary)]">
               <thead className="bg-gray-50 text-[var(--color-text-muted)] font-semibold border-b border-[var(--color-border)]">
                 <tr>

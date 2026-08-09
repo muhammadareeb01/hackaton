@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from "recharts";
 import { FileText, CheckCircle2, Clock, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 
@@ -66,7 +66,7 @@ export default function AdminDashboard() {
         setIsLoaded(true);
       })
       .catch(err => {
-        console.error(err);
+        // console.error(err);
         setIsLoaded(true);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -91,10 +91,10 @@ export default function AdminDashboard() {
 
         {/* Stat Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <StatCard title="Total Complaints" value={stats.total} icon={<FileText className="text-[var(--color-primary)] w-6 h-6" />} trend="Live" />
-          <StatCard title="Open Issues" value={stats.open_issues} icon={<AlertTriangle className="text-[var(--color-priority-high)] w-6 h-6" />} trend="Pending" />
-          <StatCard title="Resolved" value={stats.resolved} icon={<CheckCircle2 className="text-[var(--color-priority-low)] w-6 h-6" />} trend="Completed" />
-          <StatCard title="Avg Resolution Time" value={stats.avg_resolution_time} icon={<Clock className="text-[var(--color-accent)] w-6 h-6" />} trend="Estimated" />
+          <StatCard title="Total Complaints" value={stats.total} icon={<FileText className="text-white w-6 h-6" />} trend="Live" theme="blue" />
+          <StatCard title="Open Issues" value={stats.open_issues} icon={<AlertTriangle className="text-white w-6 h-6" />} trend="Pending" theme="orange" />
+          <StatCard title="Resolved" value={stats.resolved} icon={<CheckCircle2 className="text-white w-6 h-6" />} trend="green" theme="green" />
+          <StatCard title="Avg Resolution Time" value={stats.avg_resolution_time} icon={<Clock className="text-white w-6 h-6" />} trend="Estimated" theme="purple" />
         </div>
 
         {/* Charts Row */}
@@ -108,12 +108,25 @@ export default function AdminDashboard() {
               <CardContent>
                 <div className="h-[300px] w-full">
                   <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={stats.category_data} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
-                      <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                      <XAxis dataKey="name" axisLine={false} tickLine={false} />
-                      <YAxis axisLine={false} tickLine={false} />
-                      <Tooltip cursor={{ fill: '#f1f5f9' }} contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
-                      <Bar dataKey="count" fill="var(--color-accent)" radius={[4, 4, 0, 0]} animationDuration={1500} />
+                    <BarChart data={stats.category_data} margin={{ top: 20, right: 30, left: -20, bottom: 5 }}>
+                      <defs>
+                        <linearGradient id="colorCount" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#0EA5E9" stopOpacity={1}/>
+                          <stop offset="95%" stopColor="#0EA5E9" stopOpacity={0.3}/>
+                        </linearGradient>
+                        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                          <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="#0EA5E9" floodOpacity="0.2" />
+                        </filter>
+                      </defs>
+                      <CartesianGrid strokeDasharray="4 4" vertical={false} stroke="#f1f5f9" />
+                      <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 12, fontWeight: 500 }} dy={10} />
+                      <YAxis axisLine={false} tickLine={false} tick={{ fill: '#94a3b8', fontSize: 12 }} />
+                      <Tooltip 
+                        cursor={{ fill: 'transparent' }} 
+                        contentStyle={{ borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)', padding: '12px' }} 
+                        itemStyle={{ color: '#0f172a', fontWeight: 600 }}
+                      />
+                      <Bar dataKey="count" fill="url(#colorCount)" radius={[6, 6, 0, 0]} animationDuration={1500} filter="url(#shadow)" />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
@@ -135,21 +148,37 @@ export default function AdminDashboard() {
                 <div className="h-[300px] w-full flex items-center justify-center">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
+                      <defs>
+                        <filter id="pieShadow" x="-20%" y="-20%" width="140%" height="140%">
+                          <feDropShadow dx="0" dy="6" stdDeviation="6" floodColor="#000" floodOpacity="0.08" />
+                        </filter>
+                      </defs>
                       <Pie
                         data={stats.priority_data}
                         cx="50%"
                         cy="50%"
-                        innerRadius={80}
-                        outerRadius={110}
-                        paddingAngle={5}
+                        innerRadius={75}
+                        outerRadius={120}
+                        cornerRadius={8}
+                        paddingAngle={6}
                         dataKey="value"
                         animationDuration={1500}
+                        stroke="none"
                       >
                         {stats.priority_data.map((entry: PriorityData, index: number) => (
-                          <Cell key={`cell-${index}`} fill={entry.color} />
+                          <Cell key={`cell-${index}`} fill={entry.color} filter="url(#pieShadow)" className="hover:opacity-80 transition-opacity duration-300 outline-none" />
                         ))}
                       </Pie>
-                      <Tooltip contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} />
+                      <Tooltip 
+                        contentStyle={{ borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 10px 25px -5px rgb(0 0 0 / 0.1)', padding: '12px' }} 
+                        itemStyle={{ fontWeight: 600 }}
+                      />
+                      <Legend 
+                        verticalAlign="bottom" 
+                        height={36} 
+                        iconType="circle" 
+                        wrapperStyle={{ fontSize: '12px', fontWeight: 500, color: '#475569' }} 
+                      />
                     </PieChart>
                   </ResponsiveContainer>
                 </div>
@@ -171,25 +200,34 @@ interface StatCardProps {
   value: string | number;
   icon: React.ReactNode;
   trend: string;
+  theme?: 'blue' | 'orange' | 'green' | 'purple';
 }
 
-function StatCard({ title, value, icon, trend }: StatCardProps) {
+function StatCard({ title, value, icon, trend, theme = 'blue' }: StatCardProps) {
+  const themes = {
+    blue: "from-blue-500 to-indigo-600 shadow-blue-500/20",
+    orange: "from-orange-400 to-red-500 shadow-orange-500/20",
+    green: "from-emerald-400 to-teal-500 shadow-emerald-500/20",
+    purple: "from-purple-500 to-fuchsia-600 shadow-purple-500/20"
+  };
+  const bgClass = themes[theme];
+
   return (
     <motion.div whileHover={{ y: -5, scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }}>
-      <div className="relative overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all">
+      <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${bgClass} shadow-lg hover:shadow-xl transition-all text-white border border-white/10`}>
         {/* Subtle background gradient blob */}
-        <div className="absolute -right-6 -top-6 w-24 h-24 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-full blur-2xl opacity-70"></div>
+        <div className="absolute -right-6 -top-6 w-32 h-32 bg-white rounded-full blur-3xl opacity-10"></div>
         
         <CardContent className="p-6 relative z-10">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">{title}</h3>
-            <div className="p-2.5 bg-gray-50/80 backdrop-blur-sm rounded-xl border border-gray-100/50 shadow-sm">{icon}</div>
+            <h3 className="text-sm font-semibold text-white/80 uppercase tracking-wider">{title}</h3>
+            <div className="p-2.5 bg-white/20 backdrop-blur-sm rounded-xl border border-white/20 shadow-sm">{icon}</div>
           </div>
           <div className="flex items-baseline gap-2 mb-1">
-            <div className="text-4xl font-black text-gray-800 tracking-tight">{value}</div>
+            <div className="text-4xl font-black text-white tracking-tight">{value}</div>
           </div>
-          <div className="inline-flex items-center gap-1 text-xs font-bold text-[var(--color-primary)] bg-blue-50 px-2 py-0.5 rounded-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+          <div className="inline-flex items-center gap-1 text-xs font-bold text-white bg-black/10 px-2 py-0.5 rounded-md backdrop-blur-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
             {trend}
           </div>
         </CardContent>

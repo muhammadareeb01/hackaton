@@ -52,7 +52,7 @@ export function Chatbot() {
         throw new Error(data.detail || "Failed to fetch response");
       }
     } catch (error) {
-      console.error("Chat error:", error);
+      // console.error("Chat error:", error);
       setMessages([
         ...newMessages,
         { role: "model", content: "Sorry, I couldn't connect to the server. Please try again." },

@@ -7,8 +7,8 @@ import { Sidebar } from "@/components/admin/Sidebar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Admin Portal - CitySync",
-  description: "CitySync Admin Dashboard",
+  title: "Admin Portal - SmartCity",
+  description: "SmartCity Admin Dashboard",
 };
 
 export default function RootLayout({

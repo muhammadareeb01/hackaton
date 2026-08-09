@@ -142,17 +142,19 @@ export default function MyComplaintsPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="text-center py-24 dark-card rounded-3xl"
+            className="text-center py-24 bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl"
           >
-            <div className="w-16 h-16 rounded-2xl bg-[rgba(0,229,255,0.08)] border border-[rgba(0,229,255,0.15)] flex items-center justify-center mx-auto mb-5">
-              <ClipboardList className="w-8 h-8 text-[#00E5FF] opacity-60" />
+            <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center mx-auto mb-5">
+              <ClipboardList className="w-8 h-8 text-[#0EA5E9]" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">No complaints yet</h3>
-            <p className="text-[var(--color-text-muted)] mb-8 max-w-md mx-auto text-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-2">No complaints yet</h3>
+            <p className="text-gray-500 mb-8 max-w-md mx-auto text-sm">
               You haven't reported any issues. Help keep our city running smoothly by reporting problems you encounter.
             </p>
             <Link href="/report">
-              <button className="btn-neon text-sm">Create your first report</button>
+              <button className="bg-[#0EA5E9] hover:bg-[#0284c7] text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors shadow-sm">
+                Create your first report
+              </button>
             </Link>
           </motion.div>
         ) : (
@@ -168,8 +170,10 @@ export default function MyComplaintsPage() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ delay: i * 0.05 }}
-                    className="bg-white border border-gray-200 rounded-xl p-6 flex flex-col relative overflow-hidden group h-[260px] hover:border-[#0EA5E9] hover:shadow-md transition-all duration-300"
+                    className="bg-white/70 backdrop-blur-md border border-white/60 rounded-2xl p-6 flex flex-col relative overflow-hidden group h-[280px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(14,165,233,0.15)] hover:-translate-y-1 hover:border-[#0EA5E9]/50 transition-all duration-300"
                   >
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent pointer-events-none z-0"></div>
+                    <div className="relative z-10 flex flex-col h-full">
                     {/* Header row */}
                     <div className="flex items-start justify-between mb-4">
                       <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">#{c.id.substring(0, 8)}</span>
@@ -189,16 +193,17 @@ export default function MyComplaintsPage() {
                     <p className="text-sm text-gray-500 line-clamp-3 flex-1 leading-relaxed">{c.summary}</p>
 
                     {/* Footer */}
-                    <div className="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
+                    <div className="mt-auto pt-4 flex items-center justify-between border-t border-gray-200/60">
                       <div>
-                        <span className="text-[10px] text-gray-400 block uppercase tracking-wider mb-0.5">Reported</span>
-                        <span className="text-sm text-gray-900 font-medium">{new Date(c.date_submitted).toLocaleDateString()}</span>
+                        <span className="text-[10px] text-gray-400 block uppercase tracking-wider mb-0.5 font-semibold">Reported</span>
+                        <span className="text-sm text-gray-900 font-bold">{new Date(c.date_submitted).toLocaleDateString()}</span>
                       </div>
                       {/* AI Priority Badge */}
-                      <span className={`text-[11px] font-bold px-2.5 py-1 rounded-md flex items-center gap-1.5 ${pCfg.badge}`}>
+                      <span className={`text-[11px] font-bold px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow-sm ${pCfg.badge}`}>
                         {pCfg.icon}
                         {pCfg.label}
                       </span>
+                    </div>
                     </div>
                   </motion.div>
                 );

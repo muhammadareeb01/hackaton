@@ -103,20 +103,20 @@ export default function LandingPage() {
                 </motion.div>
                 
                 {/* Integrated Horizontal Stats */}
-                <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-x-8 gap-y-4 pt-8 border-t border-gray-100">
-                  <div className="flex flex-col">
-                    <div className="text-2xl font-extrabold text-gray-900 tracking-tight">2.4K+</div>
-                    <div className="text-xs font-medium text-gray-500 uppercase tracking-wider">Issues Resolved</div>
+                <motion.div variants={fadeUp} className="flex items-center justify-between sm:justify-start gap-x-2 sm:gap-x-8 pt-8 border-t border-gray-100 w-full">
+                  <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                    <div className="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">2.4K+</div>
+                    <div className="text-[10px] sm:text-xs font-medium text-gray-500 uppercase tracking-wider max-w-[70px] sm:max-w-none leading-tight">Issues Resolved</div>
                   </div>
-                  <div className="w-px h-8 bg-gray-200 hidden sm:block" />
-                  <div className="flex flex-col">
-                    <div className="text-2xl font-bold text-gray-900">87%</div>
-                    <div className="text-xs font-medium text-gray-500 uppercase tracking-wider">AI Accuracy</div>
+                  <div className="w-px h-8 bg-gray-200" />
+                  <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                    <div className="text-xl sm:text-2xl font-bold text-gray-900">87%</div>
+                    <div className="text-[10px] sm:text-xs font-medium text-gray-500 uppercase tracking-wider max-w-[70px] sm:max-w-none leading-tight">AI Accuracy</div>
                   </div>
-                  <div className="w-px h-8 bg-gray-200 hidden sm:block" />
-                  <div className="flex flex-col">
-                    <div className="text-2xl font-bold text-gray-900">&lt; 3hrs</div>
-                    <div className="text-xs font-medium text-gray-500 uppercase tracking-wider">Avg Response</div>
+                  <div className="w-px h-8 bg-gray-200" />
+                  <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                    <div className="text-xl sm:text-2xl font-bold text-gray-900">&lt; 3hrs</div>
+                    <div className="text-[10px] sm:text-xs font-medium text-gray-500 uppercase tracking-wider max-w-[70px] sm:max-w-none leading-tight">Avg Response</div>
                   </div>
                 </motion.div>
               </div>

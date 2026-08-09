@@ -26,6 +26,11 @@ def verify_email(req: EmailVerifyRequest):
 
 @router.post("/sync")
 def sync_firebase_user(request: Request, db: Session = Depends(get_db)):
+    """
+    Synchronizes a new Firebase user into our local database.
+    This is called right after a citizen registers or logs in via Firebase on the frontend,
+    ensuring they have a corresponding record in the database for complaint tracking.
+    """
     auth_header = request.headers.get("Authorization")
     if not auth_header:
         return {"status": "error", "message": "No token"}
@@ -60,7 +65,12 @@ def sync_firebase_user(request: Request, db: Session = Depends(get_db)):
 
 @router.post("/login", response_model=Token)
 def login(login_data: LoginRequest, db: Session = Depends(get_db)):
-    admin = db.query(Admin).filter(Admin.username == login_data.username).first()
+    """
+    Authenticates a municipal administrator.
+    Verifies the email and hashed password against the database, and if successful, 
+    returns a JWT Bearer token for secure admin dashboard access.
+    """
+    admin = db.query(Admin).filter(Admin.email == login_data.email).first()
     
     if not admin or not verify_password(login_data.password, admin.password_hash):
         raise HTTPException(
@@ -71,7 +81,7 @@ def login(login_data: LoginRequest, db: Session = Depends(get_db)):
         
     access_token_expires = timedelta(minutes=30)
     access_token = create_access_token(
-        data={"sub": admin.username}, expires_delta=access_token_expires
+        data={"sub": admin.email}, expires_delta=access_token_expires
     )
     
     return {"access_token": access_token, "token_type": "bearer"}

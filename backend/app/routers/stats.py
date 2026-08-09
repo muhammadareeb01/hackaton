@@ -37,14 +37,18 @@ def get_dashboard_stats(admin_user: str = Depends(get_current_admin), db: Sessio
     
     # Avg Resolution (Estimated)
     from app.ai.predict import get_estimated_resolution_days
-    complaints = db.query(Complaint).all()
+    
+    # Optimize by grouping rather than pulling all rows (500+ records)
+    grouped_complaints = db.query(Complaint.category, Complaint.priority, func.count(Complaint.id)).group_by(Complaint.category, Complaint.priority).all()
+    
     total_est_days = 0
     valid_complaints = 0
-    for c in complaints:
-        est = get_estimated_resolution_days(c.category, c.priority)
+    
+    for category, priority, count in grouped_complaints:
+        est = get_estimated_resolution_days(category, priority)
         if est:
-            total_est_days += est
-            valid_complaints += 1
+            total_est_days += (est * count)
+            valid_complaints += count
             
     avg_res = round(total_est_days / valid_complaints, 1) if valid_complaints > 0 else 4.2
     

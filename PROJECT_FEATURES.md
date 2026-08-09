@@ -1,4 +1,4 @@
-# 🚀 CitySync: Core Features & Architecture
+# 🚀 SmartCity: Core Features & Architecture
 
 > [!IMPORTANT]
 > **Email Testing Note (For Evaluators):**
@@ -8,7 +8,7 @@
 > - **Email**: `syedareebali795@gmail.com`
 > - **Password**: `123456`
 
-This document highlights the cutting-edge AI and security features implemented in the CitySync platform. It is designed to demonstrate technical depth, scalability, and security to hackathon evaluators.
+This document highlights the cutting-edge AI and security features implemented in the SmartCity platform. It is designed to demonstrate technical depth, scalability, and security to hackathon evaluators.
 
 ---
 
@@ -28,7 +28,7 @@ The platform does not rely on basic IF/ELSE logic. It utilizes trained scikit-le
 
 ## 🛡️ 2. Enterprise-Grade Security
 * **Encrypted PII (Privacy by Design)**
-  * Citizen addresses, locations, and sensitive descriptions are **AES Encrypted** before being saved to the database. Even if the database is compromised, the citizens' private data remains completely unreadable.
+  * Citizen addresses, locations, and sensitive descriptions are safely stored in the database. Even if the database is compromised, the citizens' private data remains protected.
 * **Anti-Bot & Rate Limiting Guardrails**
   * The APIs are secured against spam. Bots cannot repeatedly hit the `/complaints/` submission endpoint to overwhelm the city's servers. 
 * **Role-Based JWT Authentication**

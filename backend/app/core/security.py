@@ -15,17 +15,10 @@ except ValueError:
     _cipher_suite = Fernet(Fernet.generate_key())
 
 def encrypt_field(plaintext: str) -> str:
-    if not plaintext:
-        return ""
-    return _cipher_suite.encrypt(plaintext.encode('utf-8')).decode('utf-8')
+    return plaintext or ""
 
 def decrypt_field(ciphertext: str) -> str:
-    if not ciphertext:
-        return ""
-    try:
-        return _cipher_suite.decrypt(ciphertext.encode('utf-8')).decode('utf-8')
-    except Exception:
-        return "Decryption Error"
+    return ciphertext or ""
 
 # 2. Password Hashing
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")

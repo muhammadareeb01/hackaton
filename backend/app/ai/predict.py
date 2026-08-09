@@ -167,8 +167,8 @@ Rules:
         except Exception as e:
             print(f"Error processing image base64: {e}")
 
-    # Try gemini-2.0-flash first, fallback to gemini-2.5-flash on quota error
-    for model_name in ["gemini-2.0-flash", "gemini-2.5-flash"]:
+    # Try gemini-2.5-flash first
+    for model_name in ["gemini-2.5-flash", "gemini-2.0-flash"]:
         try:
             response = gemini_client.models.generate_content(
                 model=model_name,
@@ -277,7 +277,7 @@ Be professional, precise, and actionable."""
 
     try:
         response = gemini_client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-2.5-flash",
             contents=prompt
         )
         return response.text
@@ -306,7 +306,7 @@ Respond ONLY with a valid JSON object in this exact format, with no other text o
 """
     try:
         response = gemini_client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-2.5-flash",
             contents=prompt
         )
         raw = response.text.strip()

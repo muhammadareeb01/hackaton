@@ -73,9 +73,9 @@ def chat_with_bot(request: Request, chat_req: ChatRequest):
             
         latest_message = chat_req.messages[-1].content
         
-        # Try gemini-2.0-flash first, fallback to gemini-2.5-flash on quota error
+        # Try gemini-2.5-flash first
         response_text = None
-        for model_name in ["gemini-2.0-flash", "gemini-2.5-flash"]:
+        for model_name in ["gemini-2.5-flash", "gemini-2.0-flash"]:
             try:
                 response = gemini_client.models.generate_content(
                     model=model_name,
@@ -88,11 +88,8 @@ def chat_with_bot(request: Request, chat_req: ChatRequest):
                 response_text = response.text
                 break
             except Exception as e:
-                error_msg = str(e).lower()
-                if "429" in error_msg or "quota" in error_msg or "exhausted" in error_msg:
-                    print(f"Chatbot: {model_name} quota exhausted. Trying next...")
-                    continue
-                raise e
+                print(f"Chatbot: {model_name} failed. Error: {e}. Trying next...")
+                continue
                 
         if response_text:
             return {"response": response_text}

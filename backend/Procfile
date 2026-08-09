@@ -1,1 +1,1 @@
-web: python load_dataset.py && uvicorn main:app --host 0.0.0.0 --port $PORT
+web: python load_dataset.py && python scratch/generate_pdf.py && uvicorn main:app --host 0.0.0.0 --port $PORT

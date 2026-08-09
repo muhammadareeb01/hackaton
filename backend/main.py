@@ -1,33 +1,77 @@
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
 import os
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from app.core.config import settings
+from app.models.database import engine, Base, SessionLocal
+from app.models.admin import Admin
+from app.models.category import Category
+from app.core.security import hash_password
+from app.routers import complaints, auth, categories, stats, chat
 
-app = FastAPI()
+# Create database tables
+Base.metadata.create_all(bind=engine)
+
+# Seed default admin
+db = SessionLocal()
+try:
+    if not db.query(Admin).filter(Admin.username == "admin").first():
+        default_admin = Admin(username="admin", password_hash=hash_password("admin123"))
+        db.add(default_admin)
+        db.commit()
+
+    # Seed default categories
+    DEFAULT_CATEGORIES = [
+        "Water", "Electricity", "Road", "Sanitation",
+        "Environment", "Public Safety", "Noise", "Traffic",
+        "Parks", "Housing", "Healthcare", "Education",
+        "Transport", "Other"
+    ]
+    for cat_name in DEFAULT_CATEGORIES:
+        if not db.query(Category).filter(Category.name == cat_name).first():
+            db.add(Category(name=cat_name))
+    db.commit()
+finally:
+    db.close()
+
+app = FastAPI(
+    title=settings.PROJECT_NAME,
+    version="1.0.0"
+)
+
+# Rate Limiting configuration
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
+
+limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.add_middleware(SlowAPIMiddleware)
 
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=settings.BACKEND_CORS_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-class LoginRequest(BaseModel):
-    username: str
-    password: str
+# Include routers
+app.include_router(auth.router)
+app.include_router(complaints.router)
+app.include_router(categories.router)
+app.include_router(stats.router)
+app.include_router(chat.router)
 
 @app.get("/")
-def read_root():
-    return {"status": "success", "message": "CleanWater Access Tracker Backend is live!"}
+async def root():
+    return {"message": "Welcome to AI Smart Civic Services API"}
 
-@app.post("/api/login")
-def login(data: LoginRequest):
-    if data.username == "admin" and data.password == "admin123":
-        return {"status": "success", "message": "Login successful!", "token": "fake-jwt-token"}
-    else:
-        raise HTTPException(status_code=401, detail="Invalid username or password")
+@app.get("/api/health")
+async def health_check():
+    return {"status": "ok", "version": "1.0.0"}
 
 if __name__ == "__main__":
     import uvicorn

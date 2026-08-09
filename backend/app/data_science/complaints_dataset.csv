@@ -1,0 +1,201 @@
+complaint_id,description,category,priority,date_submitted,resolution_days,status
+C0001,Road surface completely destroyed near Pine St,Road,Medium,2026-05-18 23:31:16,,In Progress
+C0002,Street lights not working on Main St,Electricity,High,2026-04-04 23:31:16,30,Resolved
+C0003,Road surface completely destroyed near Oak Ave,Road,Medium,2026-07-02 23:31:16,13,Resolved
+C0004,Blocked storm drain causing flooding at Park Ave,Drainage,Low,2026-07-28 23:31:16,20,Resolved
+C0005,Street lights not working on Oak Ave,Electricity,High,2026-07-21 23:31:16,,Open
+C0006,Loud noise complaint from construction on Cedar Ln,Other,High,2026-04-13 23:31:16,,In Progress
+C0007,Graffiti on public wall at Washington Blvd,Other,Medium,2026-03-28 23:31:16,,In Progress
+C0008,Broken fence near the park on Park Ave,Safety,Medium,2026-06-15 23:31:16,,Open
+C0009,Terrible smell from open drain near Pine St,Drainage,Medium,2026-03-13 23:31:16,19,Resolved
+C0010,Stray dogs aggressive near Maple Dr,Other,Medium,2026-05-24 23:31:16,,In Progress
+C0011,Road surface completely destroyed near Elm St,Road,Medium,2026-04-22 23:31:16,20,Resolved
+C0012,Traffic light broken at Maple Dr intersection,Road,Low,2026-07-23 23:31:16,26,Resolved
+C0013,Huge pothole on Pine St causing traffic,Road,Medium,2026-02-14 23:31:16,3,Resolved
+C0014,Huge pothole on Washington Blvd causing traffic,Road,High,2026-07-28 23:31:16,25,Resolved
+C0015,"Pipe burst near Elm St, water flooding the sidewalk",Water,High,2026-02-11 23:31:16,27,Resolved
+C0016,Traffic light broken at Park Ave intersection,Road,Low,2026-02-16 23:31:16,30,Resolved
+C0017,Street lights not working on Park Ave,Electricity,Medium,2026-06-17 23:31:16,,Open
+C0018,Stray dogs aggressive near Washington Blvd,Other,Medium,2026-04-10 23:31:16,,Assigned
+C0019,Loud noise complaint from construction on Park Ave,Other,Medium,2026-04-28 23:31:16,29,Resolved
+C0020,Broken fence near the park on Oak Ave,Safety,Medium,2026-02-15 23:31:16,,Open
+C0021,Huge pothole on Park Ave causing traffic,Road,High,2026-03-27 23:31:16,,Assigned
+C0022,Dirty brown water coming from taps at Washington Blvd,Water,High,2026-07-16 23:31:16,17,Resolved
+C0023,No water supply in the building on Main St,Water,High,2026-05-21 23:31:16,,Open
+C0024,"Pipe burst near Elm St, water flooding the sidewalk",Water,High,2026-05-31 23:31:16,,Assigned
+C0025,Terrible smell from open drain near Park Ave,Drainage,Low,2026-03-09 23:31:16,,In Progress
+C0026,Huge pothole on Main St causing traffic,Road,Low,2026-03-11 23:31:16,27,Resolved
+C0027,Sewage backing up into street on Maple Dr,Drainage,Low,2026-03-21 23:31:16,14,Resolved
+C0028,Foul smell from uncollected trash at Washington Blvd,Waste,Low,2026-06-08 23:31:16,15,Resolved
+C0029,Complete blackout in the neighborhood around Washington Blvd,Electricity,Critical,2026-04-01 23:31:16,5,Resolved
+C0030,Complete blackout in the neighborhood around Maple Dr,Electricity,High,2026-04-03 23:31:16,14,Resolved
+C0031,Illegal dumping of construction waste near Park Ave,Waste,Low,2026-04-17 23:31:16,,In Progress
+C0032,No water supply in the building on Cedar Ln,Water,Critical,2026-05-31 23:31:16,,In Progress
+C0033,Traffic light broken at Oak Ave intersection,Road,Low,2026-03-29 23:31:16,,In Progress
+C0034,Street lights not working on Elm St,Electricity,Critical,2026-07-03 23:31:16,3,Resolved
+C0035,Complete blackout in the neighborhood around Washington Blvd,Electricity,High,2026-07-17 23:31:16,,In Progress
+C0036,Huge pothole on Oak Ave causing traffic,Road,Low,2026-04-07 23:31:16,,In Progress
+C0037,No pedestrian crossing visible at Elm St,Safety,High,2026-03-23 23:31:16,,In Progress
+C0038,Garbage bins overflowing for days on Washington Blvd,Waste,Medium,2026-07-27 23:31:16,4,Resolved
+C0039,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,Medium,2026-06-26 23:31:16,,Assigned
+C0040,Street lights not working on Washington Blvd,Electricity,High,2026-04-04 23:31:16,18,Resolved
+C0041,No pedestrian crossing visible at Oak Ave,Safety,Low,2026-08-04 23:31:16,,In Progress
+C0042,Sparking power lines near Park Ave,Electricity,High,2026-02-10 23:31:16,16,Resolved
+C0043,Sewage backing up into street on Elm St,Drainage,Low,2026-07-21 23:31:16,14,Resolved
+C0044,Loud noise complaint from construction on Pine St,Other,Low,2026-02-09 23:31:16,,In Progress
+C0045,Blocked storm drain causing flooding at Park Ave,Drainage,High,2026-05-17 23:31:16,16,Resolved
+C0046,Road surface completely destroyed near Oak Ave,Road,Low,2026-03-02 23:31:16,,In Progress
+C0047,Foul smell from uncollected trash at Oak Ave,Waste,Low,2026-03-13 23:31:16,12,Resolved
+C0048,Complete blackout in the neighborhood around Pine St,Electricity,Critical,2026-05-01 23:31:16,,Open
+C0049,No water supply in the building on Park Ave,Water,High,2026-04-09 23:31:16,3,Resolved
+C0050,No water supply in the building on Main St,Water,High,2026-07-19 23:31:16,,Assigned
+C0051,Huge pothole on Park Ave causing traffic,Road,Low,2026-05-19 23:31:16,7,Resolved
+C0052,Broken fence near the park on Main St,Safety,Low,2026-03-03 23:31:16,,In Progress
+C0053,Road surface completely destroyed near Park Ave,Road,Medium,2026-07-21 23:31:16,29,Resolved
+C0054,Dirty brown water coming from taps at Main St,Water,High,2026-02-11 23:31:16,,Assigned
+C0055,Illegal dumping of construction waste near Elm St,Waste,High,2026-07-19 23:31:16,,Open
+C0056,Road surface completely destroyed near Maple Dr,Road,Medium,2026-03-04 23:31:16,,In Progress
+C0057,"Pipe burst near Cedar Ln, water flooding the sidewalk",Water,Medium,2026-04-21 23:31:16,17,Resolved
+C0058,No pedestrian crossing visible at Park Ave,Safety,Medium,2026-02-20 23:31:16,,In Progress
+C0059,Sewage backing up into street on Main St,Drainage,Medium,2026-03-13 23:31:16,,Open
+C0060,Traffic light broken at Park Ave intersection,Road,Medium,2026-04-12 23:31:16,,In Progress
+C0061,Dirty brown water coming from taps at Oak Ave,Water,Low,2026-07-23 23:31:16,11,Resolved
+C0062,Garbage bins overflowing for days on Cedar Ln,Waste,Low,2026-07-28 23:31:16,7,Resolved
+C0063,Street lights not working on Main St,Electricity,High,2026-04-28 23:31:16,,Open
+C0064,Huge pothole on Oak Ave causing traffic,Road,Low,2026-02-13 23:31:16,,In Progress
+C0065,Broken fence near the park on Maple Dr,Safety,Critical,2026-04-23 23:31:16,1,Resolved
+C0066,Dangerous leaning tree over walkway on Main St,Safety,High,2026-07-06 23:31:16,21,Resolved
+C0067,No water supply in the building on Park Ave,Water,Medium,2026-05-05 23:31:16,,In Progress
+C0068,Foul smell from uncollected trash at Park Ave,Waste,Medium,2026-08-02 23:31:16,,In Progress
+C0069,Foul smell from uncollected trash at Elm St,Waste,Low,2026-03-30 23:31:16,,Open
+C0070,Terrible smell from open drain near Cedar Ln,Drainage,Low,2026-07-15 23:31:16,,In Progress
+C0071,No water supply in the building on Cedar Ln,Water,High,2026-06-01 23:31:16,,Open
+C0072,Garbage bins overflowing for days on Elm St,Waste,Low,2026-03-24 23:31:16,8,Resolved
+C0073,Sparking power lines near Oak Ave,Electricity,High,2026-05-13 23:31:16,,Assigned
+C0074,Foul smell from uncollected trash at Maple Dr,Waste,Low,2026-08-03 23:31:16,26,Resolved
+C0075,No water supply in the building on Pine St,Water,Medium,2026-06-07 23:31:16,11,Resolved
+C0076,Foul smell from uncollected trash at Elm St,Waste,Low,2026-04-21 23:31:16,17,Resolved
+C0077,No pedestrian crossing visible at Elm St,Safety,Low,2026-04-12 23:31:16,,Open
+C0078,Traffic light broken at Washington Blvd intersection,Road,Medium,2026-05-18 23:31:16,,Open
+C0079,Foul smell from uncollected trash at Maple Dr,Waste,Medium,2026-04-12 23:31:16,,Assigned
+C0080,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,Medium,2026-03-11 23:31:16,22,Resolved
+C0081,Huge pothole on Washington Blvd causing traffic,Road,High,2026-06-22 23:31:16,,In Progress
+C0082,Complete blackout in the neighborhood around Cedar Ln,Electricity,Critical,2026-05-31 23:31:16,,Assigned
+C0083,Dirty brown water coming from taps at Cedar Ln,Water,Critical,2026-03-12 23:31:16,5,Resolved
+C0084,Street lights not working on Maple Dr,Electricity,High,2026-03-26 23:31:16,,Assigned
+C0085,Garbage bins overflowing for days on Oak Ave,Waste,Low,2026-08-05 23:31:16,,Open
+C0086,Blocked storm drain causing flooding at Washington Blvd,Drainage,Low,2026-07-04 23:31:16,,Assigned
+C0087,Complete blackout in the neighborhood around Elm St,Electricity,High,2026-04-20 23:31:16,,Open
+C0088,Road surface completely destroyed near Oak Ave,Road,Low,2026-03-26 23:31:16,22,Resolved
+C0089,Traffic light broken at Maple Dr intersection,Road,Low,2026-07-11 23:31:16,22,Resolved
+C0090,Road surface completely destroyed near Pine St,Road,Medium,2026-07-09 23:31:16,,Assigned
+C0091,Foul smell from uncollected trash at Pine St,Waste,High,2026-05-13 23:31:16,3,Resolved
+C0092,Garbage bins overflowing for days on Maple Dr,Waste,Medium,2026-05-26 23:31:16,,In Progress
+C0093,Garbage bins overflowing for days on Cedar Ln,Waste,Low,2026-02-24 23:31:16,4,Resolved
+C0094,No pedestrian crossing visible at Washington Blvd,Safety,Medium,2026-02-14 23:31:16,16,Resolved
+C0095,Complete blackout in the neighborhood around Washington Blvd,Electricity,Critical,2026-08-01 23:31:16,2,Resolved
+C0096,Huge pothole on Washington Blvd causing traffic,Road,Medium,2026-07-06 23:31:16,13,Resolved
+C0097,Blocked storm drain causing flooding at Elm St,Drainage,Medium,2026-04-12 23:31:16,,In Progress
+C0098,Huge pothole on Cedar Ln causing traffic,Road,Low,2026-04-05 23:31:16,28,Resolved
+C0099,Traffic light broken at Cedar Ln intersection,Road,Low,2026-07-04 23:31:16,12,Resolved
+C0100,No water supply in the building on Maple Dr,Water,Critical,2026-03-25 23:31:16,,In Progress
+C0101,Garbage bins overflowing for days on Main St,Waste,High,2026-04-25 23:31:16,15,Resolved
+C0102,Foul smell from uncollected trash at Maple Dr,Waste,Medium,2026-05-06 23:31:16,,In Progress
+C0103,Garbage bins overflowing for days on Park Ave,Waste,Critical,2026-06-16 23:31:16,,Open
+C0104,"Pipe burst near Main St, water flooding the sidewalk",Water,Critical,2026-04-14 23:31:16,2,Resolved
+C0105,Complete blackout in the neighborhood around Park Ave,Electricity,Critical,2026-02-17 23:31:16,,Open
+C0106,"Pipe burst near Elm St, water flooding the sidewalk",Water,Critical,2026-06-23 23:31:16,4,Resolved
+C0107,Traffic light broken at Main St intersection,Road,Low,2026-06-13 23:31:16,5,Resolved
+C0108,Blocked storm drain causing flooding at Cedar Ln,Drainage,Medium,2026-07-04 23:31:16,,Open
+C0109,Street lights not working on Maple Dr,Electricity,High,2026-06-09 23:31:16,,Open
+C0110,Terrible smell from open drain near Cedar Ln,Drainage,Medium,2026-03-28 23:31:16,,In Progress
+C0111,Road surface completely destroyed near Park Ave,Road,Medium,2026-03-04 23:31:16,16,Resolved
+C0112,Dirty brown water coming from taps at Cedar Ln,Water,High,2026-06-16 23:31:16,,Assigned
+C0113,Foul smell from uncollected trash at Main St,Waste,Low,2026-06-21 23:31:16,20,Resolved
+C0114,Road surface completely destroyed near Pine St,Road,Low,2026-04-01 23:31:16,,In Progress
+C0115,No water supply in the building on Pine St,Water,High,2026-04-11 23:31:16,22,Resolved
+C0116,Complete blackout in the neighborhood around Washington Blvd,Electricity,Critical,2026-08-01 23:31:16,,In Progress
+C0117,Broken fence near the park on Cedar Ln,Safety,Medium,2026-03-22 23:31:16,12,Resolved
+C0118,No water supply in the building on Oak Ave,Water,Critical,2026-06-04 23:31:16,3,Resolved
+C0119,Garbage bins overflowing for days on Maple Dr,Waste,Medium,2026-05-12 23:31:16,9,Resolved
+C0120,Sewage backing up into street on Washington Blvd,Drainage,Low,2026-06-17 23:31:16,,In Progress
+C0121,Road surface completely destroyed near Park Ave,Road,Low,2026-07-13 23:31:16,13,Resolved
+C0122,Sparking power lines near Pine St,Electricity,Medium,2026-07-25 23:31:16,18,Resolved
+C0123,Garbage bins overflowing for days on Main St,Waste,Medium,2026-06-02 23:31:16,29,Resolved
+C0124,Huge pothole on Maple Dr causing traffic,Road,High,2026-07-19 23:31:16,20,Resolved
+C0125,Terrible smell from open drain near Washington Blvd,Drainage,High,2026-03-28 23:31:16,,In Progress
+C0126,Dirty brown water coming from taps at Cedar Ln,Water,Medium,2026-04-10 23:31:16,,Assigned
+C0127,Traffic light broken at Washington Blvd intersection,Road,Medium,2026-04-05 23:31:16,15,Resolved
+C0128,Garbage bins overflowing for days on Park Ave,Waste,Low,2026-04-04 23:31:16,7,Resolved
+C0129,Huge pothole on Cedar Ln causing traffic,Road,Low,2026-05-02 23:31:16,,In Progress
+C0130,Street lights not working on Washington Blvd,Electricity,Critical,2026-06-18 23:31:16,4,Resolved
+C0131,Dirty brown water coming from taps at Cedar Ln,Water,Critical,2026-07-18 23:31:16,,In Progress
+C0132,Loud noise complaint from construction on Maple Dr,Other,High,2026-03-12 23:31:16,28,Resolved
+C0133,Traffic light broken at Elm St intersection,Road,Low,2026-06-17 23:31:16,18,Resolved
+C0134,No water supply in the building on Elm St,Water,High,2026-05-19 23:31:16,9,Resolved
+C0135,Garbage bins overflowing for days on Main St,Waste,Medium,2026-03-13 23:31:16,9,Resolved
+C0136,Huge pothole on Park Ave causing traffic,Road,Low,2026-07-22 23:31:16,14,Resolved
+C0137,Illegal dumping of construction waste near Elm St,Waste,Medium,2026-06-18 23:31:16,4,Resolved
+C0138,Blocked storm drain causing flooding at Oak Ave,Drainage,Medium,2026-02-22 23:31:16,24,Resolved
+C0139,Complete blackout in the neighborhood around Park Ave,Electricity,High,2026-06-19 23:31:16,14,Resolved
+C0140,Road surface completely destroyed near Main St,Road,Medium,2026-07-30 23:31:16,,Assigned
+C0141,Complete blackout in the neighborhood around Maple Dr,Electricity,Low,2026-02-21 23:31:16,3,Resolved
+C0142,Huge pothole on Oak Ave causing traffic,Road,Medium,2026-04-17 23:31:16,4,Resolved
+C0143,Traffic light broken at Cedar Ln intersection,Road,Low,2026-04-18 23:31:16,,In Progress
+C0144,"Pipe burst near Cedar Ln, water flooding the sidewalk",Water,Low,2026-02-11 23:31:16,,Assigned
+C0145,Garbage bins overflowing for days on Pine St,Waste,Low,2026-04-05 23:31:16,,In Progress
+C0146,Huge pothole on Maple Dr causing traffic,Road,High,2026-04-25 23:31:16,25,Resolved
+C0147,Road surface completely destroyed near Cedar Ln,Road,Medium,2026-06-16 23:31:16,19,Resolved
+C0148,Sewage backing up into street on Maple Dr,Drainage,Low,2026-08-02 23:31:16,,In Progress
+C0149,Traffic light broken at Pine St intersection,Road,Medium,2026-05-07 23:31:16,15,Resolved
+C0150,Street lights not working on Main St,Electricity,Medium,2026-02-28 23:31:16,26,Resolved
+C0151,"Pipe burst near Main St, water flooding the sidewalk",Water,Critical,2026-04-10 23:31:16,1,Resolved
+C0152,Dirty brown water coming from taps at Elm St,Water,High,2026-07-24 23:31:16,3,Resolved
+C0153,Garbage bins overflowing for days on Main St,Waste,Critical,2026-07-12 23:31:16,4,Resolved
+C0154,Garbage bins overflowing for days on Cedar Ln,Waste,Low,2026-06-02 23:31:16,,In Progress
+C0155,Sewage backing up into street on Washington Blvd,Drainage,Medium,2026-02-09 23:31:16,,In Progress
+C0156,Sparking power lines near Elm St,Electricity,High,2026-04-08 23:31:16,,In Progress
+C0157,Dirty brown water coming from taps at Oak Ave,Water,High,2026-04-10 23:31:16,18,Resolved
+C0158,Foul smell from uncollected trash at Main St,Waste,Critical,2026-04-03 23:31:16,,In Progress
+C0159,No water supply in the building on Elm St,Water,High,2026-05-23 23:31:16,12,Resolved
+C0160,Illegal dumping of construction waste near Elm St,Waste,Medium,2026-07-26 23:31:16,,In Progress
+C0161,"Pipe burst near Main St, water flooding the sidewalk",Water,High,2026-04-09 23:31:16,7,Resolved
+C0162,Garbage bins overflowing for days on Elm St,Waste,Low,2026-02-13 23:31:16,,In Progress
+C0163,Sewage backing up into street on Elm St,Drainage,Low,2026-05-20 23:31:16,13,Resolved
+C0164,Terrible smell from open drain near Oak Ave,Drainage,High,2026-03-08 23:31:16,,Assigned
+C0165,Road surface completely destroyed near Park Ave,Road,High,2026-07-20 23:31:16,23,Resolved
+C0166,Terrible smell from open drain near Washington Blvd,Drainage,Medium,2026-04-27 23:31:16,5,Resolved
+C0167,Foul smell from uncollected trash at Cedar Ln,Waste,Low,2026-07-18 23:31:16,3,Resolved
+C0168,Dangerous leaning tree over walkway on Elm St,Safety,Low,2026-04-30 23:31:16,,Open
+C0169,Stray dogs aggressive near Maple Dr,Other,Medium,2026-03-19 23:31:16,,In Progress
+C0170,Dirty brown water coming from taps at Washington Blvd,Water,High,2026-07-26 23:31:16,25,Resolved
+C0171,Complete blackout in the neighborhood around Washington Blvd,Electricity,Critical,2026-07-22 23:31:16,,In Progress
+C0172,Dangerous leaning tree over walkway on Cedar Ln,Safety,High,2026-07-18 23:31:16,27,Resolved
+C0173,No water supply in the building on Cedar Ln,Water,Critical,2026-04-29 23:31:16,2,Resolved
+C0174,Road surface completely destroyed near Park Ave,Road,Low,2026-06-05 23:31:16,,In Progress
+C0175,Traffic light broken at Pine St intersection,Road,Low,2026-05-08 23:31:16,30,Resolved
+C0176,Road surface completely destroyed near Elm St,Road,Low,2026-07-05 23:31:16,8,Resolved
+C0177,Complete blackout in the neighborhood around Elm St,Electricity,Critical,2026-07-12 23:31:16,,In Progress
+C0178,Sparking power lines near Maple Dr,Electricity,Low,2026-04-02 23:31:16,9,Resolved
+C0179,Huge pothole on Maple Dr causing traffic,Road,Medium,2026-08-07 23:31:16,28,Resolved
+C0180,Road surface completely destroyed near Oak Ave,Road,Low,2026-05-16 23:31:16,,In Progress
+C0181,No water supply in the building on Maple Dr,Water,Critical,2026-06-16 23:31:16,,Assigned
+C0182,Road surface completely destroyed near Washington Blvd,Road,Medium,2026-07-10 23:31:16,23,Resolved
+C0183,Blocked storm drain causing flooding at Pine St,Drainage,Medium,2026-03-29 23:31:16,,In Progress
+C0184,No pedestrian crossing visible at Cedar Ln,Safety,Medium,2026-02-10 23:31:16,16,Resolved
+C0185,Illegal dumping of construction waste near Main St,Waste,Medium,2026-04-28 23:31:16,,In Progress
+C0186,Traffic light broken at Cedar Ln intersection,Road,High,2026-05-23 23:31:16,,Open
+C0187,Illegal dumping of construction waste near Washington Blvd,Waste,Low,2026-03-08 23:31:16,,Open
+C0188,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,High,2026-06-27 23:31:16,10,Resolved
+C0189,Road surface completely destroyed near Pine St,Road,Medium,2026-06-25 23:31:16,18,Resolved
+C0190,Illegal dumping of construction waste near Maple Dr,Waste,Medium,2026-04-30 23:31:16,5,Resolved
+C0191,Foul smell from uncollected trash at Cedar Ln,Waste,Low,2026-05-07 23:31:16,10,Resolved
+C0192,Huge pothole on Cedar Ln causing traffic,Road,Low,2026-07-03 23:31:16,,In Progress
+C0193,Dirty brown water coming from taps at Main St,Water,Critical,2026-07-17 23:31:16,,Assigned
+C0194,Street lights not working on Main St,Electricity,Medium,2026-06-12 23:31:16,30,Resolved
+C0195,Sparking power lines near Washington Blvd,Electricity,Medium,2026-05-14 23:31:16,12,Resolved
+C0196,Dirty brown water coming from taps at Elm St,Water,High,2026-06-29 23:31:16,,In Progress
+C0197,Dirty brown water coming from taps at Pine St,Water,High,2026-04-25 23:31:16,9,Resolved
+C0198,Road surface completely destroyed near Cedar Ln,Road,Medium,2026-06-10 23:31:16,20,Resolved
+C0199,Blocked storm drain causing flooding at Maple Dr,Drainage,Low,2026-06-05 23:31:16,3,Resolved
+C0200,Traffic light broken at Park Ave intersection,Road,Low,2026-05-28 23:31:16,,Assigned

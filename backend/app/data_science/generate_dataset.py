@@ -22,8 +22,9 @@ templates = {
 
 streets = ["Main St", "Oak Ave", "Pine St", "Maple Dr", "Cedar Ln", "Elm St", "Washington Blvd", "Park Ave"]
 
-def generate_dataset(num_records=200):
-    filepath = "complaints_dataset.csv"
+def generate_dataset(num_records=500):
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    filepath = os.path.join(current_dir, "complaints_dataset.csv")
     
     with open(filepath, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)

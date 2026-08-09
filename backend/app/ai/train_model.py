@@ -7,7 +7,7 @@ import joblib
 import os
 
 def train():
-    print("--- Training AI Model for CitySync ---")
+    print("--- Training AI Model for SmartCity ---")
     
     # Paths
     current_dir = os.path.dirname(os.path.abspath(__file__))

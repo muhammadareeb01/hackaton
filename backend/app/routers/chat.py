@@ -27,11 +27,11 @@ if settings.GEMINI_API_KEY:
 
 # System prompt for the chatbot
 SYSTEM_INSTRUCTION = """
-You are the "CitySync Virtual Assistant", a helpful, polite AI for a city civic complaints platform.
+You are the "SmartCity Virtual Assistant", a helpful, polite AI for a city civic complaints platform.
 Your job is to answer citizen queries regarding how to report issues, complaint categories, priority levels, and expected resolution times.
 
 PROJECT KNOWLEDGE BASE:
-- CitySync is an AI-powered platform for reporting civic issues (potholes, water leaks, etc.).
+- SmartCity is an AI-powered platform for reporting civic issues (potholes, water leaks, etc.).
 - When a user uploads a photo, our system uses Gemini Vision to detect the issue category and urgency automatically.
 - We then use a Scikit-Learn Random Forest model, trained on historical civic datasets, to predict exactly how many days it will take to fix the issue.
 - The Admin Dashboard uses JWT Auth and Recharts for live analytics.
@@ -63,7 +63,7 @@ def chat_with_bot(request: Request, chat_req: ChatRequest):
         
         # Security: Pre-filter for Prompt Injection
         if any(keyword in latest_message for keyword in INJECTION_KEYWORDS):
-            return {"response": "I am a CitySync Assistant. I cannot comply with requests that attempt to override my primary civic duties."}
+            return {"response": "I am a SmartCity Assistant. I cannot comply with requests that attempt to override my primary civic duties."}
 
         # Convert incoming messages to Gemini format
         history = []

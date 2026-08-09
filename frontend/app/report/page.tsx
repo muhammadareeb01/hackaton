@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, MapPin, Camera, Loader2, CheckCircle2, AlertTriangle, Info, X } from "lucide-react";
+import { ArrowLeft, MapPin, Camera, CheckCircle2, AlertTriangle, Info, X, Brain } from "lucide-react";
+import { Loader } from "@/components/ui/Loader";
 import Link from "next/link";
 import Cookies from "js-cookie";
 import toast from "@/lib/toast";
@@ -35,7 +36,7 @@ export default function ReportPage() {
   const [mounted, setMounted] = useState(false);
   
   
-  const { register, handleSubmit: hookFormSubmit, formState: { errors }, setValue } = useForm<FormValues>({
+  const { register, handleSubmit: hookFormSubmit, formState: { errors }, setValue, watch } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -127,41 +128,48 @@ export default function ReportPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--color-background)] relative py-12 px-6 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+    <div className="min-h-screen bg-[var(--color-background)] relative pt-28 pb-16 px-6 overflow-hidden">
+      {/* Background */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="orb-cyan absolute -top-20 -left-20 w-[350px] h-[350px] rounded-full opacity-15" />
+        <div className="orb-purple absolute -bottom-20 -right-20 w-[280px] h-[280px] rounded-full opacity-10" />
+        <div className="grid-dots absolute inset-0" />
+      </div>
       
       <div className="max-w-4xl mx-auto relative z-10">
-        <Link href="/" className="inline-flex items-center text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors mb-8 font-medium">
-          <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
-        </Link>
+        <div className="flex justify-start mb-8">
+          <Link href="/" className="inline-flex items-center gap-2 bg-blue-50 hover:bg-blue-100 text-[#08A8E8] border border-blue-200 px-4 py-2 rounded-full transition-all font-semibold shadow-sm group">
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> 
+            Back to Home
+          </Link>
+        </div>
 
         <AnimatePresence mode="wait">
           {step === "form" && (
             <motion.div key="form" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, x: -20 }}>
               <div className="mb-10 text-center">
-                <div className="inline-flex items-center space-x-2 bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 mb-6">
-                  <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
-                  <span className="text-sm font-medium text-blue-600 tracking-wide">AI-Powered Intake</span>
+                <div className="inline-flex items-center gap-2 glass-panel-cyan rounded-full px-4 py-1.5 mb-6">
+                  <span className="flex h-2 w-2 rounded-full bg-[#00E5FF] animate-pulse shadow-[0_0_8px_#00E5FF]"></span>
+                  <span className="text-sm font-medium text-[#00E5FF] tracking-wide">AI-Powered Intake</span>
                 </div>
-                <h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] mb-4 tracking-tight drop-shadow-sm">Report an Issue</h1>
-                <p className="text-[var(--color-text-muted)] text-lg max-w-xl mx-auto">Help us build a smarter, safer city. Provide details and let our AI handle the routing.</p>
+                <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight" style={{ fontStyle: 'italic' }}>Report a Problem</h1>
+                <p className="text-gray-500 text-lg max-w-xl mx-auto">Tell us what's broken in your neighbourhood. Our AI handles the rest — instantly routing it to the right team.</p>
               </div>
 
-              <Card className="backdrop-blur-xl bg-white/80 shadow-2xl border-0 ring-1 ring-black/5 overflow-hidden rounded-[2rem]">
-                <div className="h-2 w-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)]"></div>
-                <CardContent className="p-8 sm:p-12">
+              <div className="rounded-3xl overflow-hidden bg-white/70 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative">
+                <div className="h-1.5 w-full bg-gradient-to-r from-blue-400 via-[#00E5FF] to-blue-500" />
+                <div className="p-8 sm:p-12">
                   <form onSubmit={hookFormSubmit(onSubmit)} className="space-y-6">
                     {mounted && !isLoggedIn && (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <label className="text-sm font-semibold text-[var(--color-text-primary)]">Your Name <span className="text-red-500">*</span></label>
-                          <Input {...register("name")} placeholder="John Doe" className="bg-gray-50/50" />
+                          <label className="text-sm font-semibold text-gray-800">Your Name <span className="text-red-500">*</span></label>
+                          <Input {...register("name")} placeholder="John Doe" className="bg-white/60 focus:bg-white hover:bg-white transition-colors border-gray-200 shadow-sm" />
                           {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
                         </div>
                         <div className="space-y-2">
-                          <label className="text-sm font-medium text-[var(--color-primary)]">Email Address (Optional)</label>
-                          <Input type="email" {...register("email")} placeholder="john@example.com" className="bg-gray-50/50" />
+                          <label className="text-sm font-semibold text-gray-800">Email Address (Optional)</label>
+                          <Input type="email" {...register("email")} placeholder="john@example.com" className="bg-white/60 focus:bg-white hover:bg-white transition-colors border-gray-200 shadow-sm" />
                           {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
                         </div>
                       </div>
@@ -170,47 +178,92 @@ export default function ReportPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {mounted && !isLoggedIn && (
                         <div className="space-y-2">
-                          <label className="text-sm font-medium text-[var(--color-primary)]">Phone Number (Optional)</label>
-                          <Input type="tel" {...register("phone")} placeholder="+1 234 567 890" className="bg-gray-50/50" />
+                          <label className="text-sm font-semibold text-gray-800">Phone Number (Optional)</label>
+                          <Input type="tel" {...register("phone")} placeholder="+1 234 567 890" className="bg-white/60 focus:bg-white hover:bg-white transition-colors border-gray-200 shadow-sm" />
                           {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
                         </div>
                       )}
                       <div className="space-y-2">
-                        <label className="text-sm font-semibold text-[var(--color-text-primary)]">Category (Optional)</label>
-                        <div className="relative group">
-                          <select 
-                            {...register("category")}
-                            className="flex h-12 w-full appearance-none rounded-xl border border-gray-200 bg-white/50 pl-4 pr-10 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2 hover:bg-white focus:bg-white transition-colors cursor-pointer shadow-sm"
+                        <label className="text-sm font-semibold text-gray-800">Category (Optional)</label>
+                        <div className="relative">
+                          {/* Hidden actual input for React Hook Form */}
+                          <input type="hidden" {...register("category")} />
+                          
+                          {/* Custom Dropdown Button */}
+                          <button
+                            type="button"
+                            onClick={() => {
+                              // We can toggle a local state for the dropdown
+                              const el = document.getElementById('category-dropdown-menu');
+                              if (el) el.classList.toggle('hidden');
+                            }}
+                            onBlur={(e) => {
+                              // Delay hiding to allow click
+                              setTimeout(() => {
+                                const el = document.getElementById('category-dropdown-menu');
+                                if (el) el.classList.add('hidden');
+                              }, 200);
+                            }}
+                            className="flex items-center justify-between h-12 w-full rounded-xl border border-gray-200 bg-white/50 pl-4 pr-4 py-2 text-sm hover:bg-white focus:bg-white focus:ring-2 focus:ring-[#08A8E8] transition-all cursor-pointer shadow-sm text-left"
                           >
-                            <option value="">Let AI decide</option>
+                            <span className={watch("category") ? "text-gray-900 font-medium" : "text-gray-500"}>
+                              {watch("category") || "Let AI decide"}
+                            </span>
+                            <div className="text-gray-400 group-hover:text-[#08A8E8] transition-colors">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                            </div>
+                          </button>
+
+                          {/* Custom Dropdown Menu */}
+                          <div 
+                            id="category-dropdown-menu" 
+                            className="hidden absolute top-full left-0 w-full mt-2 bg-white rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] border border-gray-100 py-2 z-50 max-h-[250px] overflow-y-auto"
+                          >
+                            <div
+                              onClick={() => {
+                                setValue("category", "");
+                                document.getElementById('category-dropdown-menu')?.classList.add('hidden');
+                              }}
+                              className={`px-4 py-2.5 text-sm cursor-pointer transition-colors flex items-center gap-2 ${!watch("category") ? "bg-blue-50 text-[#08A8E8] font-medium" : "text-gray-700 hover:bg-gray-50"}`}
+                            >
+                              <Brain className={`w-4 h-4 ${!watch("category") ? "text-[#08A8E8]" : "text-gray-400"}`} />
+                              Let AI decide
+                            </div>
+                            <div className="h-px bg-gray-100 my-1 w-full" />
                             {categories.map((c, i) => (
-                              <option key={i} value={c.name}>{c.name}</option>
+                              <div
+                                key={i}
+                                onClick={() => {
+                                  setValue("category", c.name);
+                                  document.getElementById('category-dropdown-menu')?.classList.add('hidden');
+                                }}
+                                className={`px-4 py-2.5 text-sm cursor-pointer transition-colors ${watch("category") === c.name ? "bg-blue-50 text-[#08A8E8] font-medium" : "text-gray-700 hover:bg-gray-50"}`}
+                              >
+                                {c.name}
+                              </div>
                             ))}
-                          </select>
-                          <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400 group-hover:text-[var(--color-primary)] transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-[var(--color-text-primary)]">Location <span className="text-red-500">*</span></label>
+                      <label className="text-sm font-semibold text-gray-800">Location <span className="text-red-500">*</span></label>
                       <div className="relative group">
-                        <MapPin className="absolute left-4 top-3.5 w-5 h-5 text-gray-400 group-hover:text-[var(--color-primary)] transition-colors" />
-                        <Input {...register("location")} placeholder="E.g., 123 Main St, Near Central Park" className="pl-12 h-12 rounded-xl bg-white/50 border-gray-200 hover:bg-white focus:bg-white transition-colors" />
+                        <MapPin className="absolute left-4 top-3.5 w-5 h-5 text-gray-400 group-focus-within:text-[#08A8E8] transition-colors" />
+                        <Input {...register("location")} placeholder="E.g., 123 Main St, Near Central Park" className="pl-12 h-12 rounded-xl bg-white/60 border-gray-200 hover:bg-white focus:bg-white shadow-sm transition-colors" />
                       </div>
                       {errors.location && <p className="text-red-500 text-xs mt-1">{errors.location.message}</p>}
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-[var(--color-text-primary)]">Description <span className="text-red-500">*</span></label>
-                      <Textarea {...register("description")} placeholder="Describe the problem in detail... What exactly happened?" className="min-h-[150px] resize-y bg-white/50 border-gray-200 rounded-xl hover:bg-white focus:bg-white p-4 transition-colors" />
+                      <label className="text-sm font-semibold text-gray-800">Description <span className="text-red-500">*</span></label>
+                      <Textarea {...register("description")} placeholder="Describe the problem in detail... What exactly happened?" className="min-h-[150px] resize-y bg-white/60 border-gray-200 rounded-xl hover:bg-white focus:bg-white p-4 shadow-sm transition-colors" />
                       {errors.description && <p className="text-red-500 text-xs mt-1">{errors.description.message}</p>}
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-[var(--color-text-primary)]">Photo (Optional)</label>
+                      <label className="text-sm font-semibold text-gray-800">Photo (Optional)</label>
                       {!imagePreview ? (
                         <div className="relative border-2 border-dashed border-blue-200 bg-blue-50/30 rounded-2xl p-10 flex flex-col items-center justify-center text-center hover:bg-blue-50 hover:border-blue-400 transition-all cursor-pointer group">
                           <input 
@@ -239,20 +292,22 @@ export default function ReportPage() {
                       )}
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full text-lg font-bold bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] hover:from-[var(--color-primary)] hover:to-[var(--color-primary)] text-white shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all h-14 rounded-xl mt-4">
-                      Submit to AI Engine
-                    </Button>
+                    <button type="submit" className="btn-neon w-full text-base font-bold h-14 rounded-xl mt-4 flex items-center justify-center gap-2">
+                      Submit My Report
+                    </button>
                   </form>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </motion.div>
           )}
 
           {step === "loading" && (
-            <motion.div key="loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center justify-center py-32 text-center">
-              <Loader2 className="w-16 h-16 text-[var(--color-primary)] animate-spin mb-6" />
-              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-2">CitySync AI is analyzing...</h2>
-              <p className="text-[var(--color-text-muted)]">Classifying category, estimating priority, and routing ticket.</p>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col items-center justify-center py-20">
+              <Loader />
+              <h3 className="text-2xl font-bold text-white mb-2 mt-4">AI is analyzing your report...</h3>
+              <p className="text-[var(--color-text-muted)] text-center max-w-sm">
+                SmartCity AI is processing the image, categorizing the issue, and routing it to the appropriate department.
+              </p>
             </motion.div>
           )}
 

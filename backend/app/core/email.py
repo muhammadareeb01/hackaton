@@ -8,10 +8,10 @@ def send_complaint_email(to_email: str, complaint_id: str, status: str = "Regist
         print(f"MOCK EMAIL to {to_email}: Complaint {complaint_id} status updated to {status}.")
         return
         
-    subject = f"CitySync Complaint Update: {complaint_id}"
+    subject = f"SmartCity Complaint Update: {complaint_id}"
     
     if status == "Registered":
-        html = f"<p>Thank you for submitting your complaint (ID: <strong>{complaint_id}</strong>).</p><p>We have received it and our AI has begun processing it.</p>"
+        html = f"<p>Thank you for submitting your complaint (ID: <strong>{complaint_id}</strong>).</p><p>We have received it and will forward your application for processing shortly.</p>"
     elif status == "Resolved":
         html = f"<p>Good news! Your complaint (ID: <strong>{complaint_id}</strong>) has been <strong>Resolved</strong>.</p><p>Thank you for helping keep our city great.</p>"
     else:
@@ -19,7 +19,7 @@ def send_complaint_email(to_email: str, complaint_id: str, status: str = "Regist
 
     try:
         r = resend.Emails.send({
-            "from": "CitySync <onboarding@resend.dev>",
+            "from": "SmartCity <onboarding@resend.dev>",
             "to": to_email,
             "subject": subject,
             "html": html

@@ -21,8 +21,14 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex min-h-screen bg-[#f8fafc]">
           <Sidebar />
-          <div className="flex-1 min-w-0">
-            {children}
+          <div className="flex-1 flex flex-col min-w-0">
+            <main className="flex-1">
+              {children}
+            </main>
+            {/* Simple Admin Footer */}
+            <footer className="py-4 border-t border-gray-200/80 bg-white text-center text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+              &copy; {new Date().getFullYear()} SmartCity Admin Operations Portal
+            </footer>
           </div>
         </div>
         <ToastProvider />

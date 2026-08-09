@@ -101,6 +101,7 @@ def submit_complaint(complaint_in: ComplaintCreate, request: Request, db: Sessio
         "priority": db_complaint.priority,
         "confidence": db_complaint.ai_confidence,
         "summary": db_complaint.ai_summary,
+        "description": db_complaint.description,
         "status": db_complaint.status,
         "citizen_name": db_complaint.citizen_name,
         "date_submitted": db_complaint.date_submitted,
@@ -122,6 +123,7 @@ def get_my_complaints(request: Request, db: Session = Depends(get_db)):
             "priority": c.priority,
             "confidence": c.ai_confidence,
             "summary": c.ai_summary,
+            "description": c.description,
             "status": c.status,
             "citizen_name": c.citizen_name,
             "date_submitted": c.date_submitted,
@@ -130,7 +132,7 @@ def get_my_complaints(request: Request, db: Session = Depends(get_db)):
     ]
 
 @router.get("/", response_model=List[ComplaintResponse])
-def get_complaints(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+def get_complaints(skip: int = 0, limit: int = 1000, db: Session = Depends(get_db)):
     """
     Fetches a paginated list of all civic complaints.
     This is primarily used by the admin dashboard to populate the data tables and map views.
@@ -144,6 +146,7 @@ def get_complaints(skip: int = 0, limit: int = 100, db: Session = Depends(get_db
             "priority": c.priority,
             "confidence": c.ai_confidence,
             "summary": c.ai_summary,
+            "description": c.description,
             "status": c.status,
             "citizen_name": c.citizen_name,
             "date_submitted": c.date_submitted,

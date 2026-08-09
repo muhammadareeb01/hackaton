@@ -52,7 +52,7 @@ export default function SignupPage() {
         headers: { "Authorization": `Bearer ${token}` }
       });
       
-      toast.success("Account created! Welcome to CitySync.");
+      toast.success("Account created! Welcome to SmartCity.");
       router.push("/my-complaints");
     } catch (err: any) {
       toast.error(err.message || "Signup failed");
@@ -67,7 +67,7 @@ export default function SignupPage() {
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-primary)]"></div>
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-[var(--color-text-primary)] mb-2">Create Account</h1>
-          <p className="text-[var(--color-text-muted)]">Join CitySync with Firebase Auth</p>
+          <p className="text-[var(--color-text-muted)]">Join SmartCity with Firebase Auth</p>
         </div>
         
         <form onSubmit={handleSignup} className="space-y-5">

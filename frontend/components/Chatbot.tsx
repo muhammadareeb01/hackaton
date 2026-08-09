@@ -257,7 +257,7 @@ export function Chatbot() {
               >
                 <input
                   type="text"
-                  placeholder="Ask CitySync AI..."
+                  placeholder="Ask SmartCity AI..."
                   className="flex-1 bg-transparent px-3 py-2 text-sm focus:outline-none text-white placeholder:text-[var(--color-text-muted)]"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}

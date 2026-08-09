@@ -56,7 +56,7 @@ export default function AdminLogin() {
               <AlertTriangle className="w-7 h-7" />
             </div>
             <h1 className="text-2xl font-bold text-slate-900 mb-2">Admin Portal</h1>
-            <p className="text-slate-500 text-sm mb-4">Secure CitySync Administration</p>
+            <p className="text-slate-500 text-sm mb-4">Secure SmartCity Administration</p>
             <div className="w-full bg-slate-50 border border-slate-200 border-dashed rounded-lg p-3.5 text-left mb-6">
               <div className="flex items-center justify-center sm:justify-start gap-1.5 mb-2.5">
                 <ShieldCheck className="w-4 h-4 text-slate-500" />
@@ -65,7 +65,7 @@ export default function AdminLogin() {
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 text-sm text-slate-600">
                 <div className="flex-1">
                   <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block mb-0.5">Email Address</span>
-                  <span className="font-semibold text-slate-800 block truncate">admin@citysync.gov</span>
+                  <span className="font-semibold text-slate-800 block truncate">admin@smartcity.gov</span>
                 </div>
                 <div className="flex-1">
                   <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block mb-0.5">Password</span>
@@ -87,7 +87,7 @@ export default function AdminLogin() {
                   type="email"
                   value={email} 
                   onChange={(e) => setEmail(e.target.value)} 
-                  placeholder="admin@citysync.gov" 
+                  placeholder="admin@smartcity.gov" 
                   className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-800/20 focus:border-slate-800 transition-all outline-none sm:text-sm"
                 />
               </div>

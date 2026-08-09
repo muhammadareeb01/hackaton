@@ -33,7 +33,7 @@ export default function LoginPage() {
         headers: { "Authorization": `Bearer ${token}` }
       });
       
-      toast.success("Welcome back to CitySync!");
+      toast.success("Welcome back to SmartCity!");
       router.push("/my-complaints");
     } catch (err: any) {
       toast.error(err.message || "Login failed. Please check your credentials.");

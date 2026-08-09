@@ -249,11 +249,11 @@ export default function AdminCategories() {
                             <p className="text-xs text-gray-400">
                               Added {new Date(cat.created_at).toLocaleDateString("en-PK", { day: "2-digit", month: "short" })}
                             </p>
-                            {/* Delete button on hover */}
+                            {/* Delete button (visible by default) */}
                             <button
                               onClick={() => handleDeleteCategory(cat.id, cat.name)}
                               disabled={deletingId === cat.id}
-                              className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 w-6 h-6 rounded-lg bg-red-500 hover:bg-red-600 text-white flex items-center justify-center transition-all shadow-sm"
+                              className="absolute top-2 right-2 w-6 h-6 rounded-lg bg-red-50 text-red-500 hover:bg-red-500 hover:text-white flex items-center justify-center transition-all shadow-sm border border-red-100"
                               title="Delete category"
                             >
                               {deletingId === cat.id ? (

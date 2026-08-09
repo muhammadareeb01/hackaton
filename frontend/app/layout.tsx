@@ -20,9 +20,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CitySync — AI-Powered Smart City Platform",
+  title: "SmartCity — AI-Powered Smart City Platform",
   description: "Report civic issues instantly with AI triage, real-time tracking, and smart city integration.",
-  keywords: "civic complaints, smart city, AI, urban issues, CitySync",
+  keywords: "civic complaints, smart city, AI, urban issues, SmartCity",
 };
 
 export default function RootLayout({

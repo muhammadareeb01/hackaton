@@ -17,6 +17,7 @@ class ComplaintResponse(BaseModel):
     priority: str
     confidence: float
     summary: str
+    description: str
     status: str
     citizen_name: str
     date_submitted: datetime

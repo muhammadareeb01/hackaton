@@ -10,6 +10,12 @@ import { StatusBadge } from "@/components/complaints/StatusBadge";
 
 import { apiClient } from "@/lib/api";
 import toast from "@/lib/toast";
+import { CategoryFilterDropdown } from "@/components/ui/CategoryFilterDropdown";
+import { PriorityFilterDropdown } from "@/components/ui/PriorityFilterDropdown";
+import { useSearchParams } from "next/navigation";
+
+
+
 
 const PAGE_SIZE = 10;
 
@@ -53,8 +59,12 @@ interface Complaint {
 }
 
 export default function ComplaintsList() {
+  const searchParams = useSearchParams();
+  const priorityParam = searchParams.get("priority");
+
   const [statusFilter, setStatusFilter] = useState("All");
   const [categoryFilter, setCategoryFilter] = useState("All");
+  const [priorityFilter, setPriorityFilter] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [complaints, setComplaints] = useState<Complaint[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
@@ -62,6 +72,13 @@ export default function ComplaintsList() {
   const [updatingId, setUpdatingId] = useState<string | null>(null);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
+
+  // Sync priority from query parameter
+  useEffect(() => {
+    if (priorityParam) {
+      setPriorityFilter(priorityParam);
+    }
+  }, [priorityParam]);
 
   const fetchComplaints = useCallback(() => {
     setLoading(true);
@@ -106,13 +123,14 @@ export default function ComplaintsList() {
   const filteredData = complaints.filter(c => {
     const matchesStatus = statusFilter === "All" || c.status === statusFilter;
     const matchesCategory = categoryFilter === "All" || c.category === categoryFilter;
+    const matchesPriority = priorityFilter === "All" || c.priority === priorityFilter;
     const q = searchQuery.toLowerCase();
     const matchesSearch = !q ||
       c.id?.toLowerCase().includes(q) ||
       c.citizen_name?.toLowerCase().includes(q) ||
       c.summary?.toLowerCase().includes(q) ||
       c.category?.toLowerCase().includes(q);
-    return matchesStatus && matchesCategory && matchesSearch;
+    return matchesStatus && matchesCategory && matchesPriority && matchesSearch;
   });
 
   // Pagination
@@ -120,7 +138,7 @@ export default function ComplaintsList() {
   const paginatedData = filteredData.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
   const goToPage = (page: number) => setCurrentPage(Math.min(Math.max(1, page), totalPages));
 
-  useEffect(() => { setCurrentPage(1); }, [statusFilter, categoryFilter, searchQuery]);
+  useEffect(() => { setCurrentPage(1); }, [statusFilter, categoryFilter, priorityFilter, searchQuery]);
 
   return (
     <div className="min-h-screen bg-[var(--color-background)]">
@@ -174,16 +192,22 @@ export default function ComplaintsList() {
           {!loading && categories.length > 0 && (
             <div className="flex items-center gap-2">
               <span className="text-xs text-[var(--color-text-muted)] font-semibold">Category:</span>
-              <select
-                value={categoryFilter}
-                onChange={e => setCategoryFilter(e.target.value)}
-                className="text-xs border border-[var(--color-border)] rounded-lg px-3 py-1.5 bg-white text-[var(--color-text-primary)] focus:outline-none focus:border-[var(--color-primary)] cursor-pointer"
-              >
-                <option value="All">All Categories</option>
-                {categories.map(cat => (
-                  <option key={cat} value={cat}>{cat}</option>
-                ))}
-              </select>
+              <CategoryFilterDropdown
+                categories={categories}
+                selectedCategory={categoryFilter}
+                onChange={setCategoryFilter}
+              />
+            </div>
+          )}
+
+          {/* Priority Dropdown */}
+          {!loading && (
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-[var(--color-text-muted)] font-semibold">Priority:</span>
+              <PriorityFilterDropdown
+                selectedPriority={priorityFilter}
+                onChange={setPriorityFilter}
+              />
             </div>
           )}
         </div>
@@ -229,7 +253,7 @@ export default function ComplaintsList() {
                           <p className="text-xs text-[var(--color-text-muted)] font-mono mt-0.5">#{complaint.id}</p>
                         </td>
                         <td className="px-6 py-4 max-w-xs">
-                          <p className="truncate text-[var(--color-text-muted)]">{complaint.summary}</p>
+                          <p className="truncate text-[var(--color-text-muted)]">{complaint.description}</p>
                         </td>
                         <td className="px-6 py-4">
                           <span className="px-2 py-0.5 rounded-md bg-gray-100 text-xs font-medium">{complaint.category}</span>
@@ -317,7 +341,7 @@ export default function ComplaintsList() {
                     <StatusBadge status={complaint.status} />
                   </div>
                   
-                  <p className="text-sm text-[var(--color-text-muted)] line-clamp-2 leading-relaxed">{complaint.summary}</p>
+                  <p className="text-sm text-[var(--color-text-muted)] line-clamp-2 leading-relaxed">{complaint.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mt-1">
                     <span className="px-2.5 py-1 rounded-md bg-gray-50 border border-gray-100 text-xs font-medium text-gray-700">{complaint.category}</span>

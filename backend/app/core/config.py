@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     DB_PASSWORD: str = "root"
     DB_HOST: str = "localhost"
     DB_PORT: str = "3306"
-    DB_NAME: str = "citysync"
+    DB_NAME: str = "smartcity"
     
     # If DB_URL is explicitly set in env, use it. Otherwise, fallback to SQLite for easy deployment
     DB_URL: str = "sqlite:///./database.db"

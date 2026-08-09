@@ -24,6 +24,17 @@ interface CategoryData {
   count: number;
 }
 
+interface SentimentData {
+  name: string;
+  value: number;
+  color: string;
+}
+
+interface RiskData {
+  name: string;
+  count: number;
+}
+
 interface StatsData {
   total: number;
   open_issues: number;
@@ -31,6 +42,8 @@ interface StatsData {
   avg_resolution_time: string;
   category_data: CategoryData[];
   priority_data: PriorityData[];
+  sentiment_data: SentimentData[];
+  risk_data: RiskData[];
 }
 
 export default function AdminDashboard() {
@@ -186,6 +199,59 @@ export default function AdminDashboard() {
                 <div className="mt-4 p-4 bg-gray-50 rounded-lg text-sm text-[var(--color-text-muted)] border border-gray-100">
                   <span className="font-semibold text-[var(--color-text-primary)]">Insight: </span>
                   Critical and High priority issues account for 25% of the backlog. AI automatically surfaces these so they are handled first.
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+
+        {/* AI Analytics: Sentiment Row */}
+        <div className="max-w-3xl mx-auto mb-8">
+          {/* Sentiment Chart */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
+            <Card className="h-full">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-lg font-bold">
+                  <span>Citizen Sentiment Index</span>
+                  <span className="text-[10px] bg-blue-50 text-blue-600 px-2 py-0.5 rounded-md font-bold uppercase tracking-wider">AI Derived</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="h-[280px] w-full flex items-center justify-center">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                      <Pie
+                        data={stats.sentiment_data}
+                        cx="50%"
+                        cy="50%"
+                        innerRadius={65}
+                        outerRadius={95}
+                        cornerRadius={6}
+                        paddingAngle={4}
+                        dataKey="value"
+                        animationDuration={1500}
+                        stroke="none"
+                      >
+                        {stats.sentiment_data.map((entry: SentimentData, index: number) => (
+                          <Cell key={`cell-${index}`} fill={entry.color} className="hover:opacity-80 transition-opacity duration-300 outline-none" />
+                        ))}
+                      </Pie>
+                      <Tooltip 
+                        contentStyle={{ borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 10px 25px -5px rgb(0 0 0 / 0.1)', padding: '12px' }} 
+                        itemStyle={{ fontWeight: 600 }}
+                      />
+                      <Legend 
+                        verticalAlign="bottom" 
+                        height={36} 
+                        iconType="circle" 
+                        wrapperStyle={{ fontSize: '11px', fontWeight: 500, color: '#475569' }} 
+                      />
+                    </PieChart>
+                  </ResponsiveContainer>
+                </div>
+                <div className="mt-4 p-4 bg-gray-50 rounded-lg text-sm text-[var(--color-text-muted)] border border-gray-100">
+                  <span className="font-semibold text-[var(--color-text-primary)]">AI Insight: </span>
+                  Negative sentiment dominates due to critical infrastructure breakdowns. Neutral complaints highlight query-related issues.
                 </div>
               </CardContent>
             </Card>

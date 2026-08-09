@@ -18,8 +18,11 @@ class ComplaintResponse(BaseModel):
     confidence: float
     summary: str
     description: str
-    status: str
+    location: str
     citizen_name: str
+    citizen_email: str
+    citizen_phone: str
+    status: str
     date_submitted: datetime
     estimated_resolution_days: Optional[int] = None
     

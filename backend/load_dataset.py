@@ -58,10 +58,10 @@ def setup_and_load():
             )
             # Use setters for encryption
             db_complaint.description = row['description']
-            db_complaint.location = "City Area" # default location
-            db_complaint.citizen_name = "Synthetic Citizen"
-            db_complaint.citizen_email = "citizen@example.com"
-            db_complaint.citizen_phone = ""
+            db_complaint.location = row.get('location', 'Pakistan')
+            db_complaint.citizen_name = row.get('citizen_name', 'Citizen')
+            db_complaint.citizen_email = row.get('citizen_email', 'citizen@example.com')
+            db_complaint.citizen_phone = row.get('citizen_phone', '')
             
             complaints_to_add.append(db_complaint)
             

@@ -1,501 +1,501 @@
-complaint_id,description,category,priority,date_submitted,resolution_days,status
-C0001,Sparking power lines near Cedar Ln,Electricity,High,2026-07-14 10:45:15,,In Progress
-C0002,Huge pothole on Elm St causing traffic,Road,Low,2026-03-21 10:45:15,,In Progress
-C0003,Sparking power lines near Maple Dr,Electricity,Low,2026-05-31 10:45:15,,Open
-C0004,Dirty brown water coming from taps at Pine St,Water,Medium,2026-05-10 10:45:15,17,Resolved
-C0005,Terrible smell from open drain near Elm St,Drainage,Critical,2026-02-28 10:45:15,3,Resolved
-C0006,Illegal dumping of construction waste near Oak Ave,Waste,Low,2026-07-02 10:45:15,5,Resolved
-C0007,Traffic light broken at Oak Ave intersection,Road,Low,2026-08-07 10:45:15,14,Resolved
-C0008,Foul smell from uncollected trash at Park Ave,Waste,Medium,2026-05-19 10:45:15,,In Progress
-C0009,Traffic light broken at Washington Blvd intersection,Road,Medium,2026-03-25 10:45:15,,In Progress
-C0010,Loud noise complaint from construction on Park Ave,Other,Medium,2026-06-24 10:45:15,12,Resolved
-C0011,Huge pothole on Main St causing traffic,Road,Medium,2026-08-01 10:45:15,6,Resolved
-C0012,Broken fence near the park on Oak Ave,Safety,Low,2026-05-14 10:45:15,26,Resolved
-C0013,No water supply in the building on Oak Ave,Water,High,2026-06-30 10:45:15,,In Progress
-C0014,Sewage backing up into street on Cedar Ln,Drainage,High,2026-06-17 10:45:15,8,Resolved
-C0015,Graffiti on public wall at Cedar Ln,Other,Medium,2026-03-28 10:45:15,,Assigned
-C0016,Sewage backing up into street on Oak Ave,Drainage,Medium,2026-07-11 10:45:15,,Assigned
-C0017,Loud noise complaint from construction on Elm St,Other,Medium,2026-05-20 10:45:15,7,Resolved
-C0018,Huge pothole on Maple Dr causing traffic,Road,Low,2026-02-15 10:45:15,,Open
-C0019,Illegal dumping of construction waste near Pine St,Waste,Medium,2026-05-29 10:45:15,,Assigned
-C0020,Garbage bins overflowing for days on Main St,Waste,Medium,2026-04-30 10:45:15,12,Resolved
-C0021,Huge pothole on Oak Ave causing traffic,Road,Medium,2026-03-02 10:45:15,27,Resolved
-C0022,"Pipe burst near Main St, water flooding the sidewalk",Water,Low,2026-03-13 10:45:15,,In Progress
-C0023,Dirty brown water coming from taps at Oak Ave,Water,Low,2026-04-14 10:45:15,,Assigned
-C0024,Illegal dumping of construction waste near Washington Blvd,Waste,High,2026-03-09 10:45:15,3,Resolved
-C0025,Road surface completely destroyed near Park Ave,Road,Low,2026-04-21 10:45:15,6,Resolved
-C0026,Street lights not working on Oak Ave,Electricity,Medium,2026-06-06 10:45:15,,In Progress
-C0027,Traffic light broken at Oak Ave intersection,Road,Low,2026-08-01 10:45:15,30,Resolved
-C0028,Huge pothole on Oak Ave causing traffic,Road,Medium,2026-07-16 10:45:15,29,Resolved
-C0029,Garbage bins overflowing for days on Maple Dr,Waste,Critical,2026-08-01 10:45:15,3,Resolved
-C0030,Foul smell from uncollected trash at Washington Blvd,Waste,Medium,2026-04-04 10:45:15,30,Resolved
-C0031,Illegal dumping of construction waste near Pine St,Waste,Low,2026-03-06 10:45:15,18,Resolved
-C0032,"Pipe burst near Oak Ave, water flooding the sidewalk",Water,Critical,2026-05-08 10:45:15,5,Resolved
-C0033,Traffic light broken at Oak Ave intersection,Road,Medium,2026-06-17 10:45:15,,In Progress
-C0034,Road surface completely destroyed near Washington Blvd,Road,Medium,2026-06-07 10:45:15,25,Resolved
-C0035,Complete blackout in the neighborhood around Park Ave,Electricity,High,2026-05-16 10:45:15,10,Resolved
-C0036,Blocked storm drain causing flooding at Elm St,Drainage,Low,2026-04-14 10:45:15,8,Resolved
-C0037,Road surface completely destroyed near Maple Dr,Road,Medium,2026-04-22 10:45:15,23,Resolved
-C0038,Sewage backing up into street on Elm St,Drainage,Medium,2026-07-17 10:45:15,15,Resolved
-C0039,Illegal dumping of construction waste near Washington Blvd,Waste,Low,2026-07-09 10:45:15,8,Resolved
-C0040,Graffiti on public wall at Maple Dr,Other,High,2026-02-22 10:45:15,,Assigned
-C0041,Broken fence near the park on Pine St,Safety,Medium,2026-04-07 10:45:15,23,Resolved
-C0042,Illegal dumping of construction waste near Pine St,Waste,Low,2026-04-27 10:45:15,,Open
-C0043,No water supply in the building on Oak Ave,Water,High,2026-06-22 10:45:15,12,Resolved
-C0044,Sewage backing up into street on Main St,Drainage,Low,2026-05-30 10:45:15,25,Resolved
-C0045,No water supply in the building on Elm St,Water,High,2026-05-04 10:45:15,26,Resolved
-C0046,Huge pothole on Elm St causing traffic,Road,Low,2026-04-04 10:45:15,24,Resolved
-C0047,No water supply in the building on Elm St,Water,Critical,2026-08-05 10:45:15,2,Resolved
-C0048,Street lights not working on Pine St,Electricity,Critical,2026-03-26 10:45:15,2,Resolved
-C0049,No water supply in the building on Park Ave,Water,Low,2026-05-20 10:45:15,16,Resolved
-C0050,Sewage backing up into street on Maple Dr,Drainage,High,2026-02-16 10:45:15,11,Resolved
-C0051,Street lights not working on Oak Ave,Electricity,Critical,2026-05-13 10:45:15,2,Resolved
-C0052,Garbage bins overflowing for days on Main St,Waste,Low,2026-03-06 10:45:15,24,Resolved
-C0053,"Pipe burst near Elm St, water flooding the sidewalk",Water,High,2026-07-12 10:45:15,,Open
-C0054,No pedestrian crossing visible at Cedar Ln,Safety,Low,2026-08-03 10:45:15,14,Resolved
-C0055,Garbage bins overflowing for days on Park Ave,Waste,Medium,2026-04-08 10:45:15,8,Resolved
-C0056,Foul smell from uncollected trash at Cedar Ln,Waste,Medium,2026-03-23 10:45:15,17,Resolved
-C0057,Road surface completely destroyed near Maple Dr,Road,Low,2026-04-27 10:45:15,,In Progress
-C0058,Terrible smell from open drain near Maple Dr,Drainage,Critical,2026-05-17 10:45:15,,Open
-C0059,Dirty brown water coming from taps at Oak Ave,Water,High,2026-03-01 10:45:15,7,Resolved
-C0060,Loud noise complaint from construction on Park Ave,Other,High,2026-05-29 10:45:15,19,Resolved
-C0061,Blocked storm drain causing flooding at Oak Ave,Drainage,Medium,2026-03-07 10:45:15,19,Resolved
-C0062,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,Critical,2026-03-26 10:45:15,,Assigned
-C0063,Road surface completely destroyed near Washington Blvd,Road,High,2026-06-14 10:45:15,28,Resolved
-C0064,Illegal dumping of construction waste near Pine St,Waste,Critical,2026-05-16 10:45:15,,In Progress
-C0065,No water supply in the building on Pine St,Water,Low,2026-02-15 10:45:15,,In Progress
-C0066,Sewage backing up into street on Cedar Ln,Drainage,Low,2026-06-06 10:45:15,,Open
-C0067,Traffic light broken at Washington Blvd intersection,Road,Medium,2026-06-26 10:45:15,27,Resolved
-C0068,Sparking power lines near Park Ave,Electricity,High,2026-07-30 10:45:15,28,Resolved
-C0069,Street lights not working on Pine St,Electricity,High,2026-08-04 10:45:15,,Open
-C0070,Road surface completely destroyed near Oak Ave,Road,Medium,2026-06-26 10:45:15,30,Resolved
-C0071,Complete blackout in the neighborhood around Oak Ave,Electricity,High,2026-07-16 10:45:15,17,Resolved
-C0072,Huge pothole on Main St causing traffic,Road,Low,2026-06-18 10:45:15,,Assigned
-C0073,Traffic light broken at Elm St intersection,Road,Medium,2026-08-03 10:45:15,,In Progress
-C0074,Road surface completely destroyed near Oak Ave,Road,Medium,2026-07-17 10:45:15,,In Progress
-C0075,Stray dogs aggressive near Maple Dr,Other,Low,2026-02-17 10:45:15,,Assigned
-C0076,Foul smell from uncollected trash at Park Ave,Waste,Medium,2026-03-06 10:45:15,,Assigned
-C0077,Sewage backing up into street on Washington Blvd,Drainage,Medium,2026-05-24 10:45:15,5,Resolved
-C0078,Sparking power lines near Pine St,Electricity,Low,2026-04-25 10:45:15,10,Resolved
-C0079,Dirty brown water coming from taps at Main St,Water,High,2026-04-25 10:45:15,17,Resolved
-C0080,Illegal dumping of construction waste near Main St,Waste,Low,2026-06-23 10:45:15,27,Resolved
-C0081,Foul smell from uncollected trash at Cedar Ln,Waste,Low,2026-03-15 10:45:15,11,Resolved
-C0082,Complete blackout in the neighborhood around Elm St,Electricity,High,2026-04-14 10:45:15,29,Resolved
-C0083,Garbage bins overflowing for days on Maple Dr,Waste,High,2026-06-25 10:45:15,,Assigned
-C0084,Traffic light broken at Cedar Ln intersection,Road,Medium,2026-02-10 10:45:15,,In Progress
-C0085,Loud noise complaint from construction on Park Ave,Other,Medium,2026-04-03 10:45:15,,In Progress
-C0086,Traffic light broken at Maple Dr intersection,Road,Medium,2026-06-11 10:45:15,16,Resolved
-C0087,No water supply in the building on Washington Blvd,Water,Critical,2026-05-09 10:45:15,,In Progress
-C0088,Illegal dumping of construction waste near Washington Blvd,Waste,Low,2026-03-23 10:45:15,26,Resolved
-C0089,Complete blackout in the neighborhood around Washington Blvd,Electricity,High,2026-07-22 10:45:15,,In Progress
-C0090,Sparking power lines near Oak Ave,Electricity,High,2026-02-10 10:45:15,29,Resolved
-C0091,Road surface completely destroyed near Cedar Ln,Road,Low,2026-05-04 10:45:15,10,Resolved
-C0092,Street lights not working on Pine St,Electricity,High,2026-07-06 10:45:15,12,Resolved
-C0093,Sparking power lines near Park Ave,Electricity,High,2026-06-30 10:45:15,29,Resolved
-C0094,Complete blackout in the neighborhood around Washington Blvd,Electricity,Low,2026-05-21 10:45:15,6,Resolved
-C0095,Terrible smell from open drain near Cedar Ln,Drainage,Low,2026-05-04 10:45:15,,Assigned
-C0096,Street lights not working on Pine St,Electricity,Critical,2026-07-22 10:45:15,3,Resolved
-C0097,Dirty brown water coming from taps at Pine St,Water,High,2026-02-23 10:45:15,,Open
-C0098,Illegal dumping of construction waste near Oak Ave,Waste,High,2026-03-11 10:45:15,,In Progress
-C0099,Traffic light broken at Elm St intersection,Road,Low,2026-07-04 10:45:15,,In Progress
-C0100,Foul smell from uncollected trash at Cedar Ln,Waste,Medium,2026-06-05 10:45:15,,In Progress
-C0101,Road surface completely destroyed near Cedar Ln,Road,Low,2026-07-08 10:45:15,9,Resolved
-C0102,Road surface completely destroyed near Oak Ave,Road,High,2026-02-26 10:45:15,4,Resolved
-C0103,Street lights not working on Cedar Ln,Electricity,Medium,2026-02-17 10:45:15,16,Resolved
-C0104,Stray dogs aggressive near Cedar Ln,Other,Low,2026-06-11 10:45:15,21,Resolved
-C0105,Complete blackout in the neighborhood around Elm St,Electricity,Critical,2026-07-13 10:45:15,2,Resolved
-C0106,Illegal dumping of construction waste near Maple Dr,Waste,Medium,2026-02-21 10:45:15,,In Progress
-C0107,"Pipe burst near Main St, water flooding the sidewalk",Water,High,2026-04-01 10:45:15,,Assigned
-C0108,Garbage bins overflowing for days on Main St,Waste,Low,2026-05-21 10:45:15,,Assigned
-C0109,Dirty brown water coming from taps at Main St,Water,High,2026-03-13 10:45:15,17,Resolved
-C0110,Blocked storm drain causing flooding at Cedar Ln,Drainage,Medium,2026-07-04 10:45:15,,In Progress
-C0111,No water supply in the building on Pine St,Water,High,2026-06-04 10:45:15,,In Progress
-C0112,No water supply in the building on Washington Blvd,Water,High,2026-05-28 10:45:15,5,Resolved
-C0113,Traffic light broken at Elm St intersection,Road,High,2026-02-22 10:45:15,,In Progress
-C0114,Street lights not working on Main St,Electricity,High,2026-08-08 10:45:15,22,Resolved
-C0115,"Pipe burst near Park Ave, water flooding the sidewalk",Water,Medium,2026-05-11 10:45:15,12,Resolved
-C0116,Road surface completely destroyed near Pine St,Road,Medium,2026-08-03 10:45:15,14,Resolved
-C0117,Foul smell from uncollected trash at Elm St,Waste,High,2026-07-23 10:45:15,10,Resolved
-C0118,"Pipe burst near Elm St, water flooding the sidewalk",Water,Critical,2026-03-28 10:45:15,1,Resolved
-C0119,Garbage bins overflowing for days on Washington Blvd,Waste,Low,2026-02-24 10:45:15,29,Resolved
-C0120,Dangerous leaning tree over walkway on Cedar Ln,Safety,Critical,2026-03-19 10:45:15,,Open
-C0121,Road surface completely destroyed near Pine St,Road,Low,2026-06-20 10:45:15,,In Progress
-C0122,No water supply in the building on Oak Ave,Water,High,2026-07-13 10:45:15,,Assigned
-C0123,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,High,2026-07-03 10:45:15,13,Resolved
-C0124,Traffic light broken at Park Ave intersection,Road,Medium,2026-08-06 10:45:15,,In Progress
-C0125,No water supply in the building on Park Ave,Water,Medium,2026-04-15 10:45:15,,In Progress
-C0126,Huge pothole on Washington Blvd causing traffic,Road,Low,2026-06-24 10:45:15,16,Resolved
-C0127,Loud noise complaint from construction on Main St,Other,High,2026-02-23 10:45:15,16,Resolved
-C0128,Traffic light broken at Main St intersection,Road,High,2026-03-08 10:45:15,,Open
-C0129,Illegal dumping of construction waste near Main St,Waste,Medium,2026-04-23 10:45:15,7,Resolved
-C0130,Dangerous leaning tree over walkway on Elm St,Safety,Medium,2026-05-31 10:45:15,10,Resolved
-C0131,Dangerous leaning tree over walkway on Oak Ave,Safety,Critical,2026-07-16 10:45:15,5,Resolved
-C0132,Huge pothole on Elm St causing traffic,Road,Medium,2026-07-12 10:45:15,25,Resolved
-C0133,Illegal dumping of construction waste near Pine St,Waste,Low,2026-04-09 10:45:15,,Open
-C0134,Dirty brown water coming from taps at Cedar Ln,Water,High,2026-05-03 10:45:15,,Open
-C0135,No water supply in the building on Washington Blvd,Water,Medium,2026-03-30 10:45:15,,In Progress
-C0136,Garbage bins overflowing for days on Cedar Ln,Waste,Low,2026-05-11 10:45:15,19,Resolved
-C0137,Illegal dumping of construction waste near Main St,Waste,Medium,2026-06-23 10:45:15,9,Resolved
-C0138,No water supply in the building on Pine St,Water,High,2026-03-07 10:45:15,4,Resolved
-C0139,"Pipe burst near Park Ave, water flooding the sidewalk",Water,Medium,2026-03-16 10:45:15,,In Progress
-C0140,Traffic light broken at Maple Dr intersection,Road,Low,2026-07-09 10:45:15,5,Resolved
-C0141,Sparking power lines near Oak Ave,Electricity,Critical,2026-04-24 10:45:15,,In Progress
-C0142,Garbage bins overflowing for days on Park Ave,Waste,High,2026-04-12 10:45:15,,Open
-C0143,Road surface completely destroyed near Cedar Ln,Road,High,2026-05-03 10:45:15,4,Resolved
-C0144,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,Medium,2026-07-05 10:45:15,11,Resolved
-C0145,Huge pothole on Park Ave causing traffic,Road,Medium,2026-03-12 10:45:15,15,Resolved
-C0146,Sparking power lines near Cedar Ln,Electricity,Medium,2026-04-07 10:45:15,10,Resolved
-C0147,Street lights not working on Maple Dr,Electricity,Medium,2026-08-06 10:45:15,23,Resolved
-C0148,Dirty brown water coming from taps at Pine St,Water,Critical,2026-03-18 10:45:15,,In Progress
-C0149,Illegal dumping of construction waste near Maple Dr,Waste,High,2026-02-26 10:45:15,,Open
-C0150,Street lights not working on Maple Dr,Electricity,High,2026-04-06 10:45:15,26,Resolved
-C0151,Foul smell from uncollected trash at Elm St,Waste,Medium,2026-03-23 10:45:15,,In Progress
-C0152,Stray dogs aggressive near Pine St,Other,Low,2026-07-02 10:45:15,8,Resolved
-C0153,Road surface completely destroyed near Oak Ave,Road,Low,2026-03-21 10:45:15,14,Resolved
-C0154,Garbage bins overflowing for days on Elm St,Waste,Medium,2026-03-13 10:45:15,13,Resolved
-C0155,Dirty brown water coming from taps at Maple Dr,Water,Critical,2026-04-12 10:45:15,,Assigned
-C0156,Foul smell from uncollected trash at Washington Blvd,Waste,Medium,2026-05-20 10:45:15,,In Progress
-C0157,Blocked storm drain causing flooding at Park Ave,Drainage,Medium,2026-05-20 10:45:15,27,Resolved
-C0158,No water supply in the building on Washington Blvd,Water,Critical,2026-05-15 10:45:15,,Open
-C0159,Illegal dumping of construction waste near Washington Blvd,Waste,Low,2026-06-08 10:45:15,9,Resolved
-C0160,Foul smell from uncollected trash at Pine St,Waste,Low,2026-08-01 10:45:15,19,Resolved
-C0161,Illegal dumping of construction waste near Pine St,Waste,Low,2026-04-28 10:45:15,3,Resolved
-C0162,"Pipe burst near Pine St, water flooding the sidewalk",Water,High,2026-06-23 10:45:15,6,Resolved
-C0163,Complete blackout in the neighborhood around Elm St,Electricity,High,2026-06-13 10:45:15,,In Progress
-C0164,Sparking power lines near Park Ave,Electricity,High,2026-02-18 10:45:15,,In Progress
-C0165,Huge pothole on Washington Blvd causing traffic,Road,Low,2026-07-16 10:45:15,21,Resolved
-C0166,Terrible smell from open drain near Oak Ave,Drainage,Low,2026-06-17 10:45:15,,Open
-C0167,No water supply in the building on Cedar Ln,Water,Critical,2026-05-12 10:45:15,4,Resolved
-C0168,Traffic light broken at Oak Ave intersection,Road,Low,2026-05-18 10:45:15,11,Resolved
-C0169,No pedestrian crossing visible at Elm St,Safety,Low,2026-07-11 10:45:15,,Open
-C0170,Traffic light broken at Park Ave intersection,Road,Medium,2026-05-23 10:45:15,10,Resolved
-C0171,Street lights not working on Main St,Electricity,Critical,2026-05-20 10:45:15,,In Progress
-C0172,Foul smell from uncollected trash at Pine St,Waste,High,2026-04-05 10:45:15,30,Resolved
-C0173,Traffic light broken at Washington Blvd intersection,Road,Low,2026-05-11 10:45:15,15,Resolved
-C0174,Illegal dumping of construction waste near Park Ave,Waste,High,2026-02-26 10:45:15,9,Resolved
-C0175,Road surface completely destroyed near Washington Blvd,Road,Low,2026-06-08 10:45:15,7,Resolved
-C0176,Terrible smell from open drain near Oak Ave,Drainage,Low,2026-06-01 10:45:15,,Assigned
-C0177,Garbage bins overflowing for days on Washington Blvd,Waste,Critical,2026-07-24 10:45:15,5,Resolved
-C0178,Traffic light broken at Washington Blvd intersection,Road,Medium,2026-07-20 10:45:15,4,Resolved
-C0179,Sewage backing up into street on Main St,Drainage,Medium,2026-08-03 10:45:15,18,Resolved
-C0180,Dirty brown water coming from taps at Elm St,Water,Critical,2026-03-30 10:45:15,5,Resolved
-C0181,Broken fence near the park on Oak Ave,Safety,Low,2026-06-28 10:45:15,,In Progress
-C0182,Foul smell from uncollected trash at Maple Dr,Waste,High,2026-06-09 10:45:15,,In Progress
-C0183,Illegal dumping of construction waste near Washington Blvd,Waste,Low,2026-03-29 10:45:15,,In Progress
-C0184,Illegal dumping of construction waste near Cedar Ln,Waste,Medium,2026-05-07 10:45:15,,In Progress
-C0185,Traffic light broken at Park Ave intersection,Road,Low,2026-03-19 10:45:15,4,Resolved
-C0186,Road surface completely destroyed near Park Ave,Road,Medium,2026-02-14 10:45:15,24,Resolved
-C0187,No water supply in the building on Cedar Ln,Water,Critical,2026-02-22 10:45:15,2,Resolved
-C0188,Road surface completely destroyed near Main St,Road,Medium,2026-06-21 10:45:15,,In Progress
-C0189,Garbage bins overflowing for days on Oak Ave,Waste,Low,2026-08-02 10:45:15,,Open
-C0190,Graffiti on public wall at Main St,Other,Medium,2026-04-20 10:45:15,20,Resolved
-C0191,Foul smell from uncollected trash at Oak Ave,Waste,Low,2026-07-07 10:45:15,8,Resolved
-C0192,No water supply in the building on Park Ave,Water,High,2026-04-30 10:45:15,29,Resolved
-C0193,Foul smell from uncollected trash at Oak Ave,Waste,High,2026-05-11 10:45:15,14,Resolved
-C0194,Complete blackout in the neighborhood around Oak Ave,Electricity,Critical,2026-06-26 10:45:15,,In Progress
-C0195,Blocked storm drain causing flooding at Park Ave,Drainage,Low,2026-04-19 10:45:15,21,Resolved
-C0196,Illegal dumping of construction waste near Park Ave,Waste,High,2026-05-19 10:45:15,,Open
-C0197,Garbage bins overflowing for days on Elm St,Waste,Critical,2026-04-21 10:45:15,,Assigned
-C0198,Traffic light broken at Maple Dr intersection,Road,Medium,2026-05-23 10:45:15,16,Resolved
-C0199,Broken fence near the park on Pine St,Safety,Medium,2026-05-24 10:45:15,,Open
-C0200,Foul smell from uncollected trash at Washington Blvd,Waste,Medium,2026-03-07 10:45:15,5,Resolved
-C0201,Complete blackout in the neighborhood around Elm St,Electricity,Medium,2026-03-01 10:45:15,,Assigned
-C0202,Huge pothole on Oak Ave causing traffic,Road,High,2026-04-12 10:45:15,27,Resolved
-C0203,"Pipe burst near Maple Dr, water flooding the sidewalk",Water,Critical,2026-06-08 10:45:15,,Open
-C0204,Dirty brown water coming from taps at Park Ave,Water,Low,2026-03-10 10:45:15,8,Resolved
-C0205,Garbage bins overflowing for days on Main St,Waste,Low,2026-06-22 10:45:15,25,Resolved
-C0206,Foul smell from uncollected trash at Main St,Waste,Low,2026-07-12 10:45:15,14,Resolved
-C0207,"Pipe burst near Park Ave, water flooding the sidewalk",Water,High,2026-03-28 10:45:15,,Open
-C0208,Foul smell from uncollected trash at Cedar Ln,Waste,High,2026-05-01 10:45:15,,Open
-C0209,Blocked storm drain causing flooding at Park Ave,Drainage,Low,2026-02-15 10:45:15,,In Progress
-C0210,Sparking power lines near Oak Ave,Electricity,High,2026-06-04 10:45:15,12,Resolved
-C0211,Garbage bins overflowing for days on Oak Ave,Waste,Medium,2026-08-02 10:45:15,,Open
-C0212,Traffic light broken at Maple Dr intersection,Road,Medium,2026-04-28 10:45:15,18,Resolved
-C0213,Foul smell from uncollected trash at Maple Dr,Waste,Medium,2026-05-14 10:45:15,,In Progress
-C0214,Illegal dumping of construction waste near Oak Ave,Waste,Medium,2026-03-22 10:45:15,,Assigned
-C0215,Garbage bins overflowing for days on Oak Ave,Waste,Low,2026-06-09 10:45:15,,Open
-C0216,Dirty brown water coming from taps at Main St,Water,Critical,2026-06-05 10:45:15,4,Resolved
-C0217,Garbage bins overflowing for days on Washington Blvd,Waste,Low,2026-06-14 10:45:15,21,Resolved
-C0218,Complete blackout in the neighborhood around Oak Ave,Electricity,Medium,2026-05-23 10:45:15,,In Progress
-C0219,Huge pothole on Washington Blvd causing traffic,Road,Critical,2026-03-28 10:45:15,4,Resolved
-C0220,No water supply in the building on Park Ave,Water,High,2026-07-28 10:45:15,,Open
-C0221,Foul smell from uncollected trash at Cedar Ln,Waste,Medium,2026-04-04 10:45:15,28,Resolved
-C0222,Broken fence near the park on Elm St,Safety,High,2026-05-01 10:45:15,,In Progress
-C0223,Complete blackout in the neighborhood around Washington Blvd,Electricity,High,2026-05-20 10:45:15,21,Resolved
-C0224,Foul smell from uncollected trash at Elm St,Waste,Low,2026-05-22 10:45:15,12,Resolved
-C0225,Huge pothole on Park Ave causing traffic,Road,Medium,2026-04-16 10:45:15,,In Progress
-C0226,Road surface completely destroyed near Oak Ave,Road,Medium,2026-05-30 10:45:15,14,Resolved
-C0227,Dangerous leaning tree over walkway on Washington Blvd,Safety,Low,2026-07-19 10:45:15,19,Resolved
-C0228,"Pipe burst near Elm St, water flooding the sidewalk",Water,Critical,2026-04-20 10:45:15,,In Progress
-C0229,Blocked storm drain causing flooding at Cedar Ln,Drainage,Medium,2026-06-19 10:45:15,,In Progress
-C0230,Dirty brown water coming from taps at Maple Dr,Water,Critical,2026-03-30 10:45:15,1,Resolved
-C0231,Foul smell from uncollected trash at Oak Ave,Waste,High,2026-02-23 10:45:15,20,Resolved
-C0232,Dirty brown water coming from taps at Maple Dr,Water,Critical,2026-06-12 10:45:15,,In Progress
-C0233,Blocked storm drain causing flooding at Washington Blvd,Drainage,Medium,2026-02-12 10:45:15,19,Resolved
-C0234,Street lights not working on Oak Ave,Electricity,High,2026-04-03 10:45:15,24,Resolved
-C0235,Foul smell from uncollected trash at Maple Dr,Waste,High,2026-04-22 10:45:15,,In Progress
-C0236,Street lights not working on Elm St,Electricity,High,2026-05-06 10:45:15,,In Progress
-C0237,Traffic light broken at Washington Blvd intersection,Road,Medium,2026-05-01 10:45:15,,Assigned
-C0238,Road surface completely destroyed near Main St,Road,Medium,2026-07-10 10:45:15,16,Resolved
-C0239,Garbage bins overflowing for days on Pine St,Waste,Medium,2026-07-18 10:45:15,,Open
-C0240,Traffic light broken at Washington Blvd intersection,Road,Medium,2026-04-07 10:45:15,,Open
-C0241,No water supply in the building on Cedar Ln,Water,Critical,2026-03-21 10:45:15,3,Resolved
-C0242,Traffic light broken at Park Ave intersection,Road,Low,2026-07-31 10:45:15,16,Resolved
-C0243,Complete blackout in the neighborhood around Washington Blvd,Electricity,High,2026-06-01 10:45:15,29,Resolved
-C0244,"Pipe burst near Maple Dr, water flooding the sidewalk",Water,Medium,2026-03-30 10:45:15,19,Resolved
-C0245,Traffic light broken at Main St intersection,Road,Low,2026-03-25 10:45:15,29,Resolved
-C0246,Dangerous leaning tree over walkway on Park Ave,Safety,Medium,2026-07-01 10:45:15,14,Resolved
-C0247,Foul smell from uncollected trash at Pine St,Waste,Medium,2026-05-25 10:45:15,,Open
-C0248,Traffic light broken at Oak Ave intersection,Road,Low,2026-04-16 10:45:15,23,Resolved
-C0249,Street lights not working on Park Ave,Electricity,High,2026-06-01 10:45:15,18,Resolved
-C0250,Blocked storm drain causing flooding at Main St,Drainage,Medium,2026-06-14 10:45:15,19,Resolved
-C0251,"Pipe burst near Oak Ave, water flooding the sidewalk",Water,Medium,2026-06-15 10:45:15,,Open
-C0252,No water supply in the building on Park Ave,Water,Low,2026-06-26 10:45:15,27,Resolved
-C0253,Illegal dumping of construction waste near Washington Blvd,Waste,Medium,2026-02-20 10:45:15,,In Progress
-C0254,Illegal dumping of construction waste near Main St,Waste,Low,2026-05-13 10:45:15,,Assigned
-C0255,Huge pothole on Elm St causing traffic,Road,Medium,2026-07-29 10:45:15,4,Resolved
-C0256,Dangerous leaning tree over walkway on Oak Ave,Safety,High,2026-06-14 10:45:15,,Open
-C0257,Illegal dumping of construction waste near Elm St,Waste,Low,2026-04-14 10:45:15,,In Progress
-C0258,No water supply in the building on Cedar Ln,Water,High,2026-03-29 10:45:15,,Open
-C0259,Illegal dumping of construction waste near Elm St,Waste,Low,2026-04-07 10:45:15,27,Resolved
-C0260,Road surface completely destroyed near Oak Ave,Road,Low,2026-04-25 10:45:15,4,Resolved
-C0261,Huge pothole on Washington Blvd causing traffic,Road,Medium,2026-08-07 10:45:15,20,Resolved
-C0262,Street lights not working on Pine St,Electricity,Low,2026-08-07 10:45:15,13,Resolved
-C0263,Dangerous leaning tree over walkway on Pine St,Safety,Medium,2026-07-29 10:45:15,,Open
-C0264,"Pipe burst near Oak Ave, water flooding the sidewalk",Water,High,2026-06-11 10:45:15,8,Resolved
-C0265,Dirty brown water coming from taps at Washington Blvd,Water,Low,2026-06-29 10:45:15,11,Resolved
-C0266,Road surface completely destroyed near Maple Dr,Road,High,2026-03-09 10:45:15,3,Resolved
-C0267,Road surface completely destroyed near Park Ave,Road,Low,2026-08-06 10:45:15,,Assigned
-C0268,Huge pothole on Pine St causing traffic,Road,Low,2026-04-23 10:45:15,20,Resolved
-C0269,Huge pothole on Cedar Ln causing traffic,Road,Low,2026-06-30 10:45:15,,In Progress
-C0270,Huge pothole on Pine St causing traffic,Road,Medium,2026-08-04 10:45:15,,In Progress
-C0271,Road surface completely destroyed near Elm St,Road,Medium,2026-03-11 10:45:15,,In Progress
-C0272,Sparking power lines near Park Ave,Electricity,Critical,2026-07-27 10:45:15,1,Resolved
-C0273,Road surface completely destroyed near Park Ave,Road,Low,2026-07-19 10:45:15,23,Resolved
-C0274,Traffic light broken at Oak Ave intersection,Road,Medium,2026-07-28 10:45:15,23,Resolved
-C0275,Illegal dumping of construction waste near Elm St,Waste,Critical,2026-06-16 10:45:15,3,Resolved
-C0276,No water supply in the building on Maple Dr,Water,Medium,2026-03-06 10:45:15,9,Resolved
-C0277,Road surface completely destroyed near Cedar Ln,Road,Medium,2026-07-21 10:45:15,3,Resolved
-C0278,"Pipe burst near Pine St, water flooding the sidewalk",Water,High,2026-04-26 10:45:15,,Assigned
-C0279,Huge pothole on Cedar Ln causing traffic,Road,Medium,2026-02-21 10:45:15,5,Resolved
-C0280,Street lights not working on Main St,Electricity,Critical,2026-03-02 10:45:15,4,Resolved
-C0281,Garbage bins overflowing for days on Elm St,Waste,Low,2026-07-23 10:45:15,,Open
-C0282,Street lights not working on Main St,Electricity,Critical,2026-03-12 10:45:15,,Assigned
-C0283,Road surface completely destroyed near Maple Dr,Road,Critical,2026-03-24 10:45:15,,Open
-C0284,Dirty brown water coming from taps at Park Ave,Water,High,2026-06-04 10:45:15,11,Resolved
-C0285,"Pipe burst near Oak Ave, water flooding the sidewalk",Water,Critical,2026-04-13 10:45:15,,Open
-C0286,Road surface completely destroyed near Cedar Ln,Road,High,2026-05-05 10:45:15,,Open
-C0287,Illegal dumping of construction waste near Pine St,Waste,High,2026-05-20 10:45:15,8,Resolved
-C0288,Dirty brown water coming from taps at Park Ave,Water,Critical,2026-03-23 10:45:15,2,Resolved
-C0289,Graffiti on public wall at Park Ave,Other,Medium,2026-03-01 10:45:15,14,Resolved
-C0290,Terrible smell from open drain near Park Ave,Drainage,Low,2026-06-18 10:45:15,,In Progress
-C0291,Road surface completely destroyed near Oak Ave,Road,Low,2026-06-02 10:45:15,17,Resolved
-C0292,Stray dogs aggressive near Cedar Ln,Other,Low,2026-07-25 10:45:15,,Assigned
-C0293,Dirty brown water coming from taps at Washington Blvd,Water,Low,2026-05-04 10:45:15,14,Resolved
-C0294,Road surface completely destroyed near Park Ave,Road,Low,2026-06-28 10:45:15,27,Resolved
-C0295,Complete blackout in the neighborhood around Main St,Electricity,Critical,2026-05-09 10:45:15,4,Resolved
-C0296,Illegal dumping of construction waste near Pine St,Waste,High,2026-04-09 10:45:15,,In Progress
-C0297,Garbage bins overflowing for days on Oak Ave,Waste,Medium,2026-06-21 10:45:15,26,Resolved
-C0298,Stray dogs aggressive near Washington Blvd,Other,Low,2026-04-08 10:45:15,15,Resolved
-C0299,Traffic light broken at Main St intersection,Road,High,2026-07-17 10:45:15,,Open
-C0300,Dirty brown water coming from taps at Main St,Water,High,2026-03-23 10:45:15,24,Resolved
-C0301,Huge pothole on Elm St causing traffic,Road,Medium,2026-06-29 10:45:15,,Assigned
-C0302,Terrible smell from open drain near Maple Dr,Drainage,Critical,2026-04-06 10:45:15,4,Resolved
-C0303,No water supply in the building on Maple Dr,Water,Low,2026-05-18 10:45:15,11,Resolved
-C0304,Complete blackout in the neighborhood around Pine St,Electricity,Medium,2026-05-13 10:45:15,4,Resolved
-C0305,Street lights not working on Pine St,Electricity,High,2026-07-15 10:45:15,21,Resolved
-C0306,Huge pothole on Maple Dr causing traffic,Road,Low,2026-06-07 10:45:15,,Assigned
-C0307,Road surface completely destroyed near Main St,Road,Critical,2026-03-11 10:45:15,2,Resolved
-C0308,Street lights not working on Pine St,Electricity,High,2026-06-23 10:45:15,4,Resolved
-C0309,Complete blackout in the neighborhood around Maple Dr,Electricity,High,2026-03-24 10:45:15,11,Resolved
-C0310,Terrible smell from open drain near Pine St,Drainage,Low,2026-02-21 10:45:15,20,Resolved
-C0311,Blocked storm drain causing flooding at Elm St,Drainage,Low,2026-03-19 10:45:15,17,Resolved
-C0312,Traffic light broken at Elm St intersection,Road,High,2026-03-10 10:45:15,,In Progress
-C0313,Traffic light broken at Oak Ave intersection,Road,Medium,2026-07-18 10:45:15,14,Resolved
-C0314,Blocked storm drain causing flooding at Park Ave,Drainage,Medium,2026-06-30 10:45:15,6,Resolved
-C0315,Traffic light broken at Pine St intersection,Road,Low,2026-05-12 10:45:15,,Assigned
-C0316,Illegal dumping of construction waste near Main St,Waste,Low,2026-06-15 10:45:15,21,Resolved
-C0317,Illegal dumping of construction waste near Pine St,Waste,Low,2026-04-29 10:45:15,19,Resolved
-C0318,Foul smell from uncollected trash at Maple Dr,Waste,Medium,2026-03-23 10:45:15,13,Resolved
-C0319,Blocked storm drain causing flooding at Elm St,Drainage,Medium,2026-06-30 10:45:15,22,Resolved
-C0320,Sparking power lines near Park Ave,Electricity,High,2026-03-25 10:45:15,17,Resolved
-C0321,"Pipe burst near Pine St, water flooding the sidewalk",Water,Critical,2026-03-23 10:45:15,1,Resolved
-C0322,Garbage bins overflowing for days on Oak Ave,Waste,High,2026-05-06 10:45:15,21,Resolved
-C0323,Dirty brown water coming from taps at Maple Dr,Water,Critical,2026-06-01 10:45:15,1,Resolved
-C0324,Dirty brown water coming from taps at Main St,Water,Low,2026-08-03 10:45:15,9,Resolved
-C0325,Sparking power lines near Pine St,Electricity,High,2026-04-02 10:45:15,,In Progress
-C0326,Road surface completely destroyed near Oak Ave,Road,High,2026-07-14 10:45:15,,Assigned
-C0327,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,High,2026-06-07 10:45:15,4,Resolved
-C0328,Complete blackout in the neighborhood around Maple Dr,Electricity,High,2026-04-20 10:45:15,,Open
-C0329,Garbage bins overflowing for days on Oak Ave,Waste,Low,2026-05-31 10:45:15,,In Progress
-C0330,Complete blackout in the neighborhood around Pine St,Electricity,High,2026-05-21 10:45:15,28,Resolved
-C0331,"Pipe burst near Main St, water flooding the sidewalk",Water,Low,2026-05-18 10:45:15,,Open
-C0332,"Pipe burst near Pine St, water flooding the sidewalk",Water,Critical,2026-07-11 10:45:15,1,Resolved
-C0333,No pedestrian crossing visible at Elm St,Safety,Low,2026-05-20 10:45:15,13,Resolved
-C0334,Broken fence near the park on Maple Dr,Safety,Medium,2026-02-17 10:45:15,,In Progress
-C0335,No water supply in the building on Pine St,Water,Low,2026-02-22 10:45:15,21,Resolved
-C0336,Dirty brown water coming from taps at Main St,Water,High,2026-03-24 10:45:15,,In Progress
-C0337,Huge pothole on Maple Dr causing traffic,Road,High,2026-08-03 10:45:15,26,Resolved
-C0338,Dirty brown water coming from taps at Oak Ave,Water,Low,2026-03-09 10:45:15,9,Resolved
-C0339,Street lights not working on Maple Dr,Electricity,High,2026-07-17 10:45:15,,Assigned
-C0340,Dirty brown water coming from taps at Washington Blvd,Water,Low,2026-07-05 10:45:15,12,Resolved
-C0341,No water supply in the building on Elm St,Water,Critical,2026-05-04 10:45:15,,Open
-C0342,Sewage backing up into street on Cedar Ln,Drainage,Medium,2026-02-10 10:45:15,8,Resolved
-C0343,"Pipe burst near Elm St, water flooding the sidewalk",Water,High,2026-02-15 10:45:15,15,Resolved
-C0344,Road surface completely destroyed near Oak Ave,Road,Low,2026-06-12 10:45:15,,Open
-C0345,Foul smell from uncollected trash at Main St,Waste,High,2026-05-07 10:45:15,10,Resolved
-C0346,Illegal dumping of construction waste near Maple Dr,Waste,Medium,2026-05-28 10:45:15,27,Resolved
-C0347,Sparking power lines near Maple Dr,Electricity,High,2026-07-09 10:45:15,,In Progress
-C0348,Illegal dumping of construction waste near Maple Dr,Waste,Medium,2026-07-26 10:45:15,,In Progress
-C0349,Foul smell from uncollected trash at Park Ave,Waste,Medium,2026-05-21 10:45:15,9,Resolved
-C0350,Traffic light broken at Cedar Ln intersection,Road,Medium,2026-02-26 10:45:15,,In Progress
-C0351,Complete blackout in the neighborhood around Cedar Ln,Electricity,High,2026-07-25 10:45:15,,In Progress
-C0352,Illegal dumping of construction waste near Oak Ave,Waste,Medium,2026-03-13 10:45:15,8,Resolved
-C0353,Garbage bins overflowing for days on Elm St,Waste,Low,2026-07-05 10:45:15,,Open
-C0354,Loud noise complaint from construction on Oak Ave,Other,Critical,2026-02-25 10:45:15,,Assigned
-C0355,Road surface completely destroyed near Washington Blvd,Road,Low,2026-05-10 10:45:15,28,Resolved
-C0356,Garbage bins overflowing for days on Elm St,Waste,Low,2026-07-24 10:45:15,3,Resolved
-C0357,Traffic light broken at Oak Ave intersection,Road,Medium,2026-05-12 10:45:15,,In Progress
-C0358,Traffic light broken at Elm St intersection,Road,High,2026-06-14 10:45:15,,In Progress
-C0359,Street lights not working on Maple Dr,Electricity,Critical,2026-03-12 10:45:15,3,Resolved
-C0360,Sparking power lines near Main St,Electricity,Low,2026-02-14 10:45:15,16,Resolved
-C0361,Huge pothole on Elm St causing traffic,Road,High,2026-02-16 10:45:15,,Open
-C0362,Huge pothole on Oak Ave causing traffic,Road,Medium,2026-03-17 10:45:15,,Assigned
-C0363,Road surface completely destroyed near Main St,Road,Low,2026-06-06 10:45:15,11,Resolved
-C0364,Dangerous leaning tree over walkway on Cedar Ln,Safety,Low,2026-04-18 10:45:15,,In Progress
-C0365,Road surface completely destroyed near Oak Ave,Road,Medium,2026-05-07 10:45:15,16,Resolved
-C0366,Dangerous leaning tree over walkway on Washington Blvd,Safety,Medium,2026-04-28 10:45:15,,In Progress
-C0367,Garbage bins overflowing for days on Main St,Waste,Low,2026-03-27 10:45:15,,Open
-C0368,Sparking power lines near Pine St,Electricity,High,2026-05-30 10:45:15,,In Progress
-C0369,Dirty brown water coming from taps at Cedar Ln,Water,Medium,2026-05-29 10:45:15,,Open
-C0370,Garbage bins overflowing for days on Park Ave,Waste,Low,2026-02-28 10:45:15,10,Resolved
-C0371,Huge pothole on Maple Dr causing traffic,Road,High,2026-06-30 10:45:15,19,Resolved
-C0372,No water supply in the building on Pine St,Water,High,2026-03-14 10:45:15,25,Resolved
-C0373,Garbage bins overflowing for days on Oak Ave,Waste,Medium,2026-03-02 10:45:15,,In Progress
-C0374,Traffic light broken at Elm St intersection,Road,Critical,2026-04-15 10:45:15,3,Resolved
-C0375,Dirty brown water coming from taps at Elm St,Water,High,2026-07-02 10:45:15,,In Progress
-C0376,Dirty brown water coming from taps at Cedar Ln,Water,High,2026-04-24 10:45:15,,In Progress
-C0377,No water supply in the building on Cedar Ln,Water,High,2026-04-09 10:45:15,,Open
-C0378,Illegal dumping of construction waste near Maple Dr,Waste,Low,2026-03-14 10:45:15,,Assigned
-C0379,Foul smell from uncollected trash at Pine St,Waste,Low,2026-07-23 10:45:15,22,Resolved
-C0380,Complete blackout in the neighborhood around Washington Blvd,Electricity,Critical,2026-05-16 10:45:15,4,Resolved
-C0381,Traffic light broken at Oak Ave intersection,Road,Medium,2026-04-04 10:45:15,24,Resolved
-C0382,Foul smell from uncollected trash at Maple Dr,Waste,High,2026-07-07 10:45:15,,In Progress
-C0383,Dangerous leaning tree over walkway on Elm St,Safety,Critical,2026-05-05 10:45:15,4,Resolved
-C0384,Illegal dumping of construction waste near Washington Blvd,Waste,Low,2026-05-10 10:45:15,15,Resolved
-C0385,No pedestrian crossing visible at Oak Ave,Safety,High,2026-06-11 10:45:15,10,Resolved
-C0386,Terrible smell from open drain near Oak Ave,Drainage,Low,2026-03-09 10:45:15,24,Resolved
-C0387,No water supply in the building on Main St,Water,Medium,2026-03-02 10:45:15,18,Resolved
-C0388,Garbage bins overflowing for days on Maple Dr,Waste,Medium,2026-02-17 10:45:15,30,Resolved
-C0389,Road surface completely destroyed near Maple Dr,Road,Low,2026-06-20 10:45:15,18,Resolved
-C0390,Huge pothole on Elm St causing traffic,Road,Medium,2026-07-14 10:45:15,,In Progress
-C0391,Huge pothole on Main St causing traffic,Road,Medium,2026-07-03 10:45:15,,Assigned
-C0392,Traffic light broken at Elm St intersection,Road,Medium,2026-05-18 10:45:15,19,Resolved
-C0393,Garbage bins overflowing for days on Pine St,Waste,Low,2026-05-22 10:45:15,22,Resolved
-C0394,Traffic light broken at Washington Blvd intersection,Road,Low,2026-03-24 10:45:15,3,Resolved
-C0395,Complete blackout in the neighborhood around Maple Dr,Electricity,Medium,2026-06-26 10:45:15,,Open
-C0396,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,Medium,2026-07-04 10:45:15,18,Resolved
-C0397,Sewage backing up into street on Cedar Ln,Drainage,Low,2026-05-18 10:45:15,13,Resolved
-C0398,No water supply in the building on Washington Blvd,Water,High,2026-04-06 10:45:15,,Open
-C0399,Illegal dumping of construction waste near Washington Blvd,Waste,Low,2026-03-22 10:45:15,23,Resolved
-C0400,Garbage bins overflowing for days on Park Ave,Waste,Medium,2026-03-17 10:45:15,16,Resolved
-C0401,Illegal dumping of construction waste near Cedar Ln,Waste,Medium,2026-02-17 10:45:15,6,Resolved
-C0402,Huge pothole on Pine St causing traffic,Road,High,2026-05-27 10:45:15,12,Resolved
-C0403,Sparking power lines near Elm St,Electricity,Low,2026-03-24 10:45:15,,In Progress
-C0404,Stray dogs aggressive near Maple Dr,Other,High,2026-06-28 10:45:15,,In Progress
-C0405,Traffic light broken at Oak Ave intersection,Road,High,2026-05-19 10:45:15,,Open
-C0406,Traffic light broken at Maple Dr intersection,Road,Medium,2026-04-09 10:45:15,18,Resolved
-C0407,Huge pothole on Oak Ave causing traffic,Road,Low,2026-04-17 10:45:15,24,Resolved
-C0408,Dirty brown water coming from taps at Oak Ave,Water,High,2026-07-17 10:45:15,27,Resolved
-C0409,"Pipe burst near Cedar Ln, water flooding the sidewalk",Water,Medium,2026-08-04 10:45:15,6,Resolved
-C0410,"Pipe burst near Oak Ave, water flooding the sidewalk",Water,High,2026-06-30 10:45:15,,In Progress
-C0411,Blocked storm drain causing flooding at Pine St,Drainage,Critical,2026-05-27 10:45:15,4,Resolved
-C0412,No pedestrian crossing visible at Maple Dr,Safety,Low,2026-03-03 10:45:15,4,Resolved
-C0413,Sewage backing up into street on Main St,Drainage,Low,2026-06-12 10:45:15,25,Resolved
-C0414,Foul smell from uncollected trash at Washington Blvd,Waste,Low,2026-05-14 10:45:15,30,Resolved
-C0415,"Pipe burst near Pine St, water flooding the sidewalk",Water,Critical,2026-07-18 10:45:15,5,Resolved
-C0416,Traffic light broken at Pine St intersection,Road,Low,2026-04-14 10:45:15,24,Resolved
-C0417,Terrible smell from open drain near Cedar Ln,Drainage,Low,2026-02-24 10:45:15,19,Resolved
-C0418,Garbage bins overflowing for days on Main St,Waste,Low,2026-06-18 10:45:15,,In Progress
-C0419,Dirty brown water coming from taps at Elm St,Water,Critical,2026-05-21 10:45:15,,In Progress
-C0420,Huge pothole on Washington Blvd causing traffic,Road,High,2026-04-27 10:45:15,,In Progress
-C0421,No water supply in the building on Pine St,Water,Critical,2026-07-06 10:45:15,,Assigned
-C0422,Dirty brown water coming from taps at Washington Blvd,Water,Critical,2026-05-26 10:45:15,4,Resolved
-C0423,Huge pothole on Pine St causing traffic,Road,Critical,2026-03-07 10:45:15,4,Resolved
-C0424,Garbage bins overflowing for days on Pine St,Waste,Medium,2026-03-22 10:45:15,,Assigned
-C0425,Illegal dumping of construction waste near Oak Ave,Waste,Medium,2026-04-29 10:45:15,24,Resolved
-C0426,No water supply in the building on Elm St,Water,Medium,2026-06-18 10:45:15,9,Resolved
-C0427,No water supply in the building on Pine St,Water,Critical,2026-02-15 10:45:15,2,Resolved
-C0428,Huge pothole on Cedar Ln causing traffic,Road,Low,2026-02-11 10:45:15,19,Resolved
-C0429,Blocked storm drain causing flooding at Cedar Ln,Drainage,Critical,2026-03-11 10:45:15,4,Resolved
-C0430,Graffiti on public wall at Oak Ave,Other,Medium,2026-05-17 10:45:15,30,Resolved
-C0431,Road surface completely destroyed near Washington Blvd,Road,Medium,2026-05-29 10:45:15,11,Resolved
-C0432,Road surface completely destroyed near Pine St,Road,Medium,2026-03-15 10:45:15,,In Progress
-C0433,Sparking power lines near Main St,Electricity,Critical,2026-05-16 10:45:15,3,Resolved
-C0434,Illegal dumping of construction waste near Main St,Waste,Medium,2026-05-10 10:45:15,16,Resolved
-C0435,Huge pothole on Elm St causing traffic,Road,Medium,2026-07-08 10:45:15,16,Resolved
-C0436,No water supply in the building on Oak Ave,Water,Critical,2026-02-19 10:45:15,5,Resolved
-C0437,Traffic light broken at Park Ave intersection,Road,Medium,2026-06-20 10:45:15,3,Resolved
-C0438,Road surface completely destroyed near Park Ave,Road,Medium,2026-05-02 10:45:15,18,Resolved
-C0439,Road surface completely destroyed near Park Ave,Road,Medium,2026-07-26 10:45:15,,Open
-C0440,Traffic light broken at Maple Dr intersection,Road,Low,2026-07-22 10:45:15,27,Resolved
-C0441,Sparking power lines near Cedar Ln,Electricity,High,2026-05-16 10:45:15,,In Progress
-C0442,Blocked storm drain causing flooding at Park Ave,Drainage,Medium,2026-03-27 10:45:15,20,Resolved
-C0443,Broken fence near the park on Washington Blvd,Safety,Low,2026-02-28 10:45:15,6,Resolved
-C0444,Traffic light broken at Cedar Ln intersection,Road,Medium,2026-02-23 10:45:15,6,Resolved
-C0445,Dirty brown water coming from taps at Park Ave,Water,High,2026-02-25 10:45:15,,Open
-C0446,Sewage backing up into street on Elm St,Drainage,Low,2026-05-08 10:45:15,,Open
-C0447,Dangerous leaning tree over walkway on Oak Ave,Safety,Medium,2026-06-05 10:45:15,15,Resolved
-C0448,Foul smell from uncollected trash at Washington Blvd,Waste,High,2026-07-05 10:45:15,,In Progress
-C0449,Road surface completely destroyed near Cedar Ln,Road,Low,2026-06-10 10:45:15,,In Progress
-C0450,Blocked storm drain causing flooding at Maple Dr,Drainage,Low,2026-05-31 10:45:15,,In Progress
-C0451,Complete blackout in the neighborhood around Pine St,Electricity,Medium,2026-07-08 10:45:15,4,Resolved
-C0452,Street lights not working on Main St,Electricity,High,2026-07-12 10:45:15,28,Resolved
-C0453,Sparking power lines near Pine St,Electricity,High,2026-05-11 10:45:15,23,Resolved
-C0454,No pedestrian crossing visible at Maple Dr,Safety,Low,2026-03-31 10:45:15,,Open
-C0455,Stray dogs aggressive near Park Ave,Other,Low,2026-06-04 10:45:15,,In Progress
-C0456,Sparking power lines near Oak Ave,Electricity,Medium,2026-06-09 10:45:15,12,Resolved
-C0457,No pedestrian crossing visible at Elm St,Safety,Low,2026-03-23 10:45:15,,Assigned
-C0458,Road surface completely destroyed near Maple Dr,Road,Low,2026-07-29 10:45:15,,Assigned
-C0459,Illegal dumping of construction waste near Pine St,Waste,Low,2026-07-15 10:45:15,16,Resolved
-C0460,Dirty brown water coming from taps at Park Ave,Water,Critical,2026-04-19 10:45:15,4,Resolved
-C0461,"Pipe burst near Cedar Ln, water flooding the sidewalk",Water,High,2026-07-25 10:45:15,,Assigned
-C0462,Road surface completely destroyed near Washington Blvd,Road,Medium,2026-04-01 10:45:15,15,Resolved
-C0463,Blocked storm drain causing flooding at Oak Ave,Drainage,Low,2026-07-04 10:45:15,5,Resolved
-C0464,Illegal dumping of construction waste near Oak Ave,Waste,Low,2026-07-21 10:45:15,17,Resolved
-C0465,No water supply in the building on Park Ave,Water,High,2026-04-21 10:45:15,24,Resolved
-C0466,Road surface completely destroyed near Park Ave,Road,High,2026-05-06 10:45:15,,Assigned
-C0467,Stray dogs aggressive near Elm St,Other,Critical,2026-02-14 10:45:15,,In Progress
-C0468,Huge pothole on Maple Dr causing traffic,Road,High,2026-02-19 10:45:15,24,Resolved
-C0469,Garbage bins overflowing for days on Pine St,Waste,Low,2026-07-14 10:45:15,,Assigned
-C0470,Garbage bins overflowing for days on Cedar Ln,Waste,High,2026-07-04 10:45:15,28,Resolved
-C0471,Traffic light broken at Oak Ave intersection,Road,Critical,2026-03-10 10:45:15,2,Resolved
-C0472,Illegal dumping of construction waste near Elm St,Waste,Medium,2026-03-25 10:45:15,13,Resolved
-C0473,Huge pothole on Pine St causing traffic,Road,High,2026-03-30 10:45:15,22,Resolved
-C0474,Dangerous leaning tree over walkway on Park Ave,Safety,Low,2026-02-25 10:45:15,,Open
-C0475,Road surface completely destroyed near Pine St,Road,High,2026-06-03 10:45:15,,Open
-C0476,Dirty brown water coming from taps at Maple Dr,Water,Medium,2026-02-12 10:45:15,24,Resolved
-C0477,"Pipe burst near Elm St, water flooding the sidewalk",Water,High,2026-06-28 10:45:15,11,Resolved
-C0478,Huge pothole on Washington Blvd causing traffic,Road,Medium,2026-08-02 10:45:15,17,Resolved
-C0479,Garbage bins overflowing for days on Oak Ave,Waste,Medium,2026-05-26 10:45:15,23,Resolved
-C0480,Traffic light broken at Elm St intersection,Road,High,2026-04-09 10:45:15,9,Resolved
-C0481,Street lights not working on Cedar Ln,Electricity,Critical,2026-04-05 10:45:15,,Assigned
-C0482,Terrible smell from open drain near Park Ave,Drainage,Low,2026-05-20 10:45:15,11,Resolved
-C0483,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,Medium,2026-05-10 10:45:15,,Assigned
-C0484,Traffic light broken at Park Ave intersection,Road,High,2026-07-09 10:45:15,10,Resolved
-C0485,Graffiti on public wall at Elm St,Other,Critical,2026-04-13 10:45:15,,Assigned
-C0486,Graffiti on public wall at Pine St,Other,Low,2026-06-05 10:45:15,8,Resolved
-C0487,"Pipe burst near Elm St, water flooding the sidewalk",Water,High,2026-05-29 10:45:15,9,Resolved
-C0488,Road surface completely destroyed near Washington Blvd,Road,Low,2026-03-19 10:45:15,16,Resolved
-C0489,Terrible smell from open drain near Washington Blvd,Drainage,Critical,2026-07-01 10:45:15,,In Progress
-C0490,Traffic light broken at Maple Dr intersection,Road,High,2026-03-07 10:45:15,14,Resolved
-C0491,Blocked storm drain causing flooding at Maple Dr,Drainage,High,2026-07-04 10:45:15,,In Progress
-C0492,Huge pothole on Maple Dr causing traffic,Road,Low,2026-07-28 10:45:15,,Assigned
-C0493,Traffic light broken at Oak Ave intersection,Road,Low,2026-06-30 10:45:15,,Open
-C0494,No pedestrian crossing visible at Main St,Safety,Low,2026-02-11 10:45:15,24,Resolved
-C0495,Traffic light broken at Cedar Ln intersection,Road,Medium,2026-05-06 10:45:15,,In Progress
-C0496,Sewage backing up into street on Pine St,Drainage,Low,2026-05-30 10:45:15,,In Progress
-C0497,Road surface completely destroyed near Elm St,Road,Critical,2026-02-24 10:45:15,1,Resolved
-C0498,Garbage bins overflowing for days on Maple Dr,Waste,Medium,2026-06-08 10:45:15,8,Resolved
-C0499,Blocked storm drain causing flooding at Maple Dr,Drainage,Medium,2026-02-27 10:45:15,,Assigned
-C0500,Garbage bins overflowing for days on Oak Ave,Waste,Low,2026-03-18 10:45:15,7,Resolved
+complaint_id,description,category,priority,date_submitted,resolution_days,status,citizen_name,location,citizen_email,citizen_phone
+C0001,Road surface completely destroyed near Elm St,Road,Medium,2026-08-07 18:52:54,13,Resolved,Bilal Siddiqui,"Phase 4, Bahria Town, Rawalpindi",saad.k@gmail.com,+923129876543
+C0002,Huge pothole on Cedar Ln causing traffic,Road,Low,2026-04-17 18:52:54,19,Resolved,Ali Murtaza,"Sector G-9, Islamabad",usman.ghani@gmail.com,+923157654321
+C0003,Foul smell from uncollected trash at Cedar Ln,Waste,Low,2026-04-19 18:52:54,,Assigned,Bilal Siddiqui,"Block 13D, Gulshan-e-Iqbal, Karachi",mariam.m@outlook.com,+923129876543
+C0004,"Pipe burst near Elm St, water flooding the sidewalk",Water,High,2026-04-22 18:52:54,7,Resolved,Hamza Sheikh,"North Nazimabad Block H, Karachi",saad.k@gmail.com,+923224567890
+C0005,Street lights not working on Main St,Electricity,Critical,2026-02-28 18:52:54,,Open,Fatima Ahmed,"Gulberg III, Lahore",bilal.dev@gmail.com,+923337654321
+C0006,Illegal dumping of construction waste near Oak Ave,Waste,Medium,2026-07-26 18:52:54,10,Resolved,Hafsa Bibi,"Sector F-7/2, Islamabad",kiran.sheikh@hotmail.com,+923341234567
+C0007,Sparking power lines near Cedar Ln,Electricity,Critical,2026-06-15 18:52:54,,Open,Syed Hamza,"Liaquatabad No. 4, Karachi",usman.ghani@gmail.com,+923001234567
+C0008,Traffic light broken at Oak Ave intersection,Road,Medium,2026-02-19 18:52:54,,In Progress,Bilal Siddiqui,"Sector F-7/2, Islamabad",areeb@gmail.com,+923087654321
+C0009,Garbage bins overflowing for days on Main St,Waste,High,2026-04-05 18:52:54,,In Progress,Zainab Bibi,"Liaquatabad No. 4, Karachi",hamza.ali@yahoo.com,+923129876543
+C0010,"Pipe burst near Pine St, water flooding the sidewalk",Water,High,2026-06-30 18:52:54,6,Resolved,Sana Riaz,"Sector G-9, Islamabad",fatima.shah@gmail.com,+923019876543
+C0011,Stray dogs aggressive near Cedar Ln,Other,Low,2026-03-16 18:52:54,,In Progress,Hafsa Bibi,"Liaquatabad No. 4, Karachi",areeb@gmail.com,+923337654321
+C0012,Huge pothole on Elm St causing traffic,Road,Medium,2026-05-12 18:52:54,,Open,Kiran Shah,"Gulberg III, Lahore",usman.khan@gmail.com,+923456543210
+C0013,Terrible smell from open drain near Oak Ave,Drainage,Medium,2026-07-01 18:52:54,,In Progress,Muhammad Ali,"Saddar Bazar, Karachi",sana.riaz@yahoo.com,+923337654321
+C0014,Huge pothole on Oak Ave causing traffic,Road,Medium,2026-05-21 18:52:54,13,Resolved,Bilal Siddiqui,"North Nazimabad Block H, Karachi",usman.ghani@gmail.com,+923019876543
+C0015,Loud noise complaint from construction on Pine St,Other,Medium,2026-06-08 18:52:54,12,Resolved,Sana Riaz,"Gulberg III, Lahore",areeb@gmail.com,+923019876543
+C0016,Huge pothole on Maple Dr causing traffic,Road,Low,2026-06-22 18:52:54,17,Resolved,Fatima Ahmed,"Block 13D, Gulshan-e-Iqbal, Karachi",usman.ghani@gmail.com,+923179876543
+C0017,Graffiti on public wall at Pine St,Other,Low,2026-08-08 18:52:54,,Open,Mariam Malik,"Sector G-9, Islamabad",saad.k@gmail.com,+923129876543
+C0018,Traffic light broken at Maple Dr intersection,Road,High,2026-03-27 18:52:54,3,Resolved,Ahmed Raza,"Block 5, Clifton, Karachi",hamza.ali@yahoo.com,+923001234567
+C0019,Blocked storm drain causing flooding at Park Ave,Drainage,High,2026-06-02 18:52:54,5,Resolved,Sana Riaz,"Sector F-7/2, Islamabad",saad.k@gmail.com,+923456543210
+C0020,No pedestrian crossing visible at Cedar Ln,Safety,Low,2026-03-04 18:52:54,,In Progress,Hamza Sheikh,"Sector G-9, Islamabad",sana.riaz@yahoo.com,+923001234567
+C0021,No water supply in the building on Park Ave,Water,Critical,2026-03-15 18:52:54,2,Resolved,Saad Khan,"Gulberg III, Lahore",kiran.sheikh@hotmail.com,+923456543210
+C0022,Foul smell from uncollected trash at Cedar Ln,Waste,Low,2026-06-01 18:52:54,26,Resolved,Sana Riaz,"Gulberg III, Lahore",bilal.dev@gmail.com,+923341234567
+C0023,Traffic light broken at Pine St intersection,Road,Critical,2026-05-02 18:52:54,1,Resolved,Saad Khan,"Model Town Block C, Lahore",kiran.sheikh@hotmail.com,+923179876543
+C0024,Illegal dumping of construction waste near Main St,Waste,High,2026-04-18 18:52:54,4,Resolved,Sana Riaz,"Gulberg III, Lahore",kiran.sheikh@hotmail.com,+923129876543
+C0025,Dirty brown water coming from taps at Maple Dr,Water,High,2026-08-06 18:52:54,,Open,Ali Murtaza,"Liaquatabad No. 4, Karachi",saad.k@gmail.com,+923337654321
+C0026,No water supply in the building on Pine St,Water,Critical,2026-07-17 18:52:54,1,Resolved,Hafsa Bibi,"Saddar Bazar, Karachi",bilal.dev@gmail.com,+923019876543
+C0027,Street lights not working on Cedar Ln,Electricity,Low,2026-05-14 18:52:54,,Open,Fatima Ahmed,"Block 13D, Gulshan-e-Iqbal, Karachi",ahmed.raza@gmail.com,+923337654321
+C0028,Dirty brown water coming from taps at Maple Dr,Water,High,2026-02-13 18:52:54,6,Resolved,Zainab Bibi,"Saddar Bazar, Karachi",areeb@gmail.com,+923214567890
+C0029,Foul smell from uncollected trash at Washington Blvd,Waste,Medium,2026-07-29 18:52:54,,Open,Ayesha Khan,"North Nazimabad Block H, Karachi",mariam.m@outlook.com,+923214567890
+C0030,Dirty brown water coming from taps at Cedar Ln,Water,High,2026-03-21 18:52:54,4,Resolved,Ayesha Khan,"Liaquatabad No. 4, Karachi",zainab12@hotmail.com,+923224567890
+C0031,No water supply in the building on Park Ave,Water,High,2026-02-21 18:52:54,,In Progress,Syed Hamza,"North Nazimabad Block H, Karachi",hamza.ali@yahoo.com,+923129876543
+C0032,Complete blackout in the neighborhood around Maple Dr,Electricity,Critical,2026-03-02 18:52:54,3,Resolved,Sana Riaz,"Model Town Block C, Lahore",mariam.m@outlook.com,+923157654321
+C0033,Dirty brown water coming from taps at Maple Dr,Water,Medium,2026-03-27 18:52:54,10,Resolved,Sana Riaz,"Phase 4, Bahria Town, Rawalpindi",ahmed.raza@gmail.com,+923001234567
+C0034,Terrible smell from open drain near Maple Dr,Drainage,High,2026-04-16 18:52:54,4,Resolved,Ali Murtaza,"North Nazimabad Block H, Karachi",mariam.m@outlook.com,+923337654321
+C0035,Dirty brown water coming from taps at Cedar Ln,Water,Medium,2026-04-18 18:52:54,13,Resolved,Muhammad Ali,"Block 5, Clifton, Karachi",usman.ghani@gmail.com,+923224567890
+C0036,Garbage bins overflowing for days on Oak Ave,Waste,Low,2026-03-16 18:52:54,,In Progress,Fatima Ahmed,"Block 5, Clifton, Karachi",bilal.dev@gmail.com,+923214567890
+C0037,Sewage backing up into street on Oak Ave,Drainage,Medium,2026-03-11 18:52:54,13,Resolved,Mariam Malik,"Gulberg III, Lahore",hamza.ali@yahoo.com,+923179876543
+C0038,Complete blackout in the neighborhood around Cedar Ln,Electricity,High,2026-06-17 18:52:54,7,Resolved,Saad Khan,"Samanabad, Lahore",zainab12@hotmail.com,+923129876543
+C0039,Broken fence near the park on Oak Ave,Safety,Critical,2026-02-21 18:52:54,,Assigned,Zainab Bibi,"North Nazimabad Block H, Karachi",kiran.sheikh@hotmail.com,+923157654321
+C0040,Road surface completely destroyed near Park Ave,Road,Medium,2026-07-14 18:52:54,,In Progress,Syed Hamza,"Block 13D, Gulshan-e-Iqbal, Karachi",sana.riaz@yahoo.com,+923179876543
+C0041,No water supply in the building on Maple Dr,Water,Critical,2026-06-13 18:52:54,3,Resolved,Hamza Sheikh,"North Nazimabad Block H, Karachi",bilal.dev@gmail.com,+923224567890
+C0042,Illegal dumping of construction waste near Pine St,Waste,Medium,2026-07-24 18:52:54,,In Progress,Mariam Malik,"Phase 6, DHA, Karachi",saad.k@gmail.com,+923001234567
+C0043,Terrible smell from open drain near Washington Blvd,Drainage,High,2026-04-28 18:52:54,,Open,Hafsa Bibi,"Sector F-7/2, Islamabad",sana.riaz@yahoo.com,+923456543210
+C0044,No pedestrian crossing visible at Washington Blvd,Safety,Medium,2026-06-01 18:52:54,9,Resolved,Ahmed Raza,"Phase 4, Bahria Town, Rawalpindi",areeb@gmail.com,+923179876543
+C0045,Complete blackout in the neighborhood around Cedar Ln,Electricity,Critical,2026-06-07 18:52:54,1,Resolved,Ali Murtaza,"Liaquatabad No. 4, Karachi",bilal.dev@gmail.com,+923351234567
+C0046,Huge pothole on Park Ave causing traffic,Road,Low,2026-03-13 18:52:54,20,Resolved,Fatima Ahmed,"Phase 6, DHA, Karachi",kiran.sheikh@hotmail.com,+923337654321
+C0047,Street lights not working on Oak Ave,Electricity,Low,2026-07-22 18:52:54,26,Resolved,Bilal Siddiqui,"Sector F-7/2, Islamabad",areeb@gmail.com,+923456543210
+C0048,Sewage backing up into street on Washington Blvd,Drainage,High,2026-06-05 18:52:54,,Assigned,Mariam Malik,"Saddar Bazar, Karachi",sana.riaz@yahoo.com,+923337654321
+C0049,Street lights not working on Elm St,Electricity,Critical,2026-06-17 18:52:54,3,Resolved,Bilal Siddiqui,"North Nazimabad Block H, Karachi",zainab12@hotmail.com,+923341234567
+C0050,Street lights not working on Oak Ave,Electricity,High,2026-08-05 18:52:54,7,Resolved,Bilal Siddiqui,"Phase 4, Bahria Town, Rawalpindi",zainab12@hotmail.com,+923087654321
+C0051,Road surface completely destroyed near Park Ave,Road,Medium,2026-02-24 18:52:54,,Open,Syed Hamza,"Phase 4, Bahria Town, Rawalpindi",zainab12@hotmail.com,+923337654321
+C0052,Traffic light broken at Park Ave intersection,Road,Low,2026-06-19 18:52:54,19,Resolved,Hamza Sheikh,"Block 13D, Gulshan-e-Iqbal, Karachi",zainab12@hotmail.com,+923456543210
+C0053,Complete blackout in the neighborhood around Oak Ave,Electricity,Critical,2026-02-20 18:52:54,2,Resolved,Muhammad Ali,"Block 13D, Gulshan-e-Iqbal, Karachi",zainab12@hotmail.com,+923019876543
+C0054,Terrible smell from open drain near Maple Dr,Drainage,High,2026-08-06 18:52:54,6,Resolved,Muhammad Ali,"Phase 6, DHA, Karachi",kiran.sheikh@hotmail.com,+923019876543
+C0055,No pedestrian crossing visible at Maple Dr,Safety,Low,2026-07-08 18:52:54,20,Resolved,Hafsa Bibi,"Phase 4, Bahria Town, Rawalpindi",zainab12@hotmail.com,+923087654321
+C0056,Stray dogs aggressive near Cedar Ln,Other,Medium,2026-03-25 18:52:54,8,Resolved,Syed Hamza,"Model Town Block C, Lahore",hamza.ali@yahoo.com,+923337654321
+C0057,Traffic light broken at Oak Ave intersection,Road,High,2026-05-26 18:52:54,,Open,Hamza Sheikh,"Gulberg III, Lahore",usman.khan@gmail.com,+923179876543
+C0058,Huge pothole on Washington Blvd causing traffic,Road,Medium,2026-07-04 18:52:54,,Assigned,Bilal Siddiqui,"Saddar Bazar, Karachi",hamza.ali@yahoo.com,+923157654321
+C0059,"Pipe burst near Maple Dr, water flooding the sidewalk",Water,Critical,2026-06-29 18:52:54,3,Resolved,Mariam Malik,"Block 5, Clifton, Karachi",mariam.m@outlook.com,+923341234567
+C0060,Road surface completely destroyed near Pine St,Road,Medium,2026-05-03 18:52:54,11,Resolved,Ahmed Raza,"Block 5, Clifton, Karachi",ahmed.raza@gmail.com,+923341234567
+C0061,Traffic light broken at Park Ave intersection,Road,High,2026-02-19 18:52:54,,In Progress,Kiran Shah,"Samanabad, Lahore",hamza.ali@yahoo.com,+923179876543
+C0062,Foul smell from uncollected trash at Pine St,Waste,Medium,2026-05-14 18:52:54,11,Resolved,Ali Murtaza,"Block 5, Clifton, Karachi",usman.khan@gmail.com,+923214567890
+C0063,Dirty brown water coming from taps at Oak Ave,Water,Critical,2026-03-25 18:52:54,,Open,Kiran Shah,"Saddar Bazar, Karachi",usman.ghani@gmail.com,+923351234567
+C0064,Huge pothole on Washington Blvd causing traffic,Road,Low,2026-03-10 18:52:54,,Assigned,Bilal Siddiqui,"Block 5, Clifton, Karachi",ahmed.raza@gmail.com,+923224567890
+C0065,Huge pothole on Pine St causing traffic,Road,Low,2026-07-11 18:52:54,,Open,Bilal Siddiqui,"Saddar Bazar, Karachi",ahmed.raza@gmail.com,+923179876543
+C0066,Dirty brown water coming from taps at Maple Dr,Water,Critical,2026-02-17 18:52:54,,In Progress,Zainab Bibi,"Saddar Bazar, Karachi",hamza.ali@yahoo.com,+923157654321
+C0067,Traffic light broken at Maple Dr intersection,Road,Medium,2026-05-17 18:52:54,8,Resolved,Saad Khan,"Sector G-9, Islamabad",mariam.m@outlook.com,+923129876543
+C0068,Illegal dumping of construction waste near Pine St,Waste,Medium,2026-04-03 18:52:54,,Assigned,Muhammad Ali,"Samanabad, Lahore",mariam.m@outlook.com,+923157654321
+C0069,Loud noise complaint from construction on Elm St,Other,Low,2026-05-22 18:52:54,14,Resolved,Muhammad Ali,"Block 5, Clifton, Karachi",usman.ghani@gmail.com,+923456543210
+C0070,Illegal dumping of construction waste near Maple Dr,Waste,Medium,2026-05-14 18:52:54,14,Resolved,Usman Ghani,"Phase 4, Bahria Town, Rawalpindi",fatima.shah@gmail.com,+923001234567
+C0071,Sewage backing up into street on Pine St,Drainage,Low,2026-04-21 18:52:54,,Assigned,Ahmed Raza,"Saddar Bazar, Karachi",bilal.dev@gmail.com,+923157654321
+C0072,Huge pothole on Washington Blvd causing traffic,Road,Medium,2026-03-03 18:52:54,,Assigned,Muhammad Ali,"Liaquatabad No. 4, Karachi",hamza.ali@yahoo.com,+923214567890
+C0073,Huge pothole on Main St causing traffic,Road,Medium,2026-07-17 18:52:54,7,Resolved,Kiran Shah,"Phase 6, DHA, Karachi",sana.riaz@yahoo.com,+923351234567
+C0074,Complete blackout in the neighborhood around Elm St,Electricity,Critical,2026-03-01 18:52:54,,Open,Saad Khan,"Sector F-7/2, Islamabad",saad.k@gmail.com,+923224567890
+C0075,"Pipe burst near Elm St, water flooding the sidewalk",Water,High,2026-04-14 18:52:54,,Assigned,Ali Murtaza,"Block 5, Clifton, Karachi",usman.khan@gmail.com,+923129876543
+C0076,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,High,2026-07-16 18:52:54,5,Resolved,Saad Khan,"Sector G-9, Islamabad",mariam.m@outlook.com,+923337654321
+C0077,Huge pothole on Elm St causing traffic,Road,Low,2026-06-24 18:52:54,15,Resolved,Mariam Malik,"Sector F-7/2, Islamabad",kiran.sheikh@hotmail.com,+923337654321
+C0078,Illegal dumping of construction waste near Cedar Ln,Waste,Medium,2026-04-12 18:52:54,13,Resolved,Mariam Malik,"Phase 6, DHA, Karachi",zainab12@hotmail.com,+923341234567
+C0079,No pedestrian crossing visible at Cedar Ln,Safety,Medium,2026-05-19 18:52:54,,Assigned,Sana Riaz,"Model Town Block C, Lahore",ahmed.raza@gmail.com,+923157654321
+C0080,Broken fence near the park on Washington Blvd,Safety,High,2026-03-09 18:52:54,,Assigned,Bilal Siddiqui,"North Nazimabad Block H, Karachi",bilal.dev@gmail.com,+923001234567
+C0081,Garbage bins overflowing for days on Maple Dr,Waste,Low,2026-06-10 18:52:54,23,Resolved,Hina Jamil,"Phase 4, Bahria Town, Rawalpindi",bilal.dev@gmail.com,+923456543210
+C0082,"Pipe burst near Park Ave, water flooding the sidewalk",Water,High,2026-03-09 18:52:54,3,Resolved,Ali Murtaza,"Phase 4, Bahria Town, Rawalpindi",ahmed.raza@gmail.com,+923341234567
+C0083,Street lights not working on Park Ave,Electricity,Low,2026-03-20 18:52:54,19,Resolved,Ayesha Khan,"Phase 4, Bahria Town, Rawalpindi",saad.k@gmail.com,+923179876543
+C0084,Complete blackout in the neighborhood around Maple Dr,Electricity,Critical,2026-03-23 18:52:54,,Assigned,Hina Jamil,"Phase 4, Bahria Town, Rawalpindi",ahmed.raza@gmail.com,+923087654321
+C0085,Loud noise complaint from construction on Oak Ave,Other,Medium,2026-04-20 18:52:54,,In Progress,Hafsa Bibi,"Block 13D, Gulshan-e-Iqbal, Karachi",areeb@gmail.com,+923129876543
+C0086,Foul smell from uncollected trash at Park Ave,Waste,High,2026-03-02 18:52:54,4,Resolved,Sana Riaz,"Block 5, Clifton, Karachi",kiran.sheikh@hotmail.com,+923087654321
+C0087,Terrible smell from open drain near Maple Dr,Drainage,Critical,2026-05-06 18:52:54,,In Progress,Mariam Malik,"Gulberg III, Lahore",ahmed.raza@gmail.com,+923179876543
+C0088,Traffic light broken at Oak Ave intersection,Road,Low,2026-06-30 18:52:54,24,Resolved,Muhammad Ali,"Phase 4, Bahria Town, Rawalpindi",saad.k@gmail.com,+923351234567
+C0089,Traffic light broken at Main St intersection,Road,Low,2026-05-22 18:52:54,,Assigned,Syed Hamza,"Phase 6, DHA, Karachi",hamza.ali@yahoo.com,+923337654321
+C0090,Loud noise complaint from construction on Cedar Ln,Other,Low,2026-04-15 18:52:54,20,Resolved,Hafsa Bibi,"Block 13D, Gulshan-e-Iqbal, Karachi",ahmed.raza@gmail.com,+923087654321
+C0091,Road surface completely destroyed near Maple Dr,Road,Low,2026-02-18 18:52:54,,Assigned,Saad Khan,"Phase 4, Bahria Town, Rawalpindi",ahmed.raza@gmail.com,+923224567890
+C0092,Traffic light broken at Park Ave intersection,Road,Low,2026-05-13 18:52:54,18,Resolved,Kiran Shah,"Gulberg III, Lahore",areeb@gmail.com,+923129876543
+C0093,Sparking power lines near Elm St,Electricity,Critical,2026-06-20 18:52:54,,Assigned,Mariam Malik,"Gulberg III, Lahore",kiran.sheikh@hotmail.com,+923087654321
+C0094,Road surface completely destroyed near Oak Ave,Road,Low,2026-03-21 18:52:54,23,Resolved,Sana Riaz,"Sector G-9, Islamabad",usman.khan@gmail.com,+923341234567
+C0095,Illegal dumping of construction waste near Cedar Ln,Waste,Low,2026-04-07 18:52:54,,In Progress,Ali Murtaza,"Phase 6, DHA, Karachi",fatima.shah@gmail.com,+923341234567
+C0096,Stray dogs aggressive near Cedar Ln,Other,Low,2026-03-29 18:52:54,23,Resolved,Kiran Shah,"Samanabad, Lahore",areeb@gmail.com,+923214567890
+C0097,Garbage bins overflowing for days on Pine St,Waste,Low,2026-04-23 18:52:54,16,Resolved,Kiran Shah,"Phase 6, DHA, Karachi",usman.ghani@gmail.com,+923224567890
+C0098,Huge pothole on Main St causing traffic,Road,Medium,2026-06-14 18:52:54,,Assigned,Bilal Siddiqui,"North Nazimabad Block H, Karachi",hamza.ali@yahoo.com,+923456543210
+C0099,Road surface completely destroyed near Main St,Road,Medium,2026-07-10 18:52:54,10,Resolved,Fatima Ahmed,"Block 5, Clifton, Karachi",hamza.ali@yahoo.com,+923087654321
+C0100,"Pipe burst near Park Ave, water flooding the sidewalk",Water,High,2026-06-08 18:52:54,3,Resolved,Muhammad Ali,"Samanabad, Lahore",kiran.sheikh@hotmail.com,+923214567890
+C0101,Road surface completely destroyed near Washington Blvd,Road,Low,2026-03-05 18:52:54,,In Progress,Hafsa Bibi,"Block 13D, Gulshan-e-Iqbal, Karachi",ahmed.raza@gmail.com,+923341234567
+C0102,Dangerous leaning tree over walkway on Oak Ave,Safety,High,2026-04-06 18:52:54,4,Resolved,Syed Hamza,"Model Town Block C, Lahore",mariam.m@outlook.com,+923214567890
+C0103,Complete blackout in the neighborhood around Washington Blvd,Electricity,High,2026-04-19 18:52:54,,In Progress,Syed Hamza,"Gulberg III, Lahore",areeb@gmail.com,+923019876543
+C0104,Huge pothole on Cedar Ln causing traffic,Road,Low,2026-02-20 18:52:54,19,Resolved,Usman Ghani,"North Nazimabad Block H, Karachi",usman.ghani@gmail.com,+923087654321
+C0105,Dangerous leaning tree over walkway on Washington Blvd,Safety,Low,2026-03-15 18:52:54,14,Resolved,Saad Khan,"Model Town Block C, Lahore",areeb@gmail.com,+923341234567
+C0106,Blocked storm drain causing flooding at Maple Dr,Drainage,Low,2026-07-12 18:52:54,30,Resolved,Muhammad Ali,"Gulberg III, Lahore",zainab12@hotmail.com,+923179876543
+C0107,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,Critical,2026-05-17 18:52:54,2,Resolved,Syed Hamza,"Block 13D, Gulshan-e-Iqbal, Karachi",fatima.shah@gmail.com,+923456543210
+C0108,Road surface completely destroyed near Pine St,Road,Low,2026-07-09 18:52:54,,Assigned,Kiran Shah,"Phase 4, Bahria Town, Rawalpindi",bilal.dev@gmail.com,+923019876543
+C0109,Complete blackout in the neighborhood around Main St,Electricity,Medium,2026-07-13 18:52:54,7,Resolved,Ahmed Raza,"North Nazimabad Block H, Karachi",fatima.shah@gmail.com,+923019876543
+C0110,Traffic light broken at Maple Dr intersection,Road,Medium,2026-07-06 18:52:54,8,Resolved,Muhammad Ali,"Gulberg III, Lahore",kiran.sheikh@hotmail.com,+923341234567
+C0111,Sewage backing up into street on Washington Blvd,Drainage,Medium,2026-05-01 18:52:54,,In Progress,Ali Murtaza,"Block 5, Clifton, Karachi",sana.riaz@yahoo.com,+923129876543
+C0112,Road surface completely destroyed near Pine St,Road,High,2026-02-27 18:52:54,6,Resolved,Ahmed Raza,"Gulberg III, Lahore",fatima.shah@gmail.com,+923341234567
+C0113,Complete blackout in the neighborhood around Park Ave,Electricity,High,2026-07-18 18:52:54,3,Resolved,Muhammad Ali,"Model Town Block C, Lahore",sana.riaz@yahoo.com,+923179876543
+C0114,Garbage bins overflowing for days on Washington Blvd,Waste,Medium,2026-03-24 18:52:54,10,Resolved,Kiran Shah,"Block 5, Clifton, Karachi",saad.k@gmail.com,+923179876543
+C0115,Foul smell from uncollected trash at Main St,Waste,Medium,2026-05-30 18:52:54,,Assigned,Hafsa Bibi,"Samanabad, Lahore",areeb@gmail.com,+923337654321
+C0116,Road surface completely destroyed near Maple Dr,Road,Low,2026-04-19 18:52:54,30,Resolved,Hamza Sheikh,"Saddar Bazar, Karachi",hamza.ali@yahoo.com,+923214567890
+C0117,Street lights not working on Washington Blvd,Electricity,Medium,2026-02-23 18:52:54,,Open,Ali Murtaza,"Samanabad, Lahore",usman.ghani@gmail.com,+923337654321
+C0118,Huge pothole on Cedar Ln causing traffic,Road,Low,2026-05-31 18:52:54,22,Resolved,Hina Jamil,"Phase 4, Bahria Town, Rawalpindi",fatima.shah@gmail.com,+923224567890
+C0119,Traffic light broken at Elm St intersection,Road,Low,2026-04-13 18:52:54,26,Resolved,Ali Murtaza,"Model Town Block C, Lahore",hamza.ali@yahoo.com,+923157654321
+C0120,Complete blackout in the neighborhood around Washington Blvd,Electricity,Critical,2026-05-04 18:52:54,2,Resolved,Muhammad Ali,"Saddar Bazar, Karachi",zainab12@hotmail.com,+923129876543
+C0121,Illegal dumping of construction waste near Main St,Waste,Low,2026-02-14 18:52:54,,In Progress,Zainab Bibi,"Samanabad, Lahore",ahmed.raza@gmail.com,+923341234567
+C0122,Complete blackout in the neighborhood around Oak Ave,Electricity,Critical,2026-03-29 18:52:54,1,Resolved,Kiran Shah,"Block 13D, Gulshan-e-Iqbal, Karachi",bilal.dev@gmail.com,+923214567890
+C0123,Dirty brown water coming from taps at Cedar Ln,Water,Medium,2026-04-05 18:52:54,,In Progress,Kiran Shah,"Block 5, Clifton, Karachi",zainab12@hotmail.com,+923224567890
+C0124,Foul smell from uncollected trash at Oak Ave,Waste,High,2026-04-13 18:52:54,6,Resolved,Bilal Siddiqui,"Gulberg III, Lahore",saad.k@gmail.com,+923157654321
+C0125,Garbage bins overflowing for days on Maple Dr,Waste,High,2026-08-08 18:52:54,,Open,Usman Ghani,"Phase 4, Bahria Town, Rawalpindi",areeb@gmail.com,+923129876543
+C0126,Road surface completely destroyed near Main St,Road,High,2026-03-11 18:52:54,7,Resolved,Bilal Siddiqui,"Block 13D, Gulshan-e-Iqbal, Karachi",sana.riaz@yahoo.com,+923456543210
+C0127,Street lights not working on Pine St,Electricity,High,2026-08-08 18:52:54,5,Resolved,Zainab Bibi,"Sector F-7/2, Islamabad",fatima.shah@gmail.com,+923157654321
+C0128,Huge pothole on Washington Blvd causing traffic,Road,Medium,2026-07-20 18:52:54,11,Resolved,Sana Riaz,"Saddar Bazar, Karachi",usman.khan@gmail.com,+923456543210
+C0129,Loud noise complaint from construction on Main St,Other,Medium,2026-04-06 18:52:54,7,Resolved,Syed Hamza,"Sector F-7/2, Islamabad",mariam.m@outlook.com,+923456543210
+C0130,No water supply in the building on Pine St,Water,High,2026-03-18 18:52:54,,In Progress,Mariam Malik,"Sector F-7/2, Islamabad",usman.ghani@gmail.com,+923456543210
+C0131,Huge pothole on Main St causing traffic,Road,Low,2026-06-02 18:52:54,25,Resolved,Ayesha Khan,"Model Town Block C, Lahore",mariam.m@outlook.com,+923129876543
+C0132,Road surface completely destroyed near Washington Blvd,Road,High,2026-03-14 18:52:54,7,Resolved,Saad Khan,"Block 5, Clifton, Karachi",usman.khan@gmail.com,+923129876543
+C0133,Dirty brown water coming from taps at Maple Dr,Water,Critical,2026-03-19 18:52:54,1,Resolved,Hafsa Bibi,"Saddar Bazar, Karachi",hamza.ali@yahoo.com,+923456543210
+C0134,Loud noise complaint from construction on Main St,Other,Medium,2026-04-09 18:52:54,,Assigned,Usman Ghani,"Samanabad, Lahore",ahmed.raza@gmail.com,+923224567890
+C0135,Garbage bins overflowing for days on Washington Blvd,Waste,Medium,2026-03-13 18:52:54,8,Resolved,Mariam Malik,"Sector F-7/2, Islamabad",hamza.ali@yahoo.com,+923214567890
+C0136,No water supply in the building on Main St,Water,High,2026-05-06 18:52:54,7,Resolved,Sana Riaz,"Sector G-9, Islamabad",saad.k@gmail.com,+923341234567
+C0137,Road surface completely destroyed near Cedar Ln,Road,High,2026-02-22 18:52:54,,In Progress,Hafsa Bibi,"Phase 4, Bahria Town, Rawalpindi",hamza.ali@yahoo.com,+923179876543
+C0138,"Pipe burst near Oak Ave, water flooding the sidewalk",Water,Critical,2026-03-10 18:52:54,1,Resolved,Ahmed Raza,"Phase 6, DHA, Karachi",bilal.dev@gmail.com,+923129876543
+C0139,Street lights not working on Oak Ave,Electricity,High,2026-03-17 18:52:54,3,Resolved,Syed Hamza,"Block 5, Clifton, Karachi",usman.ghani@gmail.com,+923129876543
+C0140,Garbage bins overflowing for days on Washington Blvd,Waste,Low,2026-05-09 18:52:54,25,Resolved,Hina Jamil,"Sector G-9, Islamabad",hamza.ali@yahoo.com,+923019876543
+C0141,Garbage bins overflowing for days on Elm St,Waste,Low,2026-02-14 18:52:54,,Open,Sana Riaz,"Model Town Block C, Lahore",fatima.shah@gmail.com,+923179876543
+C0142,Loud noise complaint from construction on Oak Ave,Other,Medium,2026-06-17 18:52:54,10,Resolved,Usman Ghani,"Saddar Bazar, Karachi",usman.ghani@gmail.com,+923351234567
+C0143,No water supply in the building on Washington Blvd,Water,High,2026-04-05 18:52:54,5,Resolved,Hina Jamil,"Liaquatabad No. 4, Karachi",usman.khan@gmail.com,+923129876543
+C0144,Huge pothole on Washington Blvd causing traffic,Road,Low,2026-04-01 18:52:54,,Open,Saad Khan,"North Nazimabad Block H, Karachi",saad.k@gmail.com,+923224567890
+C0145,Road surface completely destroyed near Cedar Ln,Road,Low,2026-05-30 18:52:54,21,Resolved,Ayesha Khan,"Model Town Block C, Lahore",fatima.shah@gmail.com,+923157654321
+C0146,Traffic light broken at Oak Ave intersection,Road,Low,2026-07-08 18:52:54,,In Progress,Fatima Ahmed,"Block 13D, Gulshan-e-Iqbal, Karachi",kiran.sheikh@hotmail.com,+923351234567
+C0147,Illegal dumping of construction waste near Maple Dr,Waste,Low,2026-03-14 18:52:54,22,Resolved,Ali Murtaza,"Model Town Block C, Lahore",areeb@gmail.com,+923019876543
+C0148,Blocked storm drain causing flooding at Cedar Ln,Drainage,Medium,2026-05-11 18:52:54,10,Resolved,Ali Murtaza,"Phase 4, Bahria Town, Rawalpindi",sana.riaz@yahoo.com,+923351234567
+C0149,No water supply in the building on Park Ave,Water,Low,2026-03-20 18:52:54,,Assigned,Usman Ghani,"Samanabad, Lahore",mariam.m@outlook.com,+923179876543
+C0150,Garbage bins overflowing for days on Elm St,Waste,Medium,2026-07-03 18:52:54,7,Resolved,Saad Khan,"Block 13D, Gulshan-e-Iqbal, Karachi",hamza.ali@yahoo.com,+923001234567
+C0151,Sparking power lines near Washington Blvd,Electricity,High,2026-05-24 18:52:54,3,Resolved,Kiran Shah,"Sector F-7/2, Islamabad",ahmed.raza@gmail.com,+923337654321
+C0152,No water supply in the building on Maple Dr,Water,Critical,2026-03-29 18:52:54,,Open,Hafsa Bibi,"Sector G-9, Islamabad",bilal.dev@gmail.com,+923341234567
+C0153,"Pipe burst near Elm St, water flooding the sidewalk",Water,Critical,2026-07-30 18:52:54,2,Resolved,Bilal Siddiqui,"Gulberg III, Lahore",zainab12@hotmail.com,+923337654321
+C0154,Garbage bins overflowing for days on Oak Ave,Waste,High,2026-02-23 18:52:54,,In Progress,Kiran Shah,"Model Town Block C, Lahore",saad.k@gmail.com,+923179876543
+C0155,Stray dogs aggressive near Cedar Ln,Other,High,2026-05-08 18:52:54,,Open,Kiran Shah,"Samanabad, Lahore",ahmed.raza@gmail.com,+923351234567
+C0156,Garbage bins overflowing for days on Main St,Waste,High,2026-03-08 18:52:54,6,Resolved,Mariam Malik,"Liaquatabad No. 4, Karachi",usman.ghani@gmail.com,+923456543210
+C0157,Huge pothole on Elm St causing traffic,Road,Low,2026-04-13 18:52:54,28,Resolved,Hamza Sheikh,"Phase 4, Bahria Town, Rawalpindi",usman.ghani@gmail.com,+923157654321
+C0158,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,Critical,2026-05-13 18:52:54,,Open,Ahmed Raza,"Liaquatabad No. 4, Karachi",saad.k@gmail.com,+923351234567
+C0159,Broken fence near the park on Washington Blvd,Safety,Medium,2026-07-30 18:52:54,14,Resolved,Syed Hamza,"Sector G-9, Islamabad",kiran.sheikh@hotmail.com,+923157654321
+C0160,Garbage bins overflowing for days on Cedar Ln,Waste,Medium,2026-03-25 18:52:54,,In Progress,Bilal Siddiqui,"Saddar Bazar, Karachi",usman.ghani@gmail.com,+923351234567
+C0161,Dirty brown water coming from taps at Oak Ave,Water,Critical,2026-03-05 18:52:54,2,Resolved,Ayesha Khan,"Block 5, Clifton, Karachi",mariam.m@outlook.com,+923224567890
+C0162,Terrible smell from open drain near Cedar Ln,Drainage,Low,2026-07-08 18:52:54,18,Resolved,Hafsa Bibi,"Liaquatabad No. 4, Karachi",mariam.m@outlook.com,+923214567890
+C0163,Loud noise complaint from construction on Main St,Other,High,2026-02-27 18:52:54,3,Resolved,Fatima Ahmed,"Phase 6, DHA, Karachi",fatima.shah@gmail.com,+923179876543
+C0164,Illegal dumping of construction waste near Park Ave,Waste,Low,2026-05-26 18:52:54,24,Resolved,Hina Jamil,"Model Town Block C, Lahore",usman.ghani@gmail.com,+923019876543
+C0165,Traffic light broken at Main St intersection,Road,Medium,2026-07-07 18:52:54,,In Progress,Ali Murtaza,"Liaquatabad No. 4, Karachi",zainab12@hotmail.com,+923157654321
+C0166,Traffic light broken at Elm St intersection,Road,Medium,2026-02-14 18:52:54,,Open,Hamza Sheikh,"Phase 6, DHA, Karachi",usman.ghani@gmail.com,+923087654321
+C0167,Traffic light broken at Park Ave intersection,Road,Low,2026-05-18 18:52:54,16,Resolved,Muhammad Ali,"North Nazimabad Block H, Karachi",sana.riaz@yahoo.com,+923351234567
+C0168,Foul smell from uncollected trash at Oak Ave,Waste,High,2026-06-14 18:52:54,6,Resolved,Bilal Siddiqui,"Phase 6, DHA, Karachi",usman.khan@gmail.com,+923224567890
+C0169,Terrible smell from open drain near Cedar Ln,Drainage,Medium,2026-04-13 18:52:54,,Open,Mariam Malik,"Phase 6, DHA, Karachi",kiran.sheikh@hotmail.com,+923224567890
+C0170,Illegal dumping of construction waste near Main St,Waste,Low,2026-04-02 18:52:54,,In Progress,Syed Hamza,"Block 5, Clifton, Karachi",mariam.m@outlook.com,+923019876543
+C0171,Dirty brown water coming from taps at Cedar Ln,Water,Critical,2026-07-20 18:52:54,3,Resolved,Ayesha Khan,"Phase 6, DHA, Karachi",kiran.sheikh@hotmail.com,+923456543210
+C0172,Stray dogs aggressive near Oak Ave,Other,Low,2026-05-28 18:52:54,,In Progress,Hafsa Bibi,"Phase 4, Bahria Town, Rawalpindi",sana.riaz@yahoo.com,+923341234567
+C0173,No water supply in the building on Main St,Water,High,2026-02-22 18:52:54,3,Resolved,Ali Murtaza,"Saddar Bazar, Karachi",zainab12@hotmail.com,+923129876543
+C0174,Loud noise complaint from construction on Main St,Other,Medium,2026-07-01 18:52:54,,Open,Syed Hamza,"Model Town Block C, Lahore",mariam.m@outlook.com,+923019876543
+C0175,Huge pothole on Main St causing traffic,Road,Medium,2026-05-06 18:52:54,12,Resolved,Ali Murtaza,"Block 13D, Gulshan-e-Iqbal, Karachi",hamza.ali@yahoo.com,+923351234567
+C0176,"Pipe burst near Elm St, water flooding the sidewalk",Water,High,2026-04-01 18:52:54,,Open,Ayesha Khan,"Phase 4, Bahria Town, Rawalpindi",saad.k@gmail.com,+923214567890
+C0177,No water supply in the building on Maple Dr,Water,Critical,2026-03-21 18:52:54,1,Resolved,Fatima Ahmed,"Phase 6, DHA, Karachi",kiran.sheikh@hotmail.com,+923214567890
+C0178,Dirty brown water coming from taps at Maple Dr,Water,Critical,2026-07-09 18:52:54,,In Progress,Ayesha Khan,"Model Town Block C, Lahore",sana.riaz@yahoo.com,+923087654321
+C0179,Traffic light broken at Cedar Ln intersection,Road,Low,2026-03-11 18:52:54,18,Resolved,Hina Jamil,"North Nazimabad Block H, Karachi",fatima.shah@gmail.com,+923214567890
+C0180,"Pipe burst near Cedar Ln, water flooding the sidewalk",Water,Low,2026-06-02 18:52:54,25,Resolved,Ayesha Khan,"Model Town Block C, Lahore",hamza.ali@yahoo.com,+923129876543
+C0181,Complete blackout in the neighborhood around Oak Ave,Electricity,High,2026-07-04 18:52:54,6,Resolved,Sana Riaz,"Sector F-7/2, Islamabad",zainab12@hotmail.com,+923351234567
+C0182,Road surface completely destroyed near Pine St,Road,High,2026-04-30 18:52:54,7,Resolved,Muhammad Ali,"Liaquatabad No. 4, Karachi",hamza.ali@yahoo.com,+923214567890
+C0183,Traffic light broken at Main St intersection,Road,Medium,2026-04-03 18:52:54,7,Resolved,Usman Ghani,"Liaquatabad No. 4, Karachi",kiran.sheikh@hotmail.com,+923456543210
+C0184,"Pipe burst near Oak Ave, water flooding the sidewalk",Water,Low,2026-05-26 18:52:54,17,Resolved,Zainab Bibi,"Phase 4, Bahria Town, Rawalpindi",ahmed.raza@gmail.com,+923129876543
+C0185,"Pipe burst near Elm St, water flooding the sidewalk",Water,Medium,2026-03-25 18:52:54,11,Resolved,Bilal Siddiqui,"Block 5, Clifton, Karachi",usman.khan@gmail.com,+923129876543
+C0186,Street lights not working on Elm St,Electricity,Critical,2026-04-07 18:52:54,3,Resolved,Ayesha Khan,"Saddar Bazar, Karachi",sana.riaz@yahoo.com,+923129876543
+C0187,Road surface completely destroyed near Washington Blvd,Road,Low,2026-04-25 18:52:54,29,Resolved,Muhammad Ali,"Sector G-9, Islamabad",fatima.shah@gmail.com,+923337654321
+C0188,Sparking power lines near Park Ave,Electricity,High,2026-06-18 18:52:54,,In Progress,Fatima Ahmed,"North Nazimabad Block H, Karachi",areeb@gmail.com,+923001234567
+C0189,Dirty brown water coming from taps at Pine St,Water,High,2026-06-13 18:52:54,,In Progress,Ali Murtaza,"Block 13D, Gulshan-e-Iqbal, Karachi",fatima.shah@gmail.com,+923157654321
+C0190,No pedestrian crossing visible at Pine St,Safety,High,2026-06-29 18:52:54,4,Resolved,Sana Riaz,"Block 13D, Gulshan-e-Iqbal, Karachi",areeb@gmail.com,+923337654321
+C0191,Blocked storm drain causing flooding at Main St,Drainage,Medium,2026-06-26 18:52:54,12,Resolved,Sana Riaz,"Phase 6, DHA, Karachi",zainab12@hotmail.com,+923019876543
+C0192,No water supply in the building on Elm St,Water,High,2026-07-20 18:52:54,4,Resolved,Ali Murtaza,"Sector F-7/2, Islamabad",fatima.shah@gmail.com,+923456543210
+C0193,Foul smell from uncollected trash at Oak Ave,Waste,Medium,2026-03-18 18:52:54,,Open,Hina Jamil,"Phase 6, DHA, Karachi",fatima.shah@gmail.com,+923224567890
+C0194,Terrible smell from open drain near Main St,Drainage,Low,2026-02-16 18:52:54,21,Resolved,Bilal Siddiqui,"Phase 6, DHA, Karachi",mariam.m@outlook.com,+923351234567
+C0195,Dirty brown water coming from taps at Washington Blvd,Water,Critical,2026-07-30 18:52:54,2,Resolved,Usman Ghani,"Gulberg III, Lahore",zainab12@hotmail.com,+923456543210
+C0196,Illegal dumping of construction waste near Maple Dr,Waste,Low,2026-04-24 18:52:54,14,Resolved,Ayesha Khan,"Saddar Bazar, Karachi",zainab12@hotmail.com,+923019876543
+C0197,No pedestrian crossing visible at Main St,Safety,Medium,2026-07-19 18:52:54,14,Resolved,Kiran Shah,"Phase 4, Bahria Town, Rawalpindi",zainab12@hotmail.com,+923019876543
+C0198,Traffic light broken at Main St intersection,Road,Medium,2026-03-29 18:52:54,14,Resolved,Muhammad Ali,"Phase 4, Bahria Town, Rawalpindi",kiran.sheikh@hotmail.com,+923001234567
+C0199,Dirty brown water coming from taps at Pine St,Water,Low,2026-07-08 18:52:54,,Open,Bilal Siddiqui,"Phase 4, Bahria Town, Rawalpindi",saad.k@gmail.com,+923214567890
+C0200,Huge pothole on Main St causing traffic,Road,Low,2026-04-08 18:52:54,,Assigned,Syed Hamza,"Saddar Bazar, Karachi",mariam.m@outlook.com,+923019876543
+C0201,No water supply in the building on Oak Ave,Water,Critical,2026-05-23 18:52:54,1,Resolved,Kiran Shah,"Model Town Block C, Lahore",fatima.shah@gmail.com,+923341234567
+C0202,Street lights not working on Maple Dr,Electricity,High,2026-07-08 18:52:54,,Open,Ali Murtaza,"Sector G-9, Islamabad",bilal.dev@gmail.com,+923456543210
+C0203,Broken fence near the park on Washington Blvd,Safety,High,2026-06-01 18:52:54,,Assigned,Fatima Ahmed,"Block 5, Clifton, Karachi",hamza.ali@yahoo.com,+923129876543
+C0204,Foul smell from uncollected trash at Washington Blvd,Waste,Low,2026-06-23 18:52:54,20,Resolved,Ahmed Raza,"Phase 6, DHA, Karachi",zainab12@hotmail.com,+923214567890
+C0205,No water supply in the building on Washington Blvd,Water,High,2026-04-05 18:52:54,,In Progress,Mariam Malik,"Liaquatabad No. 4, Karachi",ahmed.raza@gmail.com,+923157654321
+C0206,Illegal dumping of construction waste near Main St,Waste,Low,2026-02-26 18:52:54,25,Resolved,Syed Hamza,"Model Town Block C, Lahore",sana.riaz@yahoo.com,+923019876543
+C0207,Complete blackout in the neighborhood around Park Ave,Electricity,High,2026-06-10 18:52:54,7,Resolved,Fatima Ahmed,"Sector G-9, Islamabad",usman.ghani@gmail.com,+923087654321
+C0208,Broken fence near the park on Elm St,Safety,Low,2026-05-16 18:52:54,22,Resolved,Hina Jamil,"Liaquatabad No. 4, Karachi",fatima.shah@gmail.com,+923001234567
+C0209,Road surface completely destroyed near Elm St,Road,Medium,2026-04-10 18:52:54,,Assigned,Fatima Ahmed,"Gulberg III, Lahore",kiran.sheikh@hotmail.com,+923456543210
+C0210,Traffic light broken at Main St intersection,Road,Low,2026-06-24 18:52:54,17,Resolved,Sana Riaz,"Sector F-7/2, Islamabad",zainab12@hotmail.com,+923456543210
+C0211,Foul smell from uncollected trash at Elm St,Waste,Low,2026-05-02 18:52:54,29,Resolved,Muhammad Ali,"Gulberg III, Lahore",ahmed.raza@gmail.com,+923001234567
+C0212,No pedestrian crossing visible at Maple Dr,Safety,Critical,2026-06-17 18:52:54,,In Progress,Mariam Malik,"Samanabad, Lahore",hamza.ali@yahoo.com,+923087654321
+C0213,Broken fence near the park on Cedar Ln,Safety,Medium,2026-03-24 18:52:54,10,Resolved,Ali Murtaza,"Phase 4, Bahria Town, Rawalpindi",sana.riaz@yahoo.com,+923179876543
+C0214,"Pipe burst near Maple Dr, water flooding the sidewalk",Water,High,2026-02-17 18:52:54,,In Progress,Hamza Sheikh,"Saddar Bazar, Karachi",sana.riaz@yahoo.com,+923179876543
+C0215,Illegal dumping of construction waste near Elm St,Waste,Medium,2026-07-02 18:52:54,,Assigned,Ahmed Raza,"North Nazimabad Block H, Karachi",saad.k@gmail.com,+923337654321
+C0216,Huge pothole on Washington Blvd causing traffic,Road,High,2026-04-21 18:52:54,,In Progress,Hamza Sheikh,"Block 13D, Gulshan-e-Iqbal, Karachi",sana.riaz@yahoo.com,+923456543210
+C0217,Traffic light broken at Pine St intersection,Road,Low,2026-06-09 18:52:54,,Assigned,Fatima Ahmed,"Liaquatabad No. 4, Karachi",areeb@gmail.com,+923129876543
+C0218,Illegal dumping of construction waste near Main St,Waste,High,2026-07-23 18:52:54,3,Resolved,Fatima Ahmed,"Sector G-9, Islamabad",bilal.dev@gmail.com,+923456543210
+C0219,Complete blackout in the neighborhood around Pine St,Electricity,High,2026-04-08 18:52:54,6,Resolved,Usman Ghani,"Samanabad, Lahore",areeb@gmail.com,+923337654321
+C0220,No water supply in the building on Park Ave,Water,High,2026-06-19 18:52:54,,Assigned,Ayesha Khan,"Saddar Bazar, Karachi",kiran.sheikh@hotmail.com,+923224567890
+C0221,Traffic light broken at Oak Ave intersection,Road,Medium,2026-07-29 18:52:54,11,Resolved,Usman Ghani,"Sector F-7/2, Islamabad",usman.ghani@gmail.com,+923001234567
+C0222,Garbage bins overflowing for days on Cedar Ln,Waste,Low,2026-02-27 18:52:54,15,Resolved,Mariam Malik,"Sector F-7/2, Islamabad",mariam.m@outlook.com,+923456543210
+C0223,Traffic light broken at Cedar Ln intersection,Road,High,2026-03-27 18:52:54,4,Resolved,Ali Murtaza,"Sector F-7/2, Islamabad",usman.ghani@gmail.com,+923129876543
+C0224,Dirty brown water coming from taps at Elm St,Water,Medium,2026-03-26 18:52:54,,In Progress,Kiran Shah,"Saddar Bazar, Karachi",fatima.shah@gmail.com,+923456543210
+C0225,Dirty brown water coming from taps at Oak Ave,Water,Medium,2026-05-10 18:52:54,,In Progress,Ali Murtaza,"Liaquatabad No. 4, Karachi",usman.ghani@gmail.com,+923456543210
+C0226,Dirty brown water coming from taps at Pine St,Water,High,2026-04-10 18:52:54,5,Resolved,Sana Riaz,"Saddar Bazar, Karachi",sana.riaz@yahoo.com,+923351234567
+C0227,Terrible smell from open drain near Maple Dr,Drainage,Medium,2026-08-09 18:52:54,14,Resolved,Bilal Siddiqui,"Liaquatabad No. 4, Karachi",areeb@gmail.com,+923087654321
+C0228,Foul smell from uncollected trash at Main St,Waste,Medium,2026-08-04 18:52:54,10,Resolved,Saad Khan,"North Nazimabad Block H, Karachi",bilal.dev@gmail.com,+923129876543
+C0229,Sparking power lines near Main St,Electricity,High,2026-06-05 18:52:54,4,Resolved,Fatima Ahmed,"Block 13D, Gulshan-e-Iqbal, Karachi",sana.riaz@yahoo.com,+923129876543
+C0230,Street lights not working on Cedar Ln,Electricity,High,2026-04-02 18:52:54,6,Resolved,Ayesha Khan,"Gulberg III, Lahore",zainab12@hotmail.com,+923157654321
+C0231,Road surface completely destroyed near Main St,Road,Critical,2026-04-02 18:52:54,,Open,Ayesha Khan,"Sector F-7/2, Islamabad",hamza.ali@yahoo.com,+923351234567
+C0232,Complete blackout in the neighborhood around Pine St,Electricity,Medium,2026-04-06 18:52:54,,Open,Saad Khan,"Saddar Bazar, Karachi",fatima.shah@gmail.com,+923001234567
+C0233,Blocked storm drain causing flooding at Oak Ave,Drainage,Low,2026-07-21 18:52:54,23,Resolved,Saad Khan,"North Nazimabad Block H, Karachi",hamza.ali@yahoo.com,+923456543210
+C0234,Garbage bins overflowing for days on Maple Dr,Waste,Low,2026-05-26 18:52:54,15,Resolved,Kiran Shah,"Liaquatabad No. 4, Karachi",usman.khan@gmail.com,+923001234567
+C0235,Illegal dumping of construction waste near Pine St,Waste,Low,2026-07-09 18:52:54,28,Resolved,Sana Riaz,"Block 13D, Gulshan-e-Iqbal, Karachi",saad.k@gmail.com,+923129876543
+C0236,Sparking power lines near Park Ave,Electricity,Critical,2026-07-30 18:52:54,,In Progress,Muhammad Ali,"Block 5, Clifton, Karachi",areeb@gmail.com,+923157654321
+C0237,Illegal dumping of construction waste near Elm St,Waste,Medium,2026-08-09 18:52:54,,Open,Hafsa Bibi,"Saddar Bazar, Karachi",sana.riaz@yahoo.com,+923179876543
+C0238,Road surface completely destroyed near Elm St,Road,Medium,2026-06-23 18:52:54,,Assigned,Syed Hamza,"Saddar Bazar, Karachi",mariam.m@outlook.com,+923341234567
+C0239,Street lights not working on Maple Dr,Electricity,Critical,2026-03-19 18:52:54,3,Resolved,Bilal Siddiqui,"Liaquatabad No. 4, Karachi",fatima.shah@gmail.com,+923337654321
+C0240,Illegal dumping of construction waste near Pine St,Waste,Low,2026-08-03 18:52:54,29,Resolved,Kiran Shah,"Samanabad, Lahore",hamza.ali@yahoo.com,+923179876543
+C0241,Terrible smell from open drain near Main St,Drainage,Medium,2026-03-03 18:52:54,13,Resolved,Muhammad Ali,"North Nazimabad Block H, Karachi",usman.ghani@gmail.com,+923214567890
+C0242,No pedestrian crossing visible at Pine St,Safety,Medium,2026-04-02 18:52:54,11,Resolved,Zainab Bibi,"Phase 4, Bahria Town, Rawalpindi",fatima.shah@gmail.com,+923341234567
+C0243,Foul smell from uncollected trash at Cedar Ln,Waste,Low,2026-08-08 18:52:54,29,Resolved,Usman Ghani,"Samanabad, Lahore",bilal.dev@gmail.com,+923179876543
+C0244,Sewage backing up into street on Pine St,Drainage,Low,2026-07-27 18:52:54,16,Resolved,Ahmed Raza,"Block 5, Clifton, Karachi",ahmed.raza@gmail.com,+923129876543
+C0245,Road surface completely destroyed near Main St,Road,Low,2026-04-13 18:52:54,16,Resolved,Hina Jamil,"Phase 4, Bahria Town, Rawalpindi",mariam.m@outlook.com,+923224567890
+C0246,Foul smell from uncollected trash at Cedar Ln,Waste,Medium,2026-06-03 18:52:54,10,Resolved,Kiran Shah,"Block 5, Clifton, Karachi",saad.k@gmail.com,+923157654321
+C0247,Garbage bins overflowing for days on Pine St,Waste,Low,2026-05-13 18:52:54,20,Resolved,Ali Murtaza,"Phase 4, Bahria Town, Rawalpindi",sana.riaz@yahoo.com,+923129876543
+C0248,Huge pothole on Elm St causing traffic,Road,Low,2026-06-26 18:52:54,,Open,Fatima Ahmed,"Liaquatabad No. 4, Karachi",saad.k@gmail.com,+923224567890
+C0249,Street lights not working on Oak Ave,Electricity,Critical,2026-08-05 18:52:54,,In Progress,Saad Khan,"Block 13D, Gulshan-e-Iqbal, Karachi",zainab12@hotmail.com,+923087654321
+C0250,Broken fence near the park on Oak Ave,Safety,Medium,2026-03-20 18:52:54,,In Progress,Fatima Ahmed,"Phase 4, Bahria Town, Rawalpindi",hamza.ali@yahoo.com,+923341234567
+C0251,Complete blackout in the neighborhood around Oak Ave,Electricity,Medium,2026-04-23 18:52:54,,Assigned,Bilal Siddiqui,"Gulberg III, Lahore",kiran.sheikh@hotmail.com,+923351234567
+C0252,Foul smell from uncollected trash at Pine St,Waste,Medium,2026-03-13 18:52:54,11,Resolved,Kiran Shah,"Phase 6, DHA, Karachi",bilal.dev@gmail.com,+923019876543
+C0253,No water supply in the building on Main St,Water,High,2026-03-26 18:52:54,5,Resolved,Kiran Shah,"Block 5, Clifton, Karachi",sana.riaz@yahoo.com,+923019876543
+C0254,Road surface completely destroyed near Main St,Road,Medium,2026-06-06 18:52:54,12,Resolved,Sana Riaz,"North Nazimabad Block H, Karachi",zainab12@hotmail.com,+923087654321
+C0255,Foul smell from uncollected trash at Main St,Waste,Low,2026-02-14 18:52:54,,In Progress,Kiran Shah,"Phase 4, Bahria Town, Rawalpindi",bilal.dev@gmail.com,+923337654321
+C0256,Traffic light broken at Cedar Ln intersection,Road,Low,2026-06-22 18:52:54,,In Progress,Kiran Shah,"Sector F-7/2, Islamabad",usman.ghani@gmail.com,+923337654321
+C0257,Illegal dumping of construction waste near Washington Blvd,Waste,Medium,2026-04-11 18:52:54,10,Resolved,Saad Khan,"Model Town Block C, Lahore",kiran.sheikh@hotmail.com,+923341234567
+C0258,"Pipe burst near Elm St, water flooding the sidewalk",Water,High,2026-04-03 18:52:54,,In Progress,Ayesha Khan,"Sector G-9, Islamabad",kiran.sheikh@hotmail.com,+923129876543
+C0259,Traffic light broken at Pine St intersection,Road,Medium,2026-03-20 18:52:54,,In Progress,Hafsa Bibi,"Samanabad, Lahore",kiran.sheikh@hotmail.com,+923129876543
+C0260,Road surface completely destroyed near Washington Blvd,Road,Low,2026-05-12 18:52:54,24,Resolved,Zainab Bibi,"Gulberg III, Lahore",hamza.ali@yahoo.com,+923456543210
+C0261,Huge pothole on Washington Blvd causing traffic,Road,Medium,2026-06-04 18:52:54,,In Progress,Sana Riaz,"Samanabad, Lahore",usman.khan@gmail.com,+923019876543
+C0262,Road surface completely destroyed near Oak Ave,Road,Medium,2026-05-29 18:52:54,11,Resolved,Zainab Bibi,"North Nazimabad Block H, Karachi",usman.khan@gmail.com,+923351234567
+C0263,Dirty brown water coming from taps at Cedar Ln,Water,Medium,2026-05-03 18:52:54,,Open,Fatima Ahmed,"Saddar Bazar, Karachi",usman.khan@gmail.com,+923087654321
+C0264,Huge pothole on Main St causing traffic,Road,Low,2026-03-28 18:52:54,23,Resolved,Usman Ghani,"Liaquatabad No. 4, Karachi",mariam.m@outlook.com,+923129876543
+C0265,Traffic light broken at Oak Ave intersection,Road,Low,2026-05-19 18:52:54,,Assigned,Syed Hamza,"Saddar Bazar, Karachi",usman.khan@gmail.com,+923087654321
+C0266,Huge pothole on Pine St causing traffic,Road,Medium,2026-02-12 18:52:54,13,Resolved,Kiran Shah,"Model Town Block C, Lahore",areeb@gmail.com,+923157654321
+C0267,Road surface completely destroyed near Washington Blvd,Road,Critical,2026-03-31 18:52:54,,Assigned,Syed Hamza,"North Nazimabad Block H, Karachi",areeb@gmail.com,+923341234567
+C0268,Terrible smell from open drain near Maple Dr,Drainage,Medium,2026-03-27 18:52:54,,In Progress,Syed Hamza,"North Nazimabad Block H, Karachi",usman.ghani@gmail.com,+923224567890
+C0269,Street lights not working on Cedar Ln,Electricity,High,2026-07-20 18:52:54,5,Resolved,Hamza Sheikh,"Liaquatabad No. 4, Karachi",saad.k@gmail.com,+923224567890
+C0270,Complete blackout in the neighborhood around Washington Blvd,Electricity,High,2026-02-14 18:52:54,4,Resolved,Hina Jamil,"Gulberg III, Lahore",zainab12@hotmail.com,+923179876543
+C0271,Sparking power lines near Washington Blvd,Electricity,High,2026-04-16 18:52:54,7,Resolved,Sana Riaz,"Model Town Block C, Lahore",saad.k@gmail.com,+923214567890
+C0272,Complete blackout in the neighborhood around Pine St,Electricity,Medium,2026-07-30 18:52:54,,Assigned,Hamza Sheikh,"Gulberg III, Lahore",hamza.ali@yahoo.com,+923351234567
+C0273,Huge pothole on Pine St causing traffic,Road,Critical,2026-06-03 18:52:54,3,Resolved,Saad Khan,"North Nazimabad Block H, Karachi",usman.ghani@gmail.com,+923001234567
+C0274,Street lights not working on Cedar Ln,Electricity,High,2026-06-28 18:52:54,6,Resolved,Fatima Ahmed,"Samanabad, Lahore",kiran.sheikh@hotmail.com,+923001234567
+C0275,Illegal dumping of construction waste near Main St,Waste,Critical,2026-03-28 18:52:54,3,Resolved,Ayesha Khan,"Samanabad, Lahore",mariam.m@outlook.com,+923337654321
+C0276,Traffic light broken at Main St intersection,Road,Low,2026-03-11 18:52:54,24,Resolved,Kiran Shah,"Model Town Block C, Lahore",bilal.dev@gmail.com,+923179876543
+C0277,Road surface completely destroyed near Cedar Ln,Road,Medium,2026-02-28 18:52:54,7,Resolved,Zainab Bibi,"Model Town Block C, Lahore",saad.k@gmail.com,+923019876543
+C0278,Foul smell from uncollected trash at Maple Dr,Waste,Low,2026-04-25 18:52:54,,Assigned,Muhammad Ali,"Block 13D, Gulshan-e-Iqbal, Karachi",saad.k@gmail.com,+923214567890
+C0279,No water supply in the building on Cedar Ln,Water,High,2026-04-26 18:52:54,5,Resolved,Saad Khan,"Gulberg III, Lahore",usman.ghani@gmail.com,+923351234567
+C0280,Garbage bins overflowing for days on Oak Ave,Waste,Medium,2026-03-25 18:52:54,12,Resolved,Zainab Bibi,"Sector F-7/2, Islamabad",usman.khan@gmail.com,+923337654321
+C0281,Illegal dumping of construction waste near Oak Ave,Waste,Medium,2026-08-10 18:52:54,13,Resolved,Usman Ghani,"Sector G-9, Islamabad",usman.khan@gmail.com,+923157654321
+C0282,Dangerous leaning tree over walkway on Oak Ave,Safety,Medium,2026-02-20 18:52:54,12,Resolved,Muhammad Ali,"Samanabad, Lahore",areeb@gmail.com,+923179876543
+C0283,"Pipe burst near Park Ave, water flooding the sidewalk",Water,High,2026-05-03 18:52:54,,Open,Zainab Bibi,"Phase 4, Bahria Town, Rawalpindi",usman.khan@gmail.com,+923456543210
+C0284,Huge pothole on Elm St causing traffic,Road,Low,2026-05-12 18:52:54,,Assigned,Bilal Siddiqui,"Block 5, Clifton, Karachi",mariam.m@outlook.com,+923129876543
+C0285,Stray dogs aggressive near Main St,Other,Medium,2026-02-14 18:52:54,13,Resolved,Saad Khan,"Saddar Bazar, Karachi",bilal.dev@gmail.com,+923087654321
+C0286,Road surface completely destroyed near Maple Dr,Road,High,2026-08-10 18:52:54,,In Progress,Hina Jamil,"Liaquatabad No. 4, Karachi",fatima.shah@gmail.com,+923001234567
+C0287,No water supply in the building on Park Ave,Water,High,2026-06-24 18:52:54,7,Resolved,Fatima Ahmed,"Sector F-7/2, Islamabad",zainab12@hotmail.com,+923087654321
+C0288,Traffic light broken at Park Ave intersection,Road,Low,2026-05-14 18:52:54,27,Resolved,Muhammad Ali,"Block 13D, Gulshan-e-Iqbal, Karachi",areeb@gmail.com,+923001234567
+C0289,Huge pothole on Main St causing traffic,Road,Critical,2026-08-07 18:52:54,3,Resolved,Muhammad Ali,"Phase 6, DHA, Karachi",kiran.sheikh@hotmail.com,+923351234567
+C0290,Illegal dumping of construction waste near Maple Dr,Waste,Medium,2026-04-21 18:52:54,10,Resolved,Hamza Sheikh,"Gulberg III, Lahore",sana.riaz@yahoo.com,+923214567890
+C0291,Complete blackout in the neighborhood around Pine St,Electricity,Medium,2026-07-27 18:52:54,10,Resolved,Mariam Malik,"Model Town Block C, Lahore",fatima.shah@gmail.com,+923456543210
+C0292,Garbage bins overflowing for days on Cedar Ln,Waste,Low,2026-05-29 18:52:54,22,Resolved,Mariam Malik,"Block 13D, Gulshan-e-Iqbal, Karachi",fatima.shah@gmail.com,+923001234567
+C0293,Foul smell from uncollected trash at Washington Blvd,Waste,High,2026-07-15 18:52:54,3,Resolved,Usman Ghani,"Sector G-9, Islamabad",areeb@gmail.com,+923019876543
+C0294,Dirty brown water coming from taps at Main St,Water,Medium,2026-05-17 18:52:54,,In Progress,Kiran Shah,"Sector F-7/2, Islamabad",areeb@gmail.com,+923341234567
+C0295,Terrible smell from open drain near Cedar Ln,Drainage,High,2026-03-03 18:52:54,,In Progress,Hina Jamil,"Saddar Bazar, Karachi",usman.khan@gmail.com,+923157654321
+C0296,Illegal dumping of construction waste near Cedar Ln,Waste,High,2026-07-18 18:52:54,4,Resolved,Kiran Shah,"Gulberg III, Lahore",kiran.sheikh@hotmail.com,+923019876543
+C0297,No pedestrian crossing visible at Main St,Safety,Low,2026-08-02 18:52:54,30,Resolved,Hina Jamil,"Liaquatabad No. 4, Karachi",fatima.shah@gmail.com,+923224567890
+C0298,Road surface completely destroyed near Washington Blvd,Road,Low,2026-06-18 18:52:54,15,Resolved,Kiran Shah,"Phase 6, DHA, Karachi",mariam.m@outlook.com,+923179876543
+C0299,Traffic light broken at Cedar Ln intersection,Road,High,2026-06-05 18:52:54,6,Resolved,Ali Murtaza,"Liaquatabad No. 4, Karachi",areeb@gmail.com,+923019876543
+C0300,Traffic light broken at Pine St intersection,Road,Low,2026-04-20 18:52:54,23,Resolved,Ayesha Khan,"Liaquatabad No. 4, Karachi",usman.ghani@gmail.com,+923179876543
+C0301,Graffiti on public wall at Cedar Ln,Other,High,2026-06-02 18:52:54,4,Resolved,Muhammad Ali,"Model Town Block C, Lahore",kiran.sheikh@hotmail.com,+923087654321
+C0302,Huge pothole on Cedar Ln causing traffic,Road,Low,2026-07-02 18:52:54,24,Resolved,Hamza Sheikh,"Model Town Block C, Lahore",usman.ghani@gmail.com,+923337654321
+C0303,Huge pothole on Park Ave causing traffic,Road,Low,2026-06-03 18:52:54,,Open,Zainab Bibi,"Sector F-7/2, Islamabad",sana.riaz@yahoo.com,+923129876543
+C0304,Dirty brown water coming from taps at Pine St,Water,High,2026-04-18 18:52:54,,Assigned,Zainab Bibi,"North Nazimabad Block H, Karachi",areeb@gmail.com,+923337654321
+C0305,No water supply in the building on Park Ave,Water,Critical,2026-03-28 18:52:54,3,Resolved,Muhammad Ali,"Phase 4, Bahria Town, Rawalpindi",zainab12@hotmail.com,+923157654321
+C0306,Road surface completely destroyed near Maple Dr,Road,Low,2026-04-17 18:52:54,19,Resolved,Hina Jamil,"Samanabad, Lahore",fatima.shah@gmail.com,+923341234567
+C0307,Loud noise complaint from construction on Pine St,Other,Medium,2026-06-26 18:52:54,,In Progress,Ali Murtaza,"Model Town Block C, Lahore",sana.riaz@yahoo.com,+923341234567
+C0308,Garbage bins overflowing for days on Cedar Ln,Waste,Low,2026-04-26 18:52:54,21,Resolved,Hina Jamil,"Liaquatabad No. 4, Karachi",hamza.ali@yahoo.com,+923351234567
+C0309,Complete blackout in the neighborhood around Oak Ave,Electricity,Critical,2026-05-02 18:52:54,,In Progress,Fatima Ahmed,"Phase 6, DHA, Karachi",usman.khan@gmail.com,+923224567890
+C0310,Illegal dumping of construction waste near Washington Blvd,Waste,Critical,2026-06-24 18:52:54,3,Resolved,Hamza Sheikh,"Model Town Block C, Lahore",sana.riaz@yahoo.com,+923001234567
+C0311,Garbage bins overflowing for days on Maple Dr,Waste,Medium,2026-02-19 18:52:54,8,Resolved,Syed Hamza,"Gulberg III, Lahore",usman.ghani@gmail.com,+923019876543
+C0312,"Pipe burst near Main St, water flooding the sidewalk",Water,Critical,2026-06-13 18:52:54,,Assigned,Saad Khan,"Block 13D, Gulshan-e-Iqbal, Karachi",usman.khan@gmail.com,+923087654321
+C0313,Complete blackout in the neighborhood around Main St,Electricity,Critical,2026-03-04 18:52:54,1,Resolved,Hamza Sheikh,"Model Town Block C, Lahore",mariam.m@outlook.com,+923001234567
+C0314,Illegal dumping of construction waste near Park Ave,Waste,High,2026-05-27 18:52:54,7,Resolved,Muhammad Ali,"Sector G-9, Islamabad",kiran.sheikh@hotmail.com,+923157654321
+C0315,Foul smell from uncollected trash at Oak Ave,Waste,High,2026-08-06 18:52:54,5,Resolved,Sana Riaz,"Gulberg III, Lahore",ahmed.raza@gmail.com,+923337654321
+C0316,Street lights not working on Park Ave,Electricity,High,2026-05-30 18:52:54,,Assigned,Saad Khan,"Gulberg III, Lahore",usman.ghani@gmail.com,+923351234567
+C0317,Loud noise complaint from construction on Pine St,Other,Medium,2026-07-28 18:52:54,11,Resolved,Mariam Malik,"Block 13D, Gulshan-e-Iqbal, Karachi",sana.riaz@yahoo.com,+923001234567
+C0318,Sparking power lines near Washington Blvd,Electricity,Critical,2026-05-07 18:52:54,2,Resolved,Usman Ghani,"Gulberg III, Lahore",usman.ghani@gmail.com,+923001234567
+C0319,Dirty brown water coming from taps at Elm St,Water,Critical,2026-07-31 18:52:54,,In Progress,Hafsa Bibi,"North Nazimabad Block H, Karachi",usman.khan@gmail.com,+923341234567
+C0320,Complete blackout in the neighborhood around Washington Blvd,Electricity,Medium,2026-02-25 18:52:54,,Assigned,Hamza Sheikh,"Model Town Block C, Lahore",saad.k@gmail.com,+923214567890
+C0321,Road surface completely destroyed near Maple Dr,Road,Low,2026-06-18 18:52:54,,Open,Hamza Sheikh,"Sector G-9, Islamabad",ahmed.raza@gmail.com,+923001234567
+C0322,Foul smell from uncollected trash at Elm St,Waste,Medium,2026-02-13 18:52:54,11,Resolved,Kiran Shah,"Model Town Block C, Lahore",sana.riaz@yahoo.com,+923087654321
+C0323,Foul smell from uncollected trash at Elm St,Waste,Medium,2026-06-12 18:52:54,10,Resolved,Bilal Siddiqui,"Phase 6, DHA, Karachi",mariam.m@outlook.com,+923019876543
+C0324,Huge pothole on Elm St causing traffic,Road,Medium,2026-07-15 18:52:54,14,Resolved,Zainab Bibi,"Block 5, Clifton, Karachi",fatima.shah@gmail.com,+923456543210
+C0325,"Pipe burst near Cedar Ln, water flooding the sidewalk",Water,Medium,2026-05-13 18:52:54,,Assigned,Ahmed Raza,"Phase 4, Bahria Town, Rawalpindi",hamza.ali@yahoo.com,+923129876543
+C0326,Illegal dumping of construction waste near Main St,Waste,Medium,2026-06-26 18:52:54,,In Progress,Fatima Ahmed,"Block 13D, Gulshan-e-Iqbal, Karachi",hamza.ali@yahoo.com,+923337654321
+C0327,Terrible smell from open drain near Pine St,Drainage,Medium,2026-07-29 18:52:54,7,Resolved,Zainab Bibi,"Liaquatabad No. 4, Karachi",fatima.shah@gmail.com,+923179876543
+C0328,Sewage backing up into street on Elm St,Drainage,Medium,2026-07-19 18:52:54,7,Resolved,Saad Khan,"North Nazimabad Block H, Karachi",ahmed.raza@gmail.com,+923129876543
+C0329,Sewage backing up into street on Cedar Ln,Drainage,Medium,2026-07-31 18:52:54,13,Resolved,Zainab Bibi,"Block 5, Clifton, Karachi",hamza.ali@yahoo.com,+923019876543
+C0330,Traffic light broken at Pine St intersection,Road,Low,2026-03-29 18:52:54,,Assigned,Syed Hamza,"Phase 4, Bahria Town, Rawalpindi",saad.k@gmail.com,+923129876543
+C0331,No water supply in the building on Cedar Ln,Water,High,2026-05-08 18:52:54,7,Resolved,Sana Riaz,"Samanabad, Lahore",hamza.ali@yahoo.com,+923087654321
+C0332,Terrible smell from open drain near Park Ave,Drainage,Low,2026-05-21 18:52:54,27,Resolved,Saad Khan,"Block 13D, Gulshan-e-Iqbal, Karachi",zainab12@hotmail.com,+923351234567
+C0333,Dirty brown water coming from taps at Pine St,Water,Low,2026-07-30 18:52:54,,Open,Ayesha Khan,"Model Town Block C, Lahore",zainab12@hotmail.com,+923179876543
+C0334,No water supply in the building on Elm St,Water,High,2026-07-27 18:52:54,3,Resolved,Muhammad Ali,"Sector F-7/2, Islamabad",sana.riaz@yahoo.com,+923087654321
+C0335,Huge pothole on Park Ave causing traffic,Road,High,2026-05-03 18:52:54,7,Resolved,Kiran Shah,"Phase 6, DHA, Karachi",usman.ghani@gmail.com,+923341234567
+C0336,Garbage bins overflowing for days on Washington Blvd,Waste,High,2026-06-02 18:52:54,,In Progress,Fatima Ahmed,"Liaquatabad No. 4, Karachi",saad.k@gmail.com,+923157654321
+C0337,"Pipe burst near Elm St, water flooding the sidewalk",Water,Critical,2026-07-03 18:52:54,2,Resolved,Ayesha Khan,"Gulberg III, Lahore",ahmed.raza@gmail.com,+923001234567
+C0338,Terrible smell from open drain near Pine St,Drainage,Low,2026-02-17 18:52:54,19,Resolved,Ali Murtaza,"Samanabad, Lahore",saad.k@gmail.com,+923214567890
+C0339,Illegal dumping of construction waste near Elm St,Waste,Medium,2026-06-19 18:52:54,,Open,Hina Jamil,"Phase 6, DHA, Karachi",sana.riaz@yahoo.com,+923001234567
+C0340,Blocked storm drain causing flooding at Maple Dr,Drainage,High,2026-08-04 18:52:54,5,Resolved,Ali Murtaza,"Gulberg III, Lahore",usman.khan@gmail.com,+923224567890
+C0341,"Pipe burst near Pine St, water flooding the sidewalk",Water,Critical,2026-02-23 18:52:54,2,Resolved,Muhammad Ali,"Phase 4, Bahria Town, Rawalpindi",hamza.ali@yahoo.com,+923087654321
+C0342,Street lights not working on Pine St,Electricity,Critical,2026-04-23 18:52:54,,In Progress,Ali Murtaza,"Block 13D, Gulshan-e-Iqbal, Karachi",sana.riaz@yahoo.com,+923224567890
+C0343,Dirty brown water coming from taps at Cedar Ln,Water,Low,2026-07-08 18:52:54,22,Resolved,Ahmed Raza,"Phase 6, DHA, Karachi",fatima.shah@gmail.com,+923157654321
+C0344,No water supply in the building on Park Ave,Water,Critical,2026-05-23 18:52:54,2,Resolved,Kiran Shah,"Samanabad, Lahore",areeb@gmail.com,+923001234567
+C0345,Traffic light broken at Park Ave intersection,Road,High,2026-06-22 18:52:54,5,Resolved,Hafsa Bibi,"Phase 6, DHA, Karachi",areeb@gmail.com,+923129876543
+C0346,No water supply in the building on Cedar Ln,Water,Critical,2026-06-15 18:52:54,1,Resolved,Syed Hamza,"Gulberg III, Lahore",ahmed.raza@gmail.com,+923351234567
+C0347,Foul smell from uncollected trash at Pine St,Waste,Low,2026-07-15 18:52:54,24,Resolved,Kiran Shah,"Phase 6, DHA, Karachi",areeb@gmail.com,+923001234567
+C0348,Huge pothole on Oak Ave causing traffic,Road,Low,2026-03-20 18:52:54,14,Resolved,Syed Hamza,"Saddar Bazar, Karachi",mariam.m@outlook.com,+923129876543
+C0349,Broken fence near the park on Oak Ave,Safety,Medium,2026-04-16 18:52:54,,Assigned,Hina Jamil,"Sector G-9, Islamabad",sana.riaz@yahoo.com,+923224567890
+C0350,Huge pothole on Park Ave causing traffic,Road,Medium,2026-07-22 18:52:54,,Assigned,Ali Murtaza,"Block 5, Clifton, Karachi",areeb@gmail.com,+923224567890
+C0351,Foul smell from uncollected trash at Oak Ave,Waste,Low,2026-06-08 18:52:54,,Assigned,Syed Hamza,"Sector G-9, Islamabad",mariam.m@outlook.com,+923157654321
+C0352,"Pipe burst near Park Ave, water flooding the sidewalk",Water,Medium,2026-04-19 18:52:54,10,Resolved,Ahmed Raza,"Saddar Bazar, Karachi",fatima.shah@gmail.com,+923337654321
+C0353,Huge pothole on Washington Blvd causing traffic,Road,High,2026-04-20 18:52:54,3,Resolved,Usman Ghani,"Gulberg III, Lahore",saad.k@gmail.com,+923019876543
+C0354,Huge pothole on Elm St causing traffic,Road,Low,2026-06-11 18:52:54,18,Resolved,Sana Riaz,"Block 13D, Gulshan-e-Iqbal, Karachi",fatima.shah@gmail.com,+923129876543
+C0355,Traffic light broken at Park Ave intersection,Road,Low,2026-08-02 18:52:54,21,Resolved,Kiran Shah,"Phase 4, Bahria Town, Rawalpindi",fatima.shah@gmail.com,+923224567890
+C0356,Illegal dumping of construction waste near Cedar Ln,Waste,Low,2026-03-08 18:52:54,23,Resolved,Saad Khan,"North Nazimabad Block H, Karachi",areeb@gmail.com,+923179876543
+C0357,Garbage bins overflowing for days on Cedar Ln,Waste,Low,2026-03-30 18:52:54,15,Resolved,Saad Khan,"Saddar Bazar, Karachi",fatima.shah@gmail.com,+923351234567
+C0358,Illegal dumping of construction waste near Park Ave,Waste,Low,2026-04-20 18:52:54,20,Resolved,Mariam Malik,"North Nazimabad Block H, Karachi",usman.ghani@gmail.com,+923224567890
+C0359,No water supply in the building on Park Ave,Water,High,2026-06-19 18:52:54,,Open,Kiran Shah,"Block 13D, Gulshan-e-Iqbal, Karachi",ahmed.raza@gmail.com,+923456543210
+C0360,Blocked storm drain causing flooding at Cedar Ln,Drainage,Low,2026-07-01 18:52:54,24,Resolved,Bilal Siddiqui,"Gulberg III, Lahore",kiran.sheikh@hotmail.com,+923001234567
+C0361,Complete blackout in the neighborhood around Pine St,Electricity,High,2026-05-22 18:52:54,,In Progress,Hamza Sheikh,"Gulberg III, Lahore",usman.ghani@gmail.com,+923341234567
+C0362,Sparking power lines near Elm St,Electricity,Critical,2026-06-27 18:52:54,2,Resolved,Hafsa Bibi,"Saddar Bazar, Karachi",usman.ghani@gmail.com,+923019876543
+C0363,Dangerous leaning tree over walkway on Oak Ave,Safety,Medium,2026-07-25 18:52:54,,Open,Hina Jamil,"North Nazimabad Block H, Karachi",saad.k@gmail.com,+923157654321
+C0364,Dirty brown water coming from taps at Maple Dr,Water,Medium,2026-03-16 18:52:54,,Assigned,Ali Murtaza,"Saddar Bazar, Karachi",saad.k@gmail.com,+923337654321
+C0365,Road surface completely destroyed near Maple Dr,Road,Medium,2026-03-22 18:52:54,,In Progress,Ayesha Khan,"Block 13D, Gulshan-e-Iqbal, Karachi",mariam.m@outlook.com,+923341234567
+C0366,Traffic light broken at Pine St intersection,Road,Medium,2026-04-21 18:52:54,7,Resolved,Fatima Ahmed,"Block 5, Clifton, Karachi",areeb@gmail.com,+923087654321
+C0367,Road surface completely destroyed near Cedar Ln,Road,Medium,2026-07-04 18:52:54,,In Progress,Usman Ghani,"Samanabad, Lahore",fatima.shah@gmail.com,+923214567890
+C0368,Garbage bins overflowing for days on Oak Ave,Waste,Low,2026-06-29 18:52:54,,In Progress,Hamza Sheikh,"Phase 6, DHA, Karachi",kiran.sheikh@hotmail.com,+923214567890
+C0369,"Pipe burst near Elm St, water flooding the sidewalk",Water,Critical,2026-07-09 18:52:54,2,Resolved,Bilal Siddiqui,"Block 5, Clifton, Karachi",hamza.ali@yahoo.com,+923337654321
+C0370,Foul smell from uncollected trash at Pine St,Waste,High,2026-03-19 18:52:54,3,Resolved,Kiran Shah,"Sector F-7/2, Islamabad",bilal.dev@gmail.com,+923001234567
+C0371,Traffic light broken at Pine St intersection,Road,Low,2026-02-26 18:52:54,,In Progress,Saad Khan,"North Nazimabad Block H, Karachi",fatima.shah@gmail.com,+923129876543
+C0372,Dirty brown water coming from taps at Cedar Ln,Water,Low,2026-02-26 18:52:54,24,Resolved,Usman Ghani,"Liaquatabad No. 4, Karachi",hamza.ali@yahoo.com,+923179876543
+C0373,Complete blackout in the neighborhood around Park Ave,Electricity,High,2026-03-04 18:52:54,7,Resolved,Kiran Shah,"Phase 6, DHA, Karachi",usman.ghani@gmail.com,+923337654321
+C0374,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,Critical,2026-04-10 18:52:54,3,Resolved,Hafsa Bibi,"Sector F-7/2, Islamabad",mariam.m@outlook.com,+923179876543
+C0375,Stray dogs aggressive near Washington Blvd,Other,Medium,2026-05-11 18:52:54,12,Resolved,Muhammad Ali,"Liaquatabad No. 4, Karachi",sana.riaz@yahoo.com,+923214567890
+C0376,Huge pothole on Pine St causing traffic,Road,Medium,2026-03-07 18:52:54,,Assigned,Hina Jamil,"Saddar Bazar, Karachi",fatima.shah@gmail.com,+923214567890
+C0377,No pedestrian crossing visible at Oak Ave,Safety,Medium,2026-05-22 18:52:54,,Open,Hina Jamil,"Gulberg III, Lahore",ahmed.raza@gmail.com,+923087654321
+C0378,"Pipe burst near Pine St, water flooding the sidewalk",Water,Critical,2026-03-30 18:52:54,2,Resolved,Syed Hamza,"Phase 6, DHA, Karachi",usman.ghani@gmail.com,+923224567890
+C0379,Traffic light broken at Elm St intersection,Road,Low,2026-07-17 18:52:54,27,Resolved,Saad Khan,"Phase 4, Bahria Town, Rawalpindi",bilal.dev@gmail.com,+923214567890
+C0380,Sewage backing up into street on Main St,Drainage,Medium,2026-03-10 18:52:54,,In Progress,Mariam Malik,"Sector G-9, Islamabad",fatima.shah@gmail.com,+923129876543
+C0381,Road surface completely destroyed near Washington Blvd,Road,Medium,2026-04-14 18:52:54,13,Resolved,Muhammad Ali,"Phase 4, Bahria Town, Rawalpindi",saad.k@gmail.com,+923337654321
+C0382,"Pipe burst near Main St, water flooding the sidewalk",Water,High,2026-04-03 18:52:54,,Open,Usman Ghani,"Saddar Bazar, Karachi",bilal.dev@gmail.com,+923351234567
+C0383,Road surface completely destroyed near Cedar Ln,Road,Low,2026-04-03 18:52:54,27,Resolved,Syed Hamza,"Block 5, Clifton, Karachi",mariam.m@outlook.com,+923224567890
+C0384,Road surface completely destroyed near Park Ave,Road,Low,2026-07-14 18:52:54,15,Resolved,Ali Murtaza,"North Nazimabad Block H, Karachi",ahmed.raza@gmail.com,+923341234567
+C0385,Complete blackout in the neighborhood around Oak Ave,Electricity,Low,2026-03-19 18:52:54,30,Resolved,Saad Khan,"Sector G-9, Islamabad",areeb@gmail.com,+923214567890
+C0386,No water supply in the building on Oak Ave,Water,High,2026-06-04 18:52:54,3,Resolved,Muhammad Ali,"Sector G-9, Islamabad",kiran.sheikh@hotmail.com,+923019876543
+C0387,No water supply in the building on Oak Ave,Water,Critical,2026-04-13 18:52:54,,Assigned,Kiran Shah,"Model Town Block C, Lahore",kiran.sheikh@hotmail.com,+923001234567
+C0388,"Pipe burst near Cedar Ln, water flooding the sidewalk",Water,Medium,2026-05-29 18:52:54,,In Progress,Ayesha Khan,"Gulberg III, Lahore",bilal.dev@gmail.com,+923351234567
+C0389,Garbage bins overflowing for days on Cedar Ln,Waste,Low,2026-05-31 18:52:54,,Open,Usman Ghani,"Phase 4, Bahria Town, Rawalpindi",sana.riaz@yahoo.com,+923087654321
+C0390,Road surface completely destroyed near Main St,Road,Medium,2026-05-27 18:52:54,13,Resolved,Ayesha Khan,"Gulberg III, Lahore",usman.khan@gmail.com,+923001234567
+C0391,Garbage bins overflowing for days on Main St,Waste,Low,2026-03-30 18:52:54,20,Resolved,Muhammad Ali,"Samanabad, Lahore",fatima.shah@gmail.com,+923129876543
+C0392,Loud noise complaint from construction on Cedar Ln,Other,Medium,2026-05-23 18:52:54,,Open,Muhammad Ali,"Sector G-9, Islamabad",usman.khan@gmail.com,+923456543210
+C0393,Loud noise complaint from construction on Elm St,Other,Medium,2026-02-14 18:52:54,,In Progress,Hina Jamil,"Saddar Bazar, Karachi",sana.riaz@yahoo.com,+923157654321
+C0394,No water supply in the building on Washington Blvd,Water,Medium,2026-02-13 18:52:54,14,Resolved,Syed Hamza,"Samanabad, Lahore",bilal.dev@gmail.com,+923456543210
+C0395,No water supply in the building on Washington Blvd,Water,Low,2026-02-16 18:52:54,,In Progress,Ahmed Raza,"Block 13D, Gulshan-e-Iqbal, Karachi",kiran.sheikh@hotmail.com,+923087654321
+C0396,"Pipe burst near Oak Ave, water flooding the sidewalk",Water,Critical,2026-03-15 18:52:54,1,Resolved,Ayesha Khan,"Phase 4, Bahria Town, Rawalpindi",ahmed.raza@gmail.com,+923019876543
+C0397,Foul smell from uncollected trash at Maple Dr,Waste,Low,2026-05-25 18:52:54,26,Resolved,Muhammad Ali,"Phase 6, DHA, Karachi",sana.riaz@yahoo.com,+923351234567
+C0398,Traffic light broken at Washington Blvd intersection,Road,High,2026-06-11 18:52:54,5,Resolved,Ali Murtaza,"Block 13D, Gulshan-e-Iqbal, Karachi",bilal.dev@gmail.com,+923157654321
+C0399,Stray dogs aggressive near Main St,Other,Medium,2026-04-03 18:52:54,,Assigned,Sana Riaz,"North Nazimabad Block H, Karachi",bilal.dev@gmail.com,+923179876543
+C0400,Illegal dumping of construction waste near Park Ave,Waste,Medium,2026-04-17 18:52:54,,Open,Hina Jamil,"Block 5, Clifton, Karachi",bilal.dev@gmail.com,+923179876543
+C0401,Road surface completely destroyed near Cedar Ln,Road,Medium,2026-03-18 18:52:54,,In Progress,Muhammad Ali,"Sector G-9, Islamabad",mariam.m@outlook.com,+923337654321
+C0402,Traffic light broken at Washington Blvd intersection,Road,Low,2026-07-04 18:52:54,14,Resolved,Muhammad Ali,"Block 5, Clifton, Karachi",sana.riaz@yahoo.com,+923224567890
+C0403,Terrible smell from open drain near Pine St,Drainage,Low,2026-03-25 18:52:54,27,Resolved,Mariam Malik,"Sector G-9, Islamabad",areeb@gmail.com,+923179876543
+C0404,"Pipe burst near Elm St, water flooding the sidewalk",Water,Critical,2026-03-02 18:52:54,,Open,Zainab Bibi,"Saddar Bazar, Karachi",fatima.shah@gmail.com,+923129876543
+C0405,Street lights not working on Cedar Ln,Electricity,High,2026-05-28 18:52:54,6,Resolved,Sana Riaz,"Saddar Bazar, Karachi",bilal.dev@gmail.com,+923214567890
+C0406,Terrible smell from open drain near Washington Blvd,Drainage,Low,2026-04-23 18:52:54,20,Resolved,Muhammad Ali,"Phase 4, Bahria Town, Rawalpindi",areeb@gmail.com,+923224567890
+C0407,Traffic light broken at Maple Dr intersection,Road,Low,2026-05-21 18:52:54,15,Resolved,Ali Murtaza,"Sector G-9, Islamabad",bilal.dev@gmail.com,+923157654321
+C0408,Street lights not working on Oak Ave,Electricity,High,2026-06-13 18:52:54,,In Progress,Ali Murtaza,"Sector G-9, Islamabad",saad.k@gmail.com,+923129876543
+C0409,Illegal dumping of construction waste near Maple Dr,Waste,Medium,2026-04-12 18:52:54,11,Resolved,Ahmed Raza,"Block 5, Clifton, Karachi",hamza.ali@yahoo.com,+923019876543
+C0410,Street lights not working on Maple Dr,Electricity,High,2026-07-04 18:52:54,5,Resolved,Zainab Bibi,"Phase 4, Bahria Town, Rawalpindi",fatima.shah@gmail.com,+923224567890
+C0411,Road surface completely destroyed near Park Ave,Road,Medium,2026-08-03 18:52:54,8,Resolved,Kiran Shah,"Model Town Block C, Lahore",sana.riaz@yahoo.com,+923087654321
+C0412,Illegal dumping of construction waste near Main St,Waste,Low,2026-03-05 18:52:54,25,Resolved,Syed Hamza,"Liaquatabad No. 4, Karachi",zainab12@hotmail.com,+923456543210
+C0413,Huge pothole on Main St causing traffic,Road,Medium,2026-03-03 18:52:54,9,Resolved,Kiran Shah,"Saddar Bazar, Karachi",kiran.sheikh@hotmail.com,+923129876543
+C0414,Dirty brown water coming from taps at Park Ave,Water,Critical,2026-03-25 18:52:54,,Assigned,Muhammad Ali,"Phase 6, DHA, Karachi",fatima.shah@gmail.com,+923129876543
+C0415,No water supply in the building on Pine St,Water,Critical,2026-02-20 18:52:54,3,Resolved,Syed Hamza,"Liaquatabad No. 4, Karachi",hamza.ali@yahoo.com,+923351234567
+C0416,Dirty brown water coming from taps at Pine St,Water,Low,2026-03-17 18:52:54,,Assigned,Ahmed Raza,"Phase 6, DHA, Karachi",kiran.sheikh@hotmail.com,+923087654321
+C0417,Loud noise complaint from construction on Main St,Other,Low,2026-05-24 18:52:54,26,Resolved,Fatima Ahmed,"Sector G-9, Islamabad",bilal.dev@gmail.com,+923214567890
+C0418,Sewage backing up into street on Washington Blvd,Drainage,Low,2026-03-03 18:52:54,,Assigned,Kiran Shah,"Gulberg III, Lahore",ahmed.raza@gmail.com,+923157654321
+C0419,"Pipe burst near Cedar Ln, water flooding the sidewalk",Water,High,2026-04-30 18:52:54,5,Resolved,Fatima Ahmed,"Model Town Block C, Lahore",ahmed.raza@gmail.com,+923129876543
+C0420,Complete blackout in the neighborhood around Cedar Ln,Electricity,Critical,2026-03-28 18:52:54,,In Progress,Hamza Sheikh,"Liaquatabad No. 4, Karachi",usman.khan@gmail.com,+923456543210
+C0421,Blocked storm drain causing flooding at Pine St,Drainage,High,2026-07-14 18:52:54,3,Resolved,Kiran Shah,"Sector G-9, Islamabad",saad.k@gmail.com,+923224567890
+C0422,Traffic light broken at Washington Blvd intersection,Road,Low,2026-04-27 18:52:54,14,Resolved,Syed Hamza,"Sector F-7/2, Islamabad",fatima.shah@gmail.com,+923214567890
+C0423,Illegal dumping of construction waste near Elm St,Waste,Low,2026-04-08 18:52:54,19,Resolved,Hamza Sheikh,"Block 5, Clifton, Karachi",kiran.sheikh@hotmail.com,+923179876543
+C0424,Traffic light broken at Maple Dr intersection,Road,Critical,2026-04-26 18:52:54,,In Progress,Hamza Sheikh,"Liaquatabad No. 4, Karachi",ahmed.raza@gmail.com,+923157654321
+C0425,Traffic light broken at Main St intersection,Road,Low,2026-07-15 18:52:54,23,Resolved,Sana Riaz,"North Nazimabad Block H, Karachi",usman.khan@gmail.com,+923001234567
+C0426,Blocked storm drain causing flooding at Pine St,Drainage,Medium,2026-06-06 18:52:54,14,Resolved,Usman Ghani,"North Nazimabad Block H, Karachi",usman.ghani@gmail.com,+923456543210
+C0427,Foul smell from uncollected trash at Park Ave,Waste,Low,2026-08-08 18:52:54,23,Resolved,Fatima Ahmed,"Sector F-7/2, Islamabad",areeb@gmail.com,+923337654321
+C0428,Garbage bins overflowing for days on Pine St,Waste,Medium,2026-02-26 18:52:54,8,Resolved,Saad Khan,"Samanabad, Lahore",usman.khan@gmail.com,+923341234567
+C0429,Road surface completely destroyed near Cedar Ln,Road,Low,2026-03-30 18:52:54,,Open,Ahmed Raza,"Phase 4, Bahria Town, Rawalpindi",usman.ghani@gmail.com,+923341234567
+C0430,No water supply in the building on Main St,Water,Critical,2026-03-22 18:52:54,3,Resolved,Ayesha Khan,"Saddar Bazar, Karachi",sana.riaz@yahoo.com,+923341234567
+C0431,Garbage bins overflowing for days on Main St,Waste,Low,2026-07-02 18:52:54,,Open,Syed Hamza,"Sector G-9, Islamabad",fatima.shah@gmail.com,+923456543210
+C0432,Road surface completely destroyed near Washington Blvd,Road,High,2026-05-02 18:52:54,,In Progress,Zainab Bibi,"Model Town Block C, Lahore",bilal.dev@gmail.com,+923157654321
+C0433,Garbage bins overflowing for days on Maple Dr,Waste,Medium,2026-02-23 18:52:54,,In Progress,Kiran Shah,"Samanabad, Lahore",saad.k@gmail.com,+923001234567
+C0434,Traffic light broken at Main St intersection,Road,Medium,2026-06-22 18:52:54,11,Resolved,Ali Murtaza,"Block 13D, Gulshan-e-Iqbal, Karachi",zainab12@hotmail.com,+923341234567
+C0435,Garbage bins overflowing for days on Elm St,Waste,Medium,2026-07-18 18:52:54,7,Resolved,Fatima Ahmed,"Saddar Bazar, Karachi",usman.ghani@gmail.com,+923157654321
+C0436,Sparking power lines near Maple Dr,Electricity,Low,2026-06-04 18:52:54,17,Resolved,Saad Khan,"Sector G-9, Islamabad",mariam.m@outlook.com,+923337654321
+C0437,Broken fence near the park on Main St,Safety,Critical,2026-08-06 18:52:54,,Assigned,Ayesha Khan,"Block 5, Clifton, Karachi",bilal.dev@gmail.com,+923157654321
+C0438,Road surface completely destroyed near Cedar Ln,Road,High,2026-03-03 18:52:54,,In Progress,Hamza Sheikh,"Phase 6, DHA, Karachi",areeb@gmail.com,+923001234567
+C0439,Sparking power lines near Oak Ave,Electricity,Critical,2026-06-19 18:52:54,,In Progress,Mariam Malik,"Sector G-9, Islamabad",saad.k@gmail.com,+923087654321
+C0440,Road surface completely destroyed near Oak Ave,Road,Low,2026-06-21 18:52:54,16,Resolved,Hamza Sheikh,"North Nazimabad Block H, Karachi",usman.khan@gmail.com,+923157654321
+C0441,Huge pothole on Park Ave causing traffic,Road,Low,2026-04-06 18:52:54,,In Progress,Kiran Shah,"Saddar Bazar, Karachi",hamza.ali@yahoo.com,+923456543210
+C0442,Street lights not working on Park Ave,Electricity,Critical,2026-04-13 18:52:54,1,Resolved,Hina Jamil,"Model Town Block C, Lahore",zainab12@hotmail.com,+923456543210
+C0443,Foul smell from uncollected trash at Park Ave,Waste,Medium,2026-05-12 18:52:54,,Open,Hina Jamil,"Phase 6, DHA, Karachi",ahmed.raza@gmail.com,+923157654321
+C0444,Street lights not working on Oak Ave,Electricity,Critical,2026-05-17 18:52:54,2,Resolved,Bilal Siddiqui,"Model Town Block C, Lahore",hamza.ali@yahoo.com,+923337654321
+C0445,Illegal dumping of construction waste near Maple Dr,Waste,Medium,2026-08-02 18:52:54,14,Resolved,Zainab Bibi,"Saddar Bazar, Karachi",hamza.ali@yahoo.com,+923456543210
+C0446,Traffic light broken at Cedar Ln intersection,Road,Critical,2026-04-11 18:52:54,,Open,Mariam Malik,"North Nazimabad Block H, Karachi",usman.khan@gmail.com,+923087654321
+C0447,No pedestrian crossing visible at Pine St,Safety,Low,2026-02-24 18:52:54,23,Resolved,Syed Hamza,"Samanabad, Lahore",areeb@gmail.com,+923337654321
+C0448,No water supply in the building on Cedar Ln,Water,Critical,2026-04-02 18:52:54,,In Progress,Muhammad Ali,"North Nazimabad Block H, Karachi",kiran.sheikh@hotmail.com,+923001234567
+C0449,"Pipe burst near Washington Blvd, water flooding the sidewalk",Water,Critical,2026-07-25 18:52:54,,Assigned,Mariam Malik,"Model Town Block C, Lahore",usman.ghani@gmail.com,+923224567890
+C0450,Sewage backing up into street on Pine St,Drainage,High,2026-06-05 18:52:54,7,Resolved,Hafsa Bibi,"North Nazimabad Block H, Karachi",areeb@gmail.com,+923351234567
+C0451,Street lights not working on Main St,Electricity,High,2026-05-18 18:52:54,,Open,Mariam Malik,"Samanabad, Lahore",bilal.dev@gmail.com,+923179876543
+C0452,Terrible smell from open drain near Cedar Ln,Drainage,Medium,2026-05-28 18:52:54,10,Resolved,Mariam Malik,"Block 5, Clifton, Karachi",usman.ghani@gmail.com,+923224567890
+C0453,Huge pothole on Park Ave causing traffic,Road,High,2026-05-05 18:52:54,5,Resolved,Hamza Sheikh,"Sector F-7/2, Islamabad",sana.riaz@yahoo.com,+923019876543
+C0454,No water supply in the building on Main St,Water,Critical,2026-02-20 18:52:54,,Open,Bilal Siddiqui,"Block 13D, Gulshan-e-Iqbal, Karachi",zainab12@hotmail.com,+923224567890
+C0455,Traffic light broken at Oak Ave intersection,Road,Medium,2026-04-01 18:52:54,,In Progress,Zainab Bibi,"Samanabad, Lahore",zainab12@hotmail.com,+923351234567
+C0456,No water supply in the building on Park Ave,Water,Medium,2026-07-28 18:52:54,,Open,Usman Ghani,"Phase 4, Bahria Town, Rawalpindi",hamza.ali@yahoo.com,+923001234567
+C0457,Road surface completely destroyed near Maple Dr,Road,Medium,2026-03-18 18:52:54,7,Resolved,Syed Hamza,"Block 5, Clifton, Karachi",fatima.shah@gmail.com,+923224567890
+C0458,Garbage bins overflowing for days on Pine St,Waste,High,2026-05-03 18:52:54,4,Resolved,Fatima Ahmed,"Model Town Block C, Lahore",bilal.dev@gmail.com,+923456543210
+C0459,Foul smell from uncollected trash at Cedar Ln,Waste,Low,2026-03-11 18:52:54,,Open,Usman Ghani,"Samanabad, Lahore",fatima.shah@gmail.com,+923341234567
+C0460,Terrible smell from open drain near Oak Ave,Drainage,Low,2026-04-01 18:52:54,,Open,Saad Khan,"Block 13D, Gulshan-e-Iqbal, Karachi",zainab12@hotmail.com,+923337654321
+C0461,Dirty brown water coming from taps at Washington Blvd,Water,High,2026-06-11 18:52:54,,In Progress,Syed Hamza,"Sector G-9, Islamabad",hamza.ali@yahoo.com,+923224567890
+C0462,Huge pothole on Maple Dr causing traffic,Road,Low,2026-07-13 18:52:54,,In Progress,Bilal Siddiqui,"Phase 4, Bahria Town, Rawalpindi",hamza.ali@yahoo.com,+923157654321
+C0463,Huge pothole on Oak Ave causing traffic,Road,Medium,2026-08-07 18:52:54,,Open,Hamza Sheikh,"North Nazimabad Block H, Karachi",ahmed.raza@gmail.com,+923341234567
+C0464,Sparking power lines near Elm St,Electricity,Medium,2026-07-18 18:52:54,9,Resolved,Mariam Malik,"Liaquatabad No. 4, Karachi",zainab12@hotmail.com,+923224567890
+C0465,Foul smell from uncollected trash at Cedar Ln,Waste,Medium,2026-05-14 18:52:54,7,Resolved,Hafsa Bibi,"Phase 4, Bahria Town, Rawalpindi",mariam.m@outlook.com,+923214567890
+C0466,Huge pothole on Cedar Ln causing traffic,Road,Medium,2026-03-06 18:52:54,8,Resolved,Mariam Malik,"Liaquatabad No. 4, Karachi",saad.k@gmail.com,+923087654321
+C0467,Street lights not working on Pine St,Electricity,High,2026-04-12 18:52:54,,In Progress,Zainab Bibi,"Phase 6, DHA, Karachi",kiran.sheikh@hotmail.com,+923351234567
+C0468,Road surface completely destroyed near Park Ave,Road,Medium,2026-03-03 18:52:54,9,Resolved,Muhammad Ali,"Block 13D, Gulshan-e-Iqbal, Karachi",sana.riaz@yahoo.com,+923179876543
+C0469,Graffiti on public wall at Oak Ave,Other,Low,2026-08-01 18:52:54,18,Resolved,Hamza Sheikh,"Samanabad, Lahore",usman.khan@gmail.com,+923179876543
+C0470,Sewage backing up into street on Park Ave,Drainage,Low,2026-05-24 18:52:54,,In Progress,Hina Jamil,"Phase 4, Bahria Town, Rawalpindi",kiran.sheikh@hotmail.com,+923337654321
+C0471,Road surface completely destroyed near Main St,Road,High,2026-02-16 18:52:54,6,Resolved,Hina Jamil,"Phase 6, DHA, Karachi",sana.riaz@yahoo.com,+923351234567
+C0472,"Pipe burst near Cedar Ln, water flooding the sidewalk",Water,Critical,2026-02-21 18:52:54,2,Resolved,Fatima Ahmed,"Block 13D, Gulshan-e-Iqbal, Karachi",ahmed.raza@gmail.com,+923087654321
+C0473,Street lights not working on Pine St,Electricity,High,2026-02-21 18:52:54,3,Resolved,Mariam Malik,"Samanabad, Lahore",bilal.dev@gmail.com,+923019876543
+C0474,Dirty brown water coming from taps at Elm St,Water,Critical,2026-02-18 18:52:54,,In Progress,Fatima Ahmed,"Gulberg III, Lahore",fatima.shah@gmail.com,+923351234567
+C0475,Illegal dumping of construction waste near Cedar Ln,Waste,Low,2026-05-27 18:52:54,22,Resolved,Hamza Sheikh,"Block 5, Clifton, Karachi",mariam.m@outlook.com,+923351234567
+C0476,Garbage bins overflowing for days on Cedar Ln,Waste,High,2026-02-21 18:52:54,,Open,Usman Ghani,"Gulberg III, Lahore",saad.k@gmail.com,+923019876543
+C0477,Illegal dumping of construction waste near Park Ave,Waste,High,2026-07-05 18:52:54,,In Progress,Muhammad Ali,"Phase 6, DHA, Karachi",areeb@gmail.com,+923214567890
+C0478,Loud noise complaint from construction on Park Ave,Other,Critical,2026-05-20 18:52:54,2,Resolved,Hina Jamil,"Block 5, Clifton, Karachi",saad.k@gmail.com,+923214567890
+C0479,Huge pothole on Pine St causing traffic,Road,Low,2026-02-21 18:52:54,,In Progress,Sana Riaz,"Saddar Bazar, Karachi",hamza.ali@yahoo.com,+923351234567
+C0480,Foul smell from uncollected trash at Oak Ave,Waste,Low,2026-04-22 18:52:54,27,Resolved,Ayesha Khan,"Gulberg III, Lahore",usman.khan@gmail.com,+923019876543
+C0481,Sparking power lines near Park Ave,Electricity,High,2026-05-31 18:52:54,3,Resolved,Hamza Sheikh,"Gulberg III, Lahore",areeb@gmail.com,+923224567890
+C0482,Complete blackout in the neighborhood around Maple Dr,Electricity,High,2026-03-17 18:52:54,,Open,Ayesha Khan,"Block 13D, Gulshan-e-Iqbal, Karachi",ahmed.raza@gmail.com,+923179876543
+C0483,Huge pothole on Washington Blvd causing traffic,Road,Low,2026-07-10 18:52:54,29,Resolved,Bilal Siddiqui,"Sector F-7/2, Islamabad",zainab12@hotmail.com,+923157654321
+C0484,"Pipe burst near Maple Dr, water flooding the sidewalk",Water,High,2026-07-06 18:52:54,4,Resolved,Sana Riaz,"Model Town Block C, Lahore",ahmed.raza@gmail.com,+923341234567
+C0485,Sewage backing up into street on Elm St,Drainage,Low,2026-04-03 18:52:54,19,Resolved,Saad Khan,"Sector F-7/2, Islamabad",bilal.dev@gmail.com,+923157654321
+C0486,Illegal dumping of construction waste near Park Ave,Waste,Medium,2026-04-12 18:52:54,,Assigned,Saad Khan,"Gulberg III, Lahore",zainab12@hotmail.com,+923337654321
+C0487,Road surface completely destroyed near Maple Dr,Road,Medium,2026-05-18 18:52:54,,Open,Hafsa Bibi,"Model Town Block C, Lahore",kiran.sheikh@hotmail.com,+923179876543
+C0488,No water supply in the building on Oak Ave,Water,Medium,2026-06-06 18:52:54,,In Progress,Sana Riaz,"Block 13D, Gulshan-e-Iqbal, Karachi",hamza.ali@yahoo.com,+923179876543
+C0489,Traffic light broken at Maple Dr intersection,Road,Medium,2026-07-09 18:52:54,9,Resolved,Ayesha Khan,"Saddar Bazar, Karachi",usman.ghani@gmail.com,+923214567890
+C0490,Illegal dumping of construction waste near Elm St,Waste,Low,2026-03-14 18:52:54,24,Resolved,Syed Hamza,"North Nazimabad Block H, Karachi",kiran.sheikh@hotmail.com,+923157654321
+C0491,Foul smell from uncollected trash at Pine St,Waste,Medium,2026-06-19 18:52:54,,Open,Usman Ghani,"Saddar Bazar, Karachi",bilal.dev@gmail.com,+923087654321
+C0492,Sparking power lines near Cedar Ln,Electricity,Low,2026-05-21 18:52:54,,Open,Ahmed Raza,"Phase 6, DHA, Karachi",fatima.shah@gmail.com,+923001234567
+C0493,Dirty brown water coming from taps at Washington Blvd,Water,High,2026-05-11 18:52:54,,Assigned,Bilal Siddiqui,"Phase 4, Bahria Town, Rawalpindi",areeb@gmail.com,+923157654321
+C0494,Huge pothole on Park Ave causing traffic,Road,Medium,2026-04-09 18:52:54,11,Resolved,Hina Jamil,"Sector F-7/2, Islamabad",usman.khan@gmail.com,+923019876543
+C0495,"Pipe burst near Elm St, water flooding the sidewalk",Water,High,2026-03-13 18:52:54,,In Progress,Fatima Ahmed,"Phase 6, DHA, Karachi",ahmed.raza@gmail.com,+923214567890
+C0496,Street lights not working on Main St,Electricity,Medium,2026-05-29 18:52:54,14,Resolved,Saad Khan,"Model Town Block C, Lahore",kiran.sheikh@hotmail.com,+923456543210
+C0497,No pedestrian crossing visible at Maple Dr,Safety,Medium,2026-07-06 18:52:54,8,Resolved,Fatima Ahmed,"Gulberg III, Lahore",mariam.m@outlook.com,+923214567890
+C0498,Blocked storm drain causing flooding at Washington Blvd,Drainage,Low,2026-06-28 18:52:54,,In Progress,Kiran Shah,"Block 5, Clifton, Karachi",areeb@gmail.com,+923224567890
+C0499,Traffic light broken at Maple Dr intersection,Road,Medium,2026-06-21 18:52:54,,Assigned,Hafsa Bibi,"Samanabad, Lahore",fatima.shah@gmail.com,+923087654321
+C0500,Foul smell from uncollected trash at Oak Ave,Waste,Low,2026-02-15 18:52:54,,In Progress,Mariam Malik,"Sector G-9, Islamabad",fatima.shah@gmail.com,+923001234567

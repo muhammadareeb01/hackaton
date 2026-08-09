@@ -92,7 +92,7 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-[var(--color-background)]">
-      <main className="p-8 max-w-7xl mx-auto">
+      <main className="p-8 w-full">
         <div className="mb-8 flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold text-[var(--color-text-primary)] mb-2">Overview Dashboard</h1>

@@ -102,8 +102,11 @@ def submit_complaint(complaint_in: ComplaintCreate, request: Request, db: Sessio
         "confidence": db_complaint.ai_confidence,
         "summary": db_complaint.ai_summary,
         "description": db_complaint.description,
-        "status": db_complaint.status,
+        "location": db_complaint.location,
         "citizen_name": db_complaint.citizen_name,
+        "citizen_email": db_complaint.citizen_email,
+        "citizen_phone": db_complaint.citizen_phone,
+        "status": db_complaint.status,
         "date_submitted": db_complaint.date_submitted,
         "estimated_resolution_days": ai_result.get("ai_report", {}).get("estimated_resolution_days")
     }
@@ -124,8 +127,11 @@ def get_my_complaints(request: Request, db: Session = Depends(get_db)):
             "confidence": c.ai_confidence,
             "summary": c.ai_summary,
             "description": c.description,
-            "status": c.status,
+            "location": c.location,
             "citizen_name": c.citizen_name,
+            "citizen_email": c.citizen_email,
+            "citizen_phone": c.citizen_phone,
+            "status": c.status,
             "date_submitted": c.date_submitted,
             "estimated_resolution_days": get_estimated_resolution_days(c.category, c.priority)
         } for c in complaints
@@ -147,8 +153,11 @@ def get_complaints(skip: int = 0, limit: int = 1000, db: Session = Depends(get_d
             "confidence": c.ai_confidence,
             "summary": c.ai_summary,
             "description": c.description,
-            "status": c.status,
+            "location": c.location,
             "citizen_name": c.citizen_name,
+            "citizen_email": c.citizen_email,
+            "citizen_phone": c.citizen_phone,
+            "status": c.status,
             "date_submitted": c.date_submitted,
             "estimated_resolution_days": get_estimated_resolution_days(c.category, c.priority)
         } for c in complaints

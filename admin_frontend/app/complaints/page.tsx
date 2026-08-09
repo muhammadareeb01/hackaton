@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Filter, Loader2, ChevronLeft, ChevronRight, CheckCircle2, Clock, XCircle, AlertCircle } from "lucide-react";
+import { Search, Filter, Loader2, ChevronLeft, ChevronRight, CheckCircle2, Clock, XCircle, AlertCircle, X, Mail, Phone, MapPin, MoreVertical, Eye, Layers, Droplet, Zap, Navigation, Trash2, ShieldAlert, MoreHorizontal } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Input";
 import { PriorityBadge } from "@/components/complaints/PriorityBadge";
@@ -10,12 +10,8 @@ import { StatusBadge } from "@/components/complaints/StatusBadge";
 
 import { apiClient } from "@/lib/api";
 import toast from "@/lib/toast";
-import { CategoryFilterDropdown } from "@/components/ui/CategoryFilterDropdown";
-import { PriorityFilterDropdown } from "@/components/ui/PriorityFilterDropdown";
+import { FilterDropdown, FilterDropdownOption } from "@/components/ui/FilterDropdown";
 import { useSearchParams } from "next/navigation";
-
-
-
 
 const PAGE_SIZE = 10;
 
@@ -26,14 +22,42 @@ const STATUS_OPTIONS = [
   { label: "Escalate", value: "Escalated", icon: <AlertCircle className="w-3.5 h-3.5" />, color: "text-orange-600 hover:bg-orange-50" },
 ];
 
-const STATUS_TABS = ["All", "Pending Review", "In Progress", "Resolved", "Rejected", "Escalated"];
+const STATUS_FILTER_OPTIONS: FilterDropdownOption[] = [
+  { label: "All Statuses", value: "All", icon: <Layers className="w-4 h-4 text-blue-500" /> },
+  { label: "Pending Review", value: "Pending Review", icon: <Clock className="w-4 h-4 text-amber-500" /> },
+  { label: "In Progress", value: "In Progress", icon: <Clock className="w-4 h-4 text-blue-500" /> },
+  { label: "Resolved", value: "Resolved", icon: <CheckCircle2 className="w-4 h-4 text-green-500" /> },
+  { label: "Rejected", value: "Rejected", icon: <XCircle className="w-4 h-4 text-red-500" /> },
+  { label: "Escalated", value: "Escalated", icon: <AlertCircle className="w-4 h-4 text-orange-500" /> },
+];
+
+const PRIORITY_FILTER_OPTIONS: FilterDropdownOption[] = [
+  { label: "All Priorities", value: "All", icon: <Layers className="w-4 h-4 text-blue-500" /> },
+  { label: "Critical Priority", value: "Critical", icon: <span className="w-2 h-2 rounded-full bg-red-500" /> },
+  { label: "High Priority", value: "High", icon: <span className="w-2 h-2 rounded-full bg-orange-500" /> },
+  { label: "Medium Priority", value: "Medium", icon: <span className="w-2 h-2 rounded-full bg-yellow-500" /> },
+  { label: "Low Priority", value: "Low", icon: <span className="w-2 h-2 rounded-full bg-green-500" /> },
+];
+
+const categoryIcons: Record<string, React.ReactNode> = {
+  All: <Layers className="w-4 h-4 text-blue-500" />,
+  Water: <Droplet className="w-4 h-4 text-cyan-500" />,
+  Drainage: <Droplet className="w-4 h-4 text-blue-600" />,
+  Electricity: <Zap className="w-4 h-4 text-yellow-500" />,
+  Road: <Navigation className="w-4 h-4 text-emerald-500" />,
+  Waste: <Trash2 className="w-4 h-4 text-orange-500" />,
+  Sanitation: <Trash2 className="w-4 h-4 text-orange-500" />,
+  Safety: <ShieldAlert className="w-4 h-4 text-rose-500" />,
+  "Public Safety": <ShieldAlert className="w-4 h-4 text-rose-500" />,
+  Other: <MoreHorizontal className="w-4 h-4 text-slate-500" />,
+};
 
 function TableSkeleton() {
   return (
     <>
       {Array.from({ length: PAGE_SIZE }).map((_, i) => (
         <tr key={i} className="border-b border-[var(--color-border)]">
-          {Array.from({ length: 7 }).map((_, j) => (
+          {Array.from({ length: 8 }).map((_, j) => (
             <td key={j} className="px-6 py-4">
               <div className="h-4 bg-gray-200 rounded animate-pulse" style={{ width: `${60 + (i * j % 3) * 15}%` }} />
             </td>
@@ -53,6 +77,9 @@ interface Complaint {
   citizen_name?: string;
   summary?: string;
   description?: string;
+  location?: string;
+  citizen_email?: string;
+  citizen_phone?: string;
   priority: PriorityLevel;
   status: StatusLevel;
   date_submitted: string;
@@ -70,6 +97,7 @@ function ComplaintsListContent() {
   const [complaints, setComplaints] = useState<Complaint[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedComplaint, setSelectedComplaint] = useState<Complaint | null>(null);
   const [updatingId, setUpdatingId] = useState<string | null>(null);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -139,11 +167,38 @@ function ComplaintsListContent() {
   const paginatedData = filteredData.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
   const goToPage = (page: number) => setCurrentPage(Math.min(Math.max(1, page), totalPages));
 
+  const getPaginationRange = () => {
+    const delta = 2;
+    const range: number[] = [];
+    const rangeWithDots: (number | string)[] = [];
+    let l: number | undefined;
+
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || (i >= currentPage - delta && i <= currentPage + delta)) {
+        range.push(i);
+      }
+    }
+
+    for (let i of range) {
+      if (l !== undefined) {
+        if (i - l === 2) {
+          rangeWithDots.push(l + 1);
+        } else if (i - l !== 1) {
+          rangeWithDots.push("...");
+        }
+      }
+      rangeWithDots.push(i);
+      l = i;
+    }
+
+    return rangeWithDots;
+  };
+
   useEffect(() => { setCurrentPage(1); }, [statusFilter, categoryFilter, priorityFilter, searchQuery]);
 
   return (
     <div className="min-h-screen bg-[var(--color-background)]">
-      <main className="p-8 max-w-7xl mx-auto">
+      <main className="p-8 w-full">
         {/* Header */}
         <div className="flex justify-between items-start mb-6">
           <div>
@@ -170,58 +225,56 @@ function ComplaintsListContent() {
         </div>
 
         {/* Filters Row */}
-        <div className="flex flex-wrap gap-4 mb-5">
-          {/* Status Tabs */}
-          <div className="flex gap-1.5 flex-wrap">
-            <span className="text-xs text-[var(--color-text-muted)] font-semibold self-center mr-1">Status:</span>
-            {STATUS_TABS.map(tab => (
-              <button
-                key={tab}
-                onClick={() => setStatusFilter(tab)}
-                className={`px-3 py-1 rounded-full text-xs font-semibold transition-all border ${
-                  statusFilter === tab
-                    ? "bg-[var(--color-primary)] text-white border-[var(--color-primary)]"
-                    : "bg-white text-[var(--color-text-muted)] border-[var(--color-border)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
+        <div className="flex flex-wrap gap-6 items-center mb-6">
+          {/* Status Dropdown */}
+          <FilterDropdown
+            label="Status"
+            value={statusFilter}
+            options={STATUS_FILTER_OPTIONS}
+            onChange={setStatusFilter}
+            widthClass="w-52"
+          />
 
           {/* Category Dropdown */}
           {!loading && categories.length > 0 && (
-            <div className="flex items-center gap-2">
-              <span className="text-xs text-[var(--color-text-muted)] font-semibold">Category:</span>
-              <CategoryFilterDropdown
-                categories={categories}
-                selectedCategory={categoryFilter}
-                onChange={setCategoryFilter}
-              />
-            </div>
+            <FilterDropdown
+              label="Category"
+              value={categoryFilter}
+              options={[
+                { label: "All Categories", value: "All", icon: categoryIcons["All"] },
+                ...categories.filter(c => c !== "All" && c !== "").map(c => ({
+                  label: c,
+                  value: c,
+                  icon: categoryIcons[c] || categoryIcons["Other"]
+                }))
+              ]}
+              onChange={setCategoryFilter}
+              widthClass="w-52"
+            />
           )}
 
           {/* Priority Dropdown */}
           {!loading && (
-            <div className="flex items-center gap-2">
-              <span className="text-xs text-[var(--color-text-muted)] font-semibold">Priority:</span>
-              <PriorityFilterDropdown
-                selectedPriority={priorityFilter}
-                onChange={setPriorityFilter}
-              />
-            </div>
+            <FilterDropdown
+              label="Priority"
+              value={priorityFilter}
+              options={PRIORITY_FILTER_OPTIONS}
+              onChange={setPriorityFilter}
+              widthClass="w-52"
+            />
           )}
         </div>
 
         {/* Table */}
-        <Card className="overflow-visible">
+        <Card className="overflow-hidden">
           {/* Desktop Table */}
-          <div className="hidden md:block overflow-visible">
+          <div className="hidden md:block overflow-x-auto w-full">
             <table className="w-full text-left text-sm text-[var(--color-text-primary)]">
               <thead className="bg-gray-50 text-[var(--color-text-muted)] font-semibold border-b border-[var(--color-border)]">
                 <tr>
                   <th className="px-6 py-4">ID / Name</th>
                   <th className="px-6 py-4">Description</th>
+                  <th className="px-6 py-4">Location</th>
                   <th className="px-6 py-4">Category</th>
                   <th className="px-6 py-4">Priority</th>
                   <th className="px-6 py-4">Status</th>
@@ -234,7 +287,7 @@ function ComplaintsListContent() {
                   <TableSkeleton />
                 ) : paginatedData.length === 0 ? (
                   <tr>
-                    <td colSpan={7} className="text-center py-16 text-[var(--color-text-muted)]">
+                    <td colSpan={8} className="text-center py-16 text-[var(--color-text-muted)]">
                       <Search className="w-8 h-8 mx-auto mb-3 opacity-30" />
                       <p>No complaints found matching your filters.</p>
                     </td>
@@ -252,9 +305,19 @@ function ComplaintsListContent() {
                         <td className="px-6 py-4">
                           <p className="font-medium text-[var(--color-primary)]">{complaint.citizen_name || "Anonymous"}</p>
                           <p className="text-xs text-[var(--color-text-muted)] font-mono mt-0.5">#{complaint.id}</p>
+                          {(complaint.citizen_email || complaint.citizen_phone) && (
+                            <p className="text-[10px] text-slate-400 font-medium mt-1 select-all">
+                              {complaint.citizen_email && <span>{complaint.citizen_email}</span>}
+                              {complaint.citizen_email && complaint.citizen_phone && <span className="mx-1.5">|</span>}
+                              {complaint.citizen_phone && <span>{complaint.citizen_phone}</span>}
+                            </p>
+                          )}
                         </td>
                         <td className="px-6 py-4 max-w-xs">
-                          <p className="truncate text-[var(--color-text-muted)]">{complaint.description}</p>
+                          <p className="truncate text-[var(--color-text-muted)]" title={complaint.description}>{complaint.description}</p>
+                        </td>
+                        <td className="px-6 py-4 max-w-xs">
+                          <p className="truncate text-slate-500 font-medium" title={complaint.location}>{complaint.location}</p>
                         </td>
                         <td className="px-6 py-4">
                           <span className="px-2 py-0.5 rounded-md bg-gray-100 text-xs font-medium">{complaint.category}</span>
@@ -278,29 +341,50 @@ function ComplaintsListContent() {
                             <Loader2 className="w-4 h-4 animate-spin ml-auto text-[var(--color-primary)]" />
                           ) : (
                             <div className="relative inline-block update-dropdown-container">
+                              {/* Three dot actions trigger */}
                               <button
                                 onClick={() => setOpenDropdown(openDropdown === complaint.id ? null : complaint.id)}
-                                className="text-xs font-semibold flex items-center gap-1 ml-auto transition-colors border border-[var(--color-border)] rounded-lg px-3 py-1.5 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] bg-white text-[var(--color-accent)]"
+                                className="p-2 hover:bg-gray-100 rounded-full transition-colors inline-flex items-center justify-center text-gray-500 hover:text-gray-800"
                               >
-                                <Filter className="w-3 h-3" />
-                                Update
+                                <MoreVertical className="w-4 h-4" />
                               </button>
+
                               {openDropdown === complaint.id && (
                                 <div className="fixed inset-0 z-40" onClick={(e) => { e.stopPropagation(); setOpenDropdown(null); }} />
                               )}
+                              
                               <AnimatePresence>
                                 {openDropdown === complaint.id && (
                                   <motion.div
                                     initial={{ opacity: 0, scale: 0.95, y: -4 }}
                                     animate={{ opacity: 1, scale: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.95 }}
-                                    className="absolute right-0 mt-1 w-40 bg-white border border-[var(--color-border)] rounded-xl shadow-xl z-50 overflow-hidden"
+                                    className="absolute right-0 mt-1 w-44 bg-white border border-gray-100 rounded-xl shadow-xl z-50 overflow-hidden py-1 text-left"
                                   >
+                                    {/* Action: View Details */}
+                                    <button
+                                      onClick={() => {
+                                        setSelectedComplaint(complaint);
+                                        setOpenDropdown(null);
+                                      }}
+                                      className="w-full flex items-center gap-2 px-3 py-2 text-xs font-semibold text-gray-700 hover:bg-slate-50 transition-colors"
+                                    >
+                                      <Eye className="w-3.5 h-3.5 text-blue-600" />
+                                      View Details
+                                    </button>
+
+                                    <div className="border-t border-slate-100 my-1"></div>
+
+                                    {/* Status Change Options */}
+                                    <span className="block px-3 py-1 text-[9px] font-bold text-gray-400 uppercase tracking-wider">Update Status</span>
                                     {STATUS_OPTIONS.map(opt => (
                                       <button
                                         key={opt.value}
-                                        onClick={() => handleStatusChange(complaint.id, opt.value as StatusLevel)}
-                                        className={`w-full flex items-center gap-2 px-3 py-2.5 text-xs font-medium transition-colors ${opt.color}`}
+                                        onClick={() => {
+                                          handleStatusChange(complaint.id, opt.value as StatusLevel);
+                                          setOpenDropdown(null);
+                                        }}
+                                        className={`w-full flex items-center gap-2 px-3 py-2 text-xs font-medium transition-colors ${opt.color}`}
                                       >
                                         {opt.icon}
                                         {opt.label}
@@ -338,11 +422,23 @@ function ComplaintsListContent() {
                     <div>
                       <p className="font-bold text-[var(--color-primary)] text-sm">{complaint.citizen_name || "Anonymous"}</p>
                       <p className="text-[10px] text-[var(--color-text-muted)] font-mono uppercase">#{complaint.id}</p>
+                      {(complaint.citizen_email || complaint.citizen_phone) && (
+                        <p className="text-[10px] text-slate-400 font-medium mt-0.5 select-all">
+                          {complaint.citizen_email} | {complaint.citizen_phone}
+                        </p>
+                      )}
                     </div>
                     <StatusBadge status={complaint.status} />
                   </div>
                   
                   <p className="text-sm text-[var(--color-text-muted)] line-clamp-2 leading-relaxed">{complaint.description}</p>
+                  
+                  {complaint.location && (
+                    <p className="text-xs text-slate-500 font-semibold bg-slate-50 border border-slate-100 p-2 rounded-lg">
+                      <span className="text-[10px] text-gray-400 font-bold uppercase block tracking-wider mb-0.5">Location</span>
+                      {complaint.location}
+                    </p>
+                  )}
                   
                   <div className="flex flex-wrap gap-2 mt-1">
                     <span className="px-2.5 py-1 rounded-md bg-gray-50 border border-gray-100 text-xs font-medium text-gray-700">{complaint.category}</span>
@@ -412,19 +508,28 @@ function ComplaintsListContent() {
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
-                {Array.from({ length: Math.min(totalPages, 7) }, (_, i) => i + 1).map(page => (
-                  <button
-                    key={page}
-                    onClick={() => goToPage(page)}
-                    className={`w-8 h-8 rounded-lg text-xs font-semibold transition-colors ${
-                      currentPage === page
-                        ? "bg-[var(--color-primary)] text-white"
-                        : "hover:bg-gray-200 text-[var(--color-text-muted)]"
-                    }`}
-                  >
-                    {page}
-                  </button>
-                ))}
+                {getPaginationRange().map((page, idx) => {
+                  if (page === '...') {
+                    return (
+                      <span key={`dots-${idx}`} className="px-2 text-slate-400 font-bold select-none text-xs">
+                        ...
+                      </span>
+                    );
+                  }
+                  return (
+                    <button
+                      key={page}
+                      onClick={() => goToPage(page as number)}
+                      className={`w-8 h-8 rounded-lg text-xs font-semibold transition-colors ${
+                        currentPage === page
+                          ? "bg-[var(--color-primary)] text-white"
+                          : "hover:bg-gray-200 text-[var(--color-text-muted)]"
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  );
+                })}
                 <button
                   onClick={() => goToPage(currentPage + 1)}
                   disabled={currentPage === totalPages}
@@ -437,6 +542,123 @@ function ComplaintsListContent() {
           )}
         </Card>
       </main>
+
+      {/* Detail Modal */}
+      <AnimatePresence>
+        {selectedComplaint && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 10 }}
+              className="bg-white rounded-3xl shadow-2xl border border-slate-100 w-full max-w-lg overflow-hidden flex flex-col max-h-[90vh]"
+            >
+              {/* Header */}
+              <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                <div>
+                  <span className="text-[10px] bg-slate-200 text-slate-700 px-2 py-0.5 rounded font-bold uppercase tracking-wider">Complaint Details</span>
+                  <h3 className="text-lg font-bold text-slate-800 mt-1">Ticket #{selectedComplaint.id}</h3>
+                </div>
+                <button
+                  onClick={() => setSelectedComplaint(null)}
+                  className="p-1.5 rounded-full hover:bg-slate-200 text-slate-400 hover:text-slate-600 transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Body */}
+              <div className="p-6 space-y-6 overflow-y-auto text-left">
+                {/* Status & Priority */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                    <span className="text-[10px] text-slate-400 font-bold uppercase block tracking-wider mb-1">Status</span>
+                    <StatusBadge status={selectedComplaint.status} />
+                  </div>
+                  <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                    <span className="text-[10px] text-slate-400 font-bold uppercase block tracking-wider mb-1">Priority</span>
+                    <PriorityBadge priority={selectedComplaint.priority} />
+                  </div>
+                </div>
+
+                {/* Citizen Details */}
+                <div className="space-y-3">
+                  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Citizen Information</h4>
+                  <div className="bg-slate-50 rounded-2xl border border-slate-100 p-4 space-y-3.5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm">
+                        {selectedComplaint.citizen_name?.[0] || 'A'}
+                      </div>
+                      <div>
+                        <span className="text-[10px] text-slate-400 font-bold uppercase block tracking-wide">Name</span>
+                        <span className="text-sm font-semibold text-slate-800">{selectedComplaint.citizen_name || 'Anonymous'}</span>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-3 border-t border-slate-100/80">
+                      <div className="flex items-center gap-2 min-w-0">
+                        <Mail className="w-4 h-4 text-slate-400 flex-shrink-0" />
+                        <div className="min-w-0 flex-1">
+                          <span className="text-[9px] text-slate-400 font-bold uppercase block tracking-wide">Email</span>
+                          <span className="text-xs font-medium text-slate-700 truncate block select-all" title={selectedComplaint.citizen_email}>{selectedComplaint.citizen_email || 'N/A'}</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2 min-w-0">
+                        <Phone className="w-4 h-4 text-slate-400 flex-shrink-0" />
+                        <div className="min-w-0 flex-1">
+                          <span className="text-[9px] text-slate-400 font-bold uppercase block tracking-wide">Phone</span>
+                          <span className="text-xs font-medium text-slate-700 select-all">{selectedComplaint.citizen_phone || 'N/A'}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Location */}
+                <div className="space-y-2">
+                  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Location / Address</h4>
+                  <div className="flex gap-2.5 items-start bg-slate-50 border border-slate-100 p-3.5 rounded-xl">
+                    <MapPin className="w-4.5 h-4.5 text-slate-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-xs font-semibold text-slate-700 leading-relaxed">{selectedComplaint.location || 'N/A'}</span>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <div className="space-y-2">
+                  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Complaint Description</h4>
+                  <div className="bg-slate-50 border border-slate-100 p-4 rounded-2xl max-h-40 overflow-y-auto text-xs font-medium text-slate-600 leading-relaxed whitespace-pre-line">
+                    {selectedComplaint.description}
+                  </div>
+                </div>
+
+                {/* Dates */}
+                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+                  <div>
+                    <span className="text-[10px] text-slate-400 font-bold uppercase block tracking-wider">Reported Date</span>
+                    <span className="text-xs font-semibold text-slate-700">{new Date(selectedComplaint.date_submitted).toLocaleDateString("en-PK")}</span>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-slate-400 font-bold uppercase block tracking-wider">Est. Resolution</span>
+                    <span className="text-xs font-semibold text-slate-700">
+                      {selectedComplaint.estimated_resolution_days ? `${selectedComplaint.estimated_resolution_days} Days` : 'N/A'}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="p-4 bg-slate-50 border-t border-slate-100 flex justify-end">
+                <button
+                  onClick={() => setSelectedComplaint(null)}
+                  className="px-4 py-2 bg-slate-800 text-white rounded-xl text-xs font-bold hover:bg-slate-900 transition-colors shadow-md"
+                >
+                  Close Details
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -11,6 +11,7 @@ from datetime import timedelta
 from app.core.config import settings
 import jwt
 from app.ai.email_validator import is_disposable_email
+from app.models.complaint import Complaint
 
 router = APIRouter(prefix="/api/auth", tags=["Authentication"])
 
@@ -58,7 +59,18 @@ def sync_firebase_user(request: Request, db: Session = Depends(get_db)):
             db.add(new_user)
             db.commit()
             
-        return {"status": "success"}
+        # Link past anonymous complaints matching this email
+        if email:
+            unlinked_complaints = db.query(Complaint).filter(Complaint.user_id == None).all()
+            linked_count = 0
+            for comp in unlinked_complaints:
+                if comp.citizen_email == email:
+                    comp.user_id = user_id
+                    linked_count += 1
+            if linked_count > 0:
+                db.commit()
+            
+        return {"status": "success", "linked_past_complaints": linked_count if 'linked_count' in locals() else 0}
     except Exception as e:
         print("Sync error:", e)
         return {"status": "error", "message": str(e)}

@@ -215,13 +215,12 @@ export default function ComplaintsList() {
                     </td>
                   </tr>
                 ) : (
-                  <AnimatePresence mode="popLayout">
+                  <>
                     {paginatedData.map((complaint, i) => (
                       <motion.tr
                         key={complaint.id}
                         initial={{ opacity: 0, y: 6 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0 }}
                         transition={{ delay: i * 0.03 }}
                         className="border-b border-[var(--color-border)] hover:bg-gray-50/70 transition-colors"
                       >
@@ -290,7 +289,7 @@ export default function ComplaintsList() {
                         </td>
                       </motion.tr>
                     ))}
-                  </AnimatePresence>
+                  </>
                 )}
               </tbody>
             </table>

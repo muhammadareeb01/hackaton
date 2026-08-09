@@ -10,6 +10,7 @@ import toast from "@/lib/toast";
 
 import { auth } from "@/lib/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { API_BASE_URL } from "@/lib/api";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -27,7 +28,7 @@ export default function LoginPage() {
       
       Cookies.set("user_token", token, { expires: 7 });
       
-      await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api'}/auth/sync`, {
+      await fetch(`${API_BASE_URL}/auth/sync`, {
         method: "POST",
         headers: { "Authorization": `Bearer ${token}` }
       });
@@ -43,12 +44,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        className="w-full max-w-md"
-      >
+      <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 p-8 sm:p-10 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1.5 bg-[var(--color-primary)]"></div>
           
@@ -115,7 +111,7 @@ export default function LoginPage() {
             Don't have an account? <Link href="/signup" className="text-[var(--color-primary)] font-semibold hover:underline">Sign up</Link>
           </p>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

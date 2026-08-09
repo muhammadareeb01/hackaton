@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
+@theme {
   --color-primary: #0b3d59;
   --color-accent: #1a7a8a;
   --color-background: #f7fafb;
@@ -21,9 +19,8 @@
 }
 
 @layer base {
-  html,
-  body {
+  html, body {
     background-color: var(--color-background);
-    color: var(--color-text);
+    color: var(--color-text-primary);
   }
 }

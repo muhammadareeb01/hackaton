@@ -7,6 +7,7 @@ import {
   CheckCircle2, Clock, Activity, Brain, TrendingUp, Zap
 } from "lucide-react";
 import Cookies from "js-cookie";
+import { API_BASE_URL } from "@/lib/api";
 import { useRouter } from "next/navigation";
 import toast from "@/lib/toast";
 import Link from "next/link";
@@ -40,8 +41,7 @@ export default function MyComplaintsPage() {
         return;
       }
       try {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
-        const res = await fetch(`${apiUrl}/complaints/me`, {
+        const res = await fetch(`${API_BASE_URL}/complaints/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (res.status === 401) { Cookies.remove("user_token"); router.push("/login"); return; }

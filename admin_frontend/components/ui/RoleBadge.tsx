@@ -31,9 +31,9 @@ export function RoleBadge({ role }: RoleBadgeProps) {
   const Icon = role === "superadmin" ? ShieldCheck : UserCog;
 
   return (
-    <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getBadgeStyle()}`}>
+    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getBadgeStyle()}`}>
       <Icon className="w-3 h-3 mr-1" />
       {getLabel()}
-    </div>
+    </span>
   );
 }

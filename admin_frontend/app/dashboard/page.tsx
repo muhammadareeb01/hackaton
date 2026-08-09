@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
+import { API_BASE_URL } from "@/lib/api";
 
 
 import { RoleBadge } from "@/components/ui/RoleBadge";
@@ -49,7 +50,7 @@ export default function AdminDashboard() {
       return;
     }
     
-    fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api'}/stats/`, {
+    fetch(`${API_BASE_URL}/stats/`, {
       headers: {
         "Authorization": `Bearer ${token}`
       }

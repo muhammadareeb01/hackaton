@@ -10,6 +10,7 @@ import Cookies from "js-cookie";
 
 import { auth } from "@/lib/firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { API_BASE_URL } from "@/lib/api";
 
 export default function SignupPage() {
   const [name, setName] = useState("");
@@ -24,7 +25,7 @@ export default function SignupPage() {
     setLoading(true);
     try {
       // 1. Verify email using backend AI Model before Firebase signup
-      const verifyRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api'}/auth/verify-email`, {
+      const verifyRes = await fetch(`${API_BASE_URL}/auth/verify-email`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email })
@@ -46,7 +47,7 @@ export default function SignupPage() {
       Cookies.set("user_token", token, { expires: 7 });
       
       // Sync with SQL DB
-      await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api'}/auth/sync`, {
+      await fetch(`${API_BASE_URL}/auth/sync`, {
         method: "POST",
         headers: { "Authorization": `Bearer ${token}` }
       });
@@ -62,11 +63,7 @@ export default function SignupPage() {
 
   return (
     <div className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-[var(--color-background)] p-6">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-md bg-white rounded-3xl shadow-xl border border-[var(--color-border)] p-8 overflow-hidden relative"
-      >
+      <div className="w-full max-w-md bg-white rounded-3xl shadow-xl border border-[var(--color-border)] p-8 overflow-hidden relative">
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-primary)]"></div>
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-[var(--color-text-primary)] mb-2">Create Account</h1>
@@ -83,7 +80,7 @@ export default function SignupPage() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all"
-                placeholder="John Doe"
+                placeholder="Areeb"
                 required
               />
             </div>
@@ -137,7 +134,7 @@ export default function SignupPage() {
         <p className="mt-6 text-center text-sm text-gray-500">
           Already have an account? <Link href="/login" className="text-[var(--color-primary)] font-semibold hover:underline">Log in</Link>
         </p>
-      </motion.div>
+      </div>
     </div>
   );
 }

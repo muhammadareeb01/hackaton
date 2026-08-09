@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send, Bot, User, Sparkles } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import { API_BASE_URL } from "@/lib/api";
 
 interface Message {
   role: "user" | "model";
@@ -37,8 +38,7 @@ export function Chatbot() {
     setIsLoading(true);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
-      const response = await fetch(`${apiUrl}/chat/`, {
+      const response = await fetch(`${API_BASE_URL}/chat/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: newMessages }),

@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, MapPin, Camera, CheckCircle2, AlertTriangle, Info, X, Brain } from "lucide-react";
+import { ArrowLeft, MapPin, Camera, CheckCircle2, AlertTriangle, Info, X, Brain, Upload, Send, Loader2 } from "lucide-react";
 import { Loader } from "@/components/ui/Loader";
 import Link from "next/link";
 import Cookies from "js-cookie";
+import { API_BASE_URL } from "@/lib/api";
 import toast from "@/lib/toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -49,7 +50,7 @@ export default function ReportPage() {
   });
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api'}/categories/`)
+    fetch(`${API_BASE_URL}/categories/`)
       .then(res => res.json())
       .then(data => setCategories(data))
       .catch(() => { /* error handling */ });
@@ -92,7 +93,7 @@ export default function ReportPage() {
         headers["Authorization"] = `Bearer ${token}`;
       }
       
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api'}/complaints/`, {
+      const response = await fetch(`${API_BASE_URL}/complaints/`, {
         method: "POST",
         headers: headers,
         body: JSON.stringify({
@@ -164,7 +165,7 @@ export default function ReportPage() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
                           <label className="text-sm font-semibold text-gray-800">Your Name <span className="text-red-500">*</span></label>
-                          <Input {...register("name")} placeholder="John Doe" className="bg-white/60 focus:bg-white hover:bg-white transition-colors border-gray-200 shadow-sm" />
+                          <Input {...register("name")} placeholder="Areeb" className="bg-white/60 focus:bg-white hover:bg-white transition-colors border-gray-200 shadow-sm" />
                           {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
                         </div>
                         <div className="space-y-2">
@@ -251,7 +252,7 @@ export default function ReportPage() {
                       <label className="text-sm font-semibold text-gray-800">Location <span className="text-red-500">*</span></label>
                       <div className="relative group">
                         <MapPin className="absolute left-4 top-3.5 w-5 h-5 text-gray-400 group-focus-within:text-[#08A8E8] transition-colors" />
-                        <Input {...register("location")} placeholder="E.g., 123 Main St, Near Central Park" className="pl-12 h-12 rounded-xl bg-white/60 border-gray-200 hover:bg-white focus:bg-white shadow-sm transition-colors" />
+                        <Input {...register("location")} placeholder="E.g., Hyderabad" className="pl-12 h-12 rounded-xl bg-white/60 border-gray-200 hover:bg-white focus:bg-white shadow-sm transition-colors" />
                       </div>
                       {errors.location && <p className="text-red-500 text-xs mt-1">{errors.location.message}</p>}
                     </div>

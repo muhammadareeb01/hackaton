@@ -98,7 +98,12 @@ export function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-3">
-            {mounted && isLoggedIn ? (
+            {!mounted ? (
+              <div className="flex items-center gap-3">
+                <div className="w-[72px] h-[38px] bg-gray-100/80 animate-pulse rounded-xl" />
+                <div className="w-[144px] h-[38px] bg-[#0EA5E9]/20 animate-pulse rounded-xl" />
+              </div>
+            ) : isLoggedIn ? (
               <>
                 <Link href="/my-complaints">
                   <span className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 border border-gray-200 px-4 py-2 rounded-xl transition-all">
@@ -181,7 +186,12 @@ export function Navbar() {
             <div className="h-px bg-gray-100 w-full" />
 
             <div className="flex flex-col gap-3">
-              {mounted && isLoggedIn ? (
+              {!mounted ? (
+                <>
+                  <div className="w-full h-[46px] bg-gray-100/80 animate-pulse rounded-xl" />
+                  <div className="w-full h-[46px] bg-[#0EA5E9]/20 animate-pulse rounded-xl shadow-sm" />
+                </>
+              ) : isLoggedIn ? (
                 <>
                   <Link href="/my-complaints" onClick={() => setIsMobileMenuOpen(false)}>
                     <div className="flex items-center justify-center gap-2 text-sm font-medium text-gray-700 bg-gray-50 border border-gray-200 px-4 py-3 rounded-xl">

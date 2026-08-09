@@ -6,7 +6,7 @@
 > 
 > **🔑 Citizen Test Account (For Email Testing):**
 > - **Email**: `syedareebali795@gmail.com`
-> - **Password**: `Citysync@123`
+> - **Password**: `123456`
 
 This document highlights the cutting-edge AI and security features implemented in the CitySync platform. It is designed to demonstrate technical depth, scalability, and security to hackathon evaluators.
 

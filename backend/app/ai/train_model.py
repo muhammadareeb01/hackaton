@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report, confusion_matrix
 import joblib
 import os
@@ -29,30 +30,29 @@ def train():
     # 2. Split Data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
-    # 3. Vectorize Text
-    print("Vectorizing text using TF-IDF...")
-    vectorizer = TfidfVectorizer(stop_words='english', max_features=1000)
-    X_train_vec = vectorizer.fit_transform(X_train)
-    X_test_vec = vectorizer.transform(X_test)
+    # 3. Create Pipeline
+    print("Creating Pipeline with TF-IDF and Logistic Regression...")
+    pipeline = Pipeline([
+        ('tfidf', TfidfVectorizer(stop_words='english', max_features=1000)),
+        ('clf', LogisticRegression(class_weight='balanced', random_state=42, max_iter=1000))
+    ])
     
     # 4. Train Classifier
-    print("Training Logistic Regression Model...")
-    model = LogisticRegression(class_weight='balanced', random_state=42, max_iter=1000)
-    model.fit(X_train_vec, y_train)
+    print("Training Pipeline...")
+    pipeline.fit(X_train, y_train)
     
     # 5. Evaluate
     print("\n--- Model Evaluation ---")
-    y_pred = model.predict(X_test_vec)
+    y_pred = pipeline.predict(X_test)
     print("Classification Report:")
     print(classification_report(y_test, y_pred))
     
     print("Confusion Matrix:")
     print(confusion_matrix(y_test, y_pred))
     
-    # 6. Save Models
-    joblib.dump(vectorizer, f"{model_dir}/tfidf_vectorizer.joblib")
-    joblib.dump(model, f"{model_dir}/category_model.joblib")
-    print(f"\nModel and Vectorizer saved to {model_dir}/")
+    # 6. Save Model
+    joblib.dump(pipeline, f"{model_dir}/category_pipeline.joblib")
+    print(f"\nPipeline saved to {model_dir}/category_pipeline.joblib")
 
 if __name__ == "__main__":
     train()

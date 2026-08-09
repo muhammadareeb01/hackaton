@@ -23,17 +23,8 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
   }, [pathname]);
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={pathname}
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -15 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className="flex-grow flex flex-col"
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <div className="flex-grow flex flex-col">
+      {children}
+    </div>
   );
 }

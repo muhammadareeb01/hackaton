@@ -31,29 +31,65 @@ except Exception as e:
 
 import joblib
 
+_category_pipeline = None
+_resolution_model = None
+_models_loaded = False
+
+def _load_models():
+    global _category_pipeline, _resolution_model, _models_loaded
+    if _models_loaded:
+        return
+    current_dir = os.path.dirname(__file__)
+    try:
+        pipeline_path = os.path.join(current_dir, "models", "category_pipeline.joblib")
+        if os.path.exists(pipeline_path):
+            _category_pipeline = joblib.load(pipeline_path)
+    except Exception as e:
+        print(f"Failed to load category pipeline: {e}")
+    try:
+        res_path = os.path.join(current_dir, "models", "resolution_model.joblib")
+        if os.path.exists(res_path):
+            _resolution_model = joblib.load(res_path)
+    except Exception as e:
+        print(f"Failed to load resolution model: {e}")
+    _models_loaded = True
+
+
 def get_static_fallback(text: str = "") -> dict:
     category = "Pending Review"
     confidence = 0.0
     
     # Try to use local ML model as fallback if text is provided
     if text:
+        _load_models()
         try:
-            model_path = os.path.join(os.path.dirname(__file__), "models", "category_model.joblib")
-            vec_path = os.path.join(os.path.dirname(__file__), "models", "tfidf_vectorizer.joblib")
-            if os.path.exists(model_path) and os.path.exists(vec_path):
-                model = joblib.load(model_path)
-                vectorizer = joblib.load(vec_path)
-                
-                text_vec = vectorizer.transform([text])
-                prediction = model.predict(text_vec)[0]
+            if _category_pipeline:
+                prediction = _category_pipeline.predict([text])[0]
                 
                 # Get prediction probability if available
-                probs = model.predict_proba(text_vec)[0]
+                probs = _category_pipeline.predict_proba([text])[0]
                 max_prob = max(probs)
                 
                 category = prediction
                 confidence = round(max_prob * 100, 1)
                 print(f"Local ML Fallback used: {category} ({confidence}%)")
+            else:
+                # Fallback to old models if pipeline doesn't exist yet
+                model_path = os.path.join(os.path.dirname(__file__), "models", "category_model.joblib")
+                vec_path = os.path.join(os.path.dirname(__file__), "models", "tfidf_vectorizer.joblib")
+                if os.path.exists(model_path) and os.path.exists(vec_path):
+                    model = joblib.load(model_path)
+                    vectorizer = joblib.load(vec_path)
+                    
+                    text_vec = vectorizer.transform([text])
+                    prediction = model.predict(text_vec)[0]
+                    
+                    probs = model.predict_proba(text_vec)[0]
+                    max_prob = max(probs)
+                    
+                    category = prediction
+                    confidence = round(max_prob * 100, 1)
+                    print(f"Local ML Fallback used (Legacy): {category} ({confidence}%)")
         except Exception as e:
             print(f"Local ML model fallback failed: {e}")
 
@@ -169,11 +205,9 @@ def predict_complaint(text: str, image_base64: str = None) -> dict:
         result = get_static_fallback(text)
         
     # Inject Data Science ML Resolution Predictor
+    _load_models()
     try:
-        model_path = os.path.join(os.path.dirname(__file__), "models", "resolution_model.joblib")
-        if os.path.exists(model_path):
-            resolution_model = joblib.load(model_path)
-            
+        if _resolution_model:
             # Prepare input data for pipeline
             import pandas as pd
             input_df = pd.DataFrame([{
@@ -182,7 +216,7 @@ def predict_complaint(text: str, image_base64: str = None) -> dict:
             }])
             
             # Predict days and round to nearest whole number
-            predicted_days = resolution_model.predict(input_df)[0]
+            predicted_days = _resolution_model.predict(input_df)[0]
             result['ai_report']['estimated_resolution_days'] = max(1, int(round(predicted_days)))
             print(f"ML Resolution Prediction: {result['ai_report']['estimated_resolution_days']} days")
     except Exception as e:
@@ -192,13 +226,12 @@ def predict_complaint(text: str, image_base64: str = None) -> dict:
 
 def get_estimated_resolution_days(category: str, priority: str) -> int:
     """Helper function to quickly predict resolution days for existing complaints"""
+    _load_models()
     try:
-        model_path = os.path.join(os.path.dirname(__file__), "models", "resolution_model.joblib")
-        if os.path.exists(model_path):
-            resolution_model = joblib.load(model_path)
+        if _resolution_model:
             import pandas as pd
             input_df = pd.DataFrame([{'category': category or 'Other', 'priority': priority or 'Medium'}])
-            predicted_days = resolution_model.predict(input_df)[0]
+            predicted_days = _resolution_model.predict(input_df)[0]
             return max(1, int(round(predicted_days)))
     except Exception as e:
         pass

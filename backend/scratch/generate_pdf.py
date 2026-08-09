@@ -11,7 +11,7 @@ from app.models.database import SessionLocal
 from app.models.complaint import Complaint
 from app.ai.predict import get_estimated_resolution_days
 
-class ProjectReportPDF(FPDF):
+class DetailedReportPDF(FPDF):
     def header(self):
         # Top banner styling
         self.set_fill_color(26, 42, 74) # Dark Navy
@@ -20,7 +20,7 @@ class ProjectReportPDF(FPDF):
         self.set_text_color(255, 255, 255)
         self.set_font("helvetica", "B", 8)
         self.set_y(4)
-        self.cell(0, 5, "SMARTCITY - SYSTEM STATISTICS & PORTFOLIO REPORT", align="C")
+        self.cell(0, 5, "SMARTCITY - COMPREHENSIVE AI/ML & SYSTEMS ENGINEERING REPORT", align="C")
         self.ln(12)
 
     def footer(self):
@@ -64,7 +64,7 @@ def create_report():
     finally:
         db.close()
 
-    pdf = ProjectReportPDF()
+    pdf = DetailedReportPDF()
     pdf.set_auto_page_break(auto=True, margin=20)
     pdf.add_page()
     
@@ -85,7 +85,7 @@ def create_report():
     pdf.line(20, pdf.get_y(), 190, pdf.get_y())
     pdf.ln(6)
     
-    # 1. Project Vision
+    # SECTION 1: Vision
     pdf.set_font("helvetica", "B", 13)
     pdf.set_text_color(26, 42, 74)
     pdf.cell(0, 8, "1. Project Vision & Mission", ln=True)
@@ -103,27 +103,26 @@ def create_report():
     pdf.multi_cell(0, 5, vision_text)
     pdf.ln(4)
     
-    # 2. Machine Learning & AI
+    # SECTION 2: Advanced Machine Learning Models
     pdf.set_font("helvetica", "B", 13)
     pdf.set_text_color(26, 42, 74)
-    pdf.cell(0, 8, "2. Advanced Machine Learning (AI)", ln=True)
+    pdf.cell(0, 8, "2. Advanced Machine Learning (Local ML Fallbacks)", ln=True)
     
     pdf.set_font("helvetica", "", 10)
     pdf.set_text_color(60, 60, 60)
     ml_intro = (
-        "SmartCity bypasses static IF/ELSE structures in favor of mathematical models trained on historical "
-        "municipal datasets. The pipeline features four distinct AI components:"
+        "SmartCity does not rely on hardcoded rules. The platform deploys locally trained Scikit-Learn models "
+        "that act as high-speed components and reliable fallbacks if the external Gemini API is rate-limited:"
     )
     pdf.multi_cell(0, 5, ml_intro)
-    pdf.ln(1)
+    pdf.ln(2)
     
-    bullets = [
-        ("Spam & Disposable Email Detection:", " Uses a Logistic Regression model with a character N-gram Count Vectorizer to mathematically block temporary domain registrations on signup."),
-        ("Resolution Time Forecasting:", " Employs a Scikit-Learn RandomForestRegressor to estimate exact resolution timelines based on priority, season, and department trends."),
-        ("Automated Issue Categorization:", " Uses TF-IDF vectorization and Logistic Regression to route incoming description text to the correct division instantly."),
-        ("Conversational Chatbot Assistant:", " Uses Gemini 2.5 Flash as an interactive assistant with secure prompt-injection filters.")
+    ml_models = [
+        ("Disposable Email Detection (Registration Spam Blocker):", " Uses a Logistic Regression model with a character-level N-gram Count Vectorizer. It mathematically scans the character sequences of domains during citizen registration to block disposable domains (like @10minutemail, @tempmail), preventing bot creation."),
+        ("Resolution Time Forecasting:", " Employs a Scikit-Learn RandomForestRegressor. It processes priority levels, departmental assignments, and seasonal parameters to calculate exactly how many days a complaint will take to resolve based on historical resolution trends, displaying a realistic timeline to the citizen."),
+        ("Text-Based Category Classification Fallback:", " Uses TF-IDF vectorization paired with a Logistic Regression classifier to automatically parse descriptions and route tickets to appropriate municipal divisions (Water, Roads, Electricity, etc.) if Gemini is unavailable.")
     ]
-    for title, desc in bullets:
+    for title, desc in ml_models:
         pdf.set_font("helvetica", "B", 9.5)
         pdf.set_text_color(26, 42, 74)
         pdf.write(5, f"  * {title}")
@@ -131,70 +130,58 @@ def create_report():
         pdf.set_text_color(60, 60, 60)
         pdf.write(5, desc)
         pdf.ln(5.5)
-    pdf.ln(3)
-    
-    # 3. Firebase & Security
-    pdf.set_font("helvetica", "B", 13)
-    pdf.set_text_color(26, 42, 74)
-    pdf.cell(0, 8, "3. Firebase & Security Architecture", ln=True)
-    
-    pdf.set_font("helvetica", "", 10)
-    pdf.set_text_color(60, 60, 60)
-    auth_text = (
-        "To guarantee security at scale, SmartCity decouples identity management from the core database. "
-        "Firebase Authentication manages citizen login and registration securely. Upon successful verification, "
-        "Firebase issues a cryptographically signed ID token to the citizen. The Python backend interceptor decodes "
-        "this token securely to authorize citizen requests. Admins utilize a separate JWT-based cookie authorization "
-        "scheme, establishing role-based access control (RBAC) to isolate citizen and official privileges."
-    )
-    pdf.multi_cell(0, 5, auth_text)
     pdf.ln(4)
     
-    # 4. Resend Automated Emails
+    # SECTION 3: Google Gemini LLM Integration
     pdf.set_font("helvetica", "B", 13)
     pdf.set_text_color(26, 42, 74)
-    pdf.cell(0, 8, "4. Resend Automated Notification System", ln=True)
+    pdf.cell(0, 8, "3. Google Gemini AI Integration Features", ln=True)
     
     pdf.set_font("helvetica", "", 10)
     pdf.set_text_color(60, 60, 60)
-    email_text = (
-        "Communication transparency is key to civic trust. SmartCity integrates the Resend API "
-        "to deliver instant email notifications directly to citizens. The system operates on a state-machine trigger: "
-        "whenever an admin updates a complaint status (Accept, Resolve, Reject, Escalate), a background email task is "
-        "immediately dispatched. During the sandbox/testing phase, emails are sent using onboarding@resend.dev. Due to "
-        "sandbox safety rules, deliveries are strictly restricted to the verified account owner's email address. "
-        "The system has a rate limit of 100 emails per day and 3,000 emails per month on the free tier."
+    gemini_intro = (
+        "SmartCity integrates the Google GenAI SDK powered by the highly optimized gemini-2.5-flash model "
+        "to deliver interactive, real-time civic triage and conversational features:"
     )
-    pdf.multi_cell(0, 5, email_text)
+    pdf.multi_cell(0, 5, gemini_intro)
+    pdf.ln(2)
+    
+    gemini_features = [
+        ("Conversational Chatbot Assistant:", " A floating 3D Bot in the citizen frontend communicates with a FastAPI route. It parses history and prompts Gemini using a tailored municipal knowledge base, allowing citizens to query reporting steps using natural language processing."),
+        ("Vision-Based Complaint Triage:", " When citizens submit a complaint, Gemini processes both text descriptions and uploaded photos (converted to base64). It automatically detects the correct category, urgency levels, and outputs a one-sentence summary."),
+        ("Dynamic Category Styling:", " If an admin creates a custom category, Gemini automatically generates a corresponding emoji icon and a matching hexadecimal UI color code to style the admin dashboard on the fly."),
+        ("AI Engineer Investigation Reports:", " In the admin details panel, clicking 'View Details' triggers Gemini to instantly compile a comprehensive engineering investigation report containing impact analysis, step-by-step action plans, required equipment/personnel, and prevention recommendations.")
+    ]
+    for title, desc in gemini_features:
+        pdf.set_font("helvetica", "B", 9.5)
+        pdf.set_text_color(26, 42, 74)
+        pdf.write(5, f"  * {title}")
+        pdf.set_font("helvetica", "", 9.5)
+        pdf.set_text_color(60, 60, 60)
+        pdf.write(5, desc)
+        pdf.ln(5.5)
     pdf.ln(4)
 
-    # 5. Database & Relational Layout
+    # Add a page break to organize layout beautifully
+    pdf.add_page()
+    
+    # SECTION 4: Live Statistics
     pdf.set_font("helvetica", "B", 13)
     pdf.set_text_color(26, 42, 74)
-    pdf.cell(0, 8, "5. Database & Relational Layout", ln=True)
+    pdf.cell(0, 8, "4. Live Admin Dashboard Statistics & Analytics", ln=True)
     
     pdf.set_font("helvetica", "", 10)
     pdf.set_text_color(60, 60, 60)
-    db_text = (
-        "The relational schema is implemented in MySQL (with a local SQLite fallback for testing). "
-        "The complaints database model maintains strict relational integrity. To prevent credential leaks, "
-        "database columns save citizen details in plain-text while core endpoints are secured with SlowAPI "
-        "rate-limiting to guard against automated attacks and spam."
+    stats_intro = (
+        "The Admin Dashboard aggregates municipal data dynamically from the SQL database using optimized "
+        "aggregations. Below are the current live metrics compiled for this system:"
     )
-    pdf.multi_cell(0, 5, db_text)
-    pdf.ln(6)
-    
-    # 6. LIVE STATISTICS
-    pdf.set_font("helvetica", "B", 13)
-    pdf.set_text_color(26, 42, 74)
-    pdf.cell(0, 8, "6. Live Admin Dashboard Statistics", ln=True)
-    pdf.ln(1)
+    pdf.multi_cell(0, 5, stats_intro)
+    pdf.ln(4)
     
     # Stat boxes
     pdf.set_fill_color(245, 247, 250)
     pdf.set_draw_color(210, 215, 225)
-    
-    # Draw key metrics
     pdf.set_font("helvetica", "B", 10)
     pdf.set_text_color(26, 42, 74)
     
@@ -204,32 +191,23 @@ def create_report():
     pdf.cell(44, 10, f"Avg Resolution: {avg_res} Days", border=1, fill=True, align="C")
     pdf.ln(14)
     
-    # Draw category / priority stats tables
+    # Tables side by side
     pdf.set_font("helvetica", "B", 10)
     pdf.cell(85, 6, "Category Distribution", ln=False)
     pdf.cell(85, 6, "Priority Distribution", ln=True)
     pdf.ln(1)
     
-    # Fetch top categories and priorities count details
     pdf.set_font("helvetica", "", 9)
     pdf.set_text_color(60, 60, 60)
-    
-    # Draw up to 5 rows of comparisons side by side
     for idx in range(max(len(cat_counts), len(priority_counts))):
         if idx >= 5:
             break
-            
-        # Left cell (category)
         if idx < len(cat_counts):
             cat_name, cat_val = cat_counts[idx]
             pdf.cell(85, 6, f"{cat_name}: {cat_val} complaints", border="B")
         else:
             pdf.cell(85, 6, "", border="B")
-            
-        # Spacer
         pdf.cell(5, 6, "")
-        
-        # Right cell (priority)
         if idx < len(priority_counts):
             pri_name, pri_val = priority_counts[idx]
             pdf.cell(80, 6, f"{pri_name} Priority: {pri_val} tickets", border="B")
@@ -238,13 +216,37 @@ def create_report():
         pdf.ln()
     pdf.ln(8)
     
+    # SECTION 5: Firebase & Resend & Validation Details
+    pdf.set_font("helvetica", "B", 13)
+    pdf.set_text_color(26, 42, 74)
+    pdf.cell(0, 8, "5. Authentication, Validation & Automated Notifications", ln=True)
+    
+    pdf.set_font("helvetica", "", 10)
+    pdf.set_text_color(60, 60, 60)
+    
+    sec5_bullets = [
+        ("Evaluator Test Credentials:", " Evaluators can use Email: 'syedareebali795@gmail.com' and Password: '123456' to login, submit complaints, and track details from the citizen portal."),
+        ("Strict Input Validations:", " The portal uses robust input validation controls. Submissions require properly formatted emails, minimum password lengths (6+ characters), and non-empty text descriptions to maintain clean databases."),
+        ("SlowAPI Bot Protection:", " To prevent automated script attacks, the complaint routes utilize SlowAPI. Multiple bots cannot spam the submission endpoint simultaneously, protecting backend resources from denial-of-service."),
+        ("Resend Notifications (Free Tier vs Pro):", " The Resend API sends automatic HTML status updates (Accept, Resolve, Reject, Escalate). In free sandbox mode, testing is strictly restricted to the verified account owner: syedareebali795@gmail.com. On a Pro/paid production plan, it will seamlessly scale to deliver alerts to all citizen emails automatically."),
+        ("Phone Authentication Roadmap:", " The phone number field is collected. Verification SMS is set as a future roadmap feature, as Firebase Phone Authentication requires a paid/pro plan for API verification.")
+    ]
+    for title, desc in sec5_bullets:
+        pdf.set_font("helvetica", "B", 9.5)
+        pdf.set_text_color(26, 42, 74)
+        pdf.write(5, f"  * {title}")
+        pdf.set_font("helvetica", "", 9.5)
+        pdf.set_text_color(60, 60, 60)
+        pdf.write(5, desc)
+        pdf.ln(5.5)
+    pdf.ln(4)
+
     # Tech Stack Summary Table
     pdf.set_font("helvetica", "B", 12)
     pdf.set_text_color(26, 42, 74)
-    pdf.cell(0, 8, "Tech Stack & Deployment Matrix", ln=True)
+    pdf.cell(0, 8, "6. Tech Stack & Deployment Matrix", ln=True)
     pdf.ln(2)
     
-    # Custom Table
     pdf.set_font("helvetica", "B", 9)
     pdf.set_fill_color(240, 244, 250)
     pdf.set_text_color(26, 42, 74)

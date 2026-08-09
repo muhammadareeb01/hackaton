@@ -56,12 +56,22 @@ export default function AdminLogin() {
             </div>
             <h1 className="text-2xl font-bold text-slate-900 mb-2">Admin Portal</h1>
             <p className="text-slate-500 text-sm mb-4">Secure CitySync Administration</p>
-            <div className="bg-blue-50 text-blue-700 text-xs py-2 px-3 rounded-md border border-blue-100 font-medium inline-block text-left">
-              <p><strong>Demo Credentials:</strong></p>
-              <p className="mt-1">Email: <code className="bg-white px-1 py-0.5 rounded border border-blue-200">admin@citysync.gov</code></p>
-              <p>Password: <code className="bg-white px-1 py-0.5 rounded border border-blue-200">admin1234</code></p>
+            <div className="w-full bg-slate-50 border border-slate-200 border-dashed rounded-lg p-3.5 text-left mb-6">
+              <div className="flex items-center justify-center sm:justify-start gap-1.5 mb-2.5">
+                <ShieldCheck className="w-4 h-4 text-slate-500" />
+                <span className="text-sm font-semibold text-slate-700">Demo Credentials</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 text-sm text-slate-600">
+                <div className="flex-1">
+                  <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Email Address</span>
+                  <code className="font-mono text-xs text-slate-800 bg-white px-2.5 py-1.5 rounded border border-slate-200 block w-full truncate select-all">admin@citysync.gov</code>
+                </div>
+                <div className="flex-1">
+                  <span className="text-slate-400 text-[10px] font-bold uppercase tracking-wider block mb-1">Password</span>
+                  <code className="font-mono text-xs text-slate-800 bg-white px-2.5 py-1.5 rounded border border-slate-200 block w-full truncate select-all">admin1234</code>
+                </div>
+              </div>
             </div>
-          </div>
 
           <form onSubmit={handleLogin} className="space-y-5">
             <div className="space-y-1.5">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Filter, Loader2, ChevronLeft, ChevronRight, CheckCircle2, Clock, XCircle, AlertCircle } from "lucide-react";
 import { Card } from "@/components/ui/Card";
@@ -52,13 +52,14 @@ interface Complaint {
   category: string;
   citizen_name?: string;
   summary?: string;
+  description?: string;
   priority: PriorityLevel;
   status: StatusLevel;
   date_submitted: string;
   estimated_resolution_days?: number;
 }
 
-export default function ComplaintsList() {
+function ComplaintsListContent() {
   const searchParams = useSearchParams();
   const priorityParam = searchParams.get("priority");
 
@@ -437,5 +438,17 @@ export default function ComplaintsList() {
         </Card>
       </main>
     </div>
+  );
+}
+
+export default function ComplaintsList() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-[var(--color-background)] flex items-center justify-center">
+        <Loader2 className="w-8 h-8 animate-spin text-[var(--color-primary)]" />
+      </div>
+    }>
+      <ComplaintsListContent />
+    </Suspense>
   );
 }

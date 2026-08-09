@@ -2,6 +2,7 @@ import Cookies from 'js-cookie';
 import toast from '@/lib/toast';
 
 let rawBase = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+if (!rawBase.startsWith('http')) rawBase = 'https://' + rawBase;
 if (rawBase.endsWith('/')) rawBase = rawBase.slice(0, -1);
 export const API_BASE_URL = rawBase.endsWith('/api') ? rawBase : `${rawBase}/api`;
 
